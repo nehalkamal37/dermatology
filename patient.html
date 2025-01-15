@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Info Section</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .patient-info-section {
+            padding: 50px;
+            background-color: #fff;
+        }
+        .patient-info-section h1 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .patient-info-section p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .form-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        .form-link {
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px 25px;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+        .form-link:hover {
+            background-color: #0056b3;
+        }
+        .insurance-info {
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+            padding: 20px;
+            border-top: 1px solid #ddd;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="patient-info-section">
+        <h1>Patient Info</h1>
+        <p>Welcome to our practice! Please find the necessary forms and insurance information below.</p>
+        <div class="form-links">
+            <a href="patient-intake-form.pdf" class="form-link" download>Patient Intake Form</a>
+            <a href="medical-history-form.pdf" class="form-link" download>Medical History Form</a>
+        </div>
+        <div class="insurance-info">
+            <p>We accept most major insurance plans, including Aetna, Blue Cross, Medicare, and more.</p>
+        </div>
+    </div>
+</body>
+</html>
