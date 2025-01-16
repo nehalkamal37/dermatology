@@ -31,14 +31,17 @@
     	<div class="container">
     		<div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
     			<div class="col-lg-2 pr-4 align-items-center">
-		    		<a class="navbar-brand" href="index.html">Dr.<span>care</span></a>
+		    		<a class="navbar-brand" href="index.html">CA<span>Rheumatology  </span></a>
 	    		</div>
 	    		<div class="col-lg-10 d-none d-md-block">
 		    		<div class="row d-flex">
+						
 			    		<div class="col-md-4 pr-4 d-flex topper align-items-center">
+							<!--
 			    			<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center"><span class="icon-map"></span></div>
-						    <span class="text">Address: 198 West 21th Street, Suite 721 New York NY 10016</span>
+			<span class="text">Address: 198 West 21th Street, Suite 721 New York NY 10016</span>  -->
 					    </div>
+					
 					    <div class="col-md pr-4 d-flex topper align-items-center">
 					    	<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
 						    <span class="text">Email: youremail@email.com</span>
@@ -52,6 +55,19 @@
 		    </div>
 		  </div>
     </nav>
+	<style>.nav-link {
+		color: black;
+		text-decoration: none;
+	}
+	
+	.nav-link.active {
+		color: white;
+		background-color: blue;
+		padding: 5px 10px;
+		border-radius: 5px;
+	}
+	
+		  </style>   
 	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container d-flex align-items-center">
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,17 +76,51 @@
 	      <p class="button-custom order-lg-last mb-0"><a href="appointment.html" class="btn btn-secondary py-2 px-3">Make An Appointment</a></p>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav mr-auto">
-	        	<li class="nav-item active"><a href="index.html" class="nav-link pl-0">Home</a></li>
-	        	<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-	        	<li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-	        	<li class="nav-item"><a href="" class="nav-link">Locations</a></li>
-	        	<li class="nav-item"><a href="patient.html" class="nav-link">Patient Info</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+	        <!--	<li class="nav-item active"><a href="index.html" id="home" class="nav-link pl-0">Home</a></li>
+          -->
+				
+						<li class="nav-item" id="home"><a href="index.html" class="nav-link">Home</a></li>
+						<li class="nav-item active" id="about"><a href="about.html" class="nav-link pl-0">About</a></li>
+						<li class="nav-item" id="services"><a href="services.html" class="nav-link">Services</a></li>
+						<li class="nav-item" ><a href="contact.html" class="nav-link">Locations</a></li>
+						<li class="nav-item" ><a href="patient.html" id="patient" class="nav-link">Patient Info</a></li>
+						<li class="nav-item" id="contact"><a href="contact.html" class="nav-link">Contact</a></li>
+				
 	        </ul>
+			
 	      </div>
 	    </div>
 	  </nav>
+	  
+	  <script>
+		// Get all navigation links
+		const navLinks = document.querySelectorAll('.nav-link');
+	
+		// Add click event listener to each link
+		navLinks.forEach(link => {
+			link.addEventListener('click', () => {
+				// Remove 'active' class from all links
+				navLinks.forEach(nav => nav.classList.remove('active'));
+	
+				// Add 'active' class to the clicked link
+				link.classList.add('active');
+			});
+		});
+	
+		// Highlight the active link based on the current URL
+		const currentPath = window.location.pathname;
+		navLinks.forEach(link => {
+			if (link.getAttribute('href') === currentPath) {
+				link.classList.add('active');
+			}
+		});
+	</script>
+	
+	
     <!-- END nav -->
+    
+
+
     <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
