@@ -8026,6 +8026,8 @@ h1, h2, h3, h4, h5,
   .topper .text {
     width: calc(100% - 60px); }
 
+
+    
 .ftco-navbar-light {
   position: fixed;
   background-color: white;
@@ -8038,6 +8040,7 @@ h1, h2, h3, h4, h5,
       position: relative;
       top: 0;
       padding: 10px 15px; } }
+
 
       /*navv*/
       .ftco-navbar-light {
@@ -8099,8 +8102,6 @@ h1, h2, h3, h4, h5,
   .ftco-navbar-light {
       background-color: #003366; /* Ensures it looks good on smaller screens */
       padding: 10px 15px;
-
-      
       background: #000000 !important;
       position: fixed; /* Fixed for mobile as well */
       top: 0;

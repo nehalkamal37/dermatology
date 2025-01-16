@@ -30,7 +30,9 @@
 <style>.text-class {
 	white-space: nowrap; /* Prevent text from breaking onto a new line */
 	
-}</style>
+}
+
+</style>
 
 <nav class="navbar py-4 navbar-expand-lg ftco_navbar navbar-light bg-light flex-row">
 	<div class="container">
@@ -79,12 +81,6 @@
 		border-radius: 5px;
 	}
 	
-	/* Navbar Styling */
-/* Keep the original styling but make it fixed */
-
-
-
-
 		  </style>   
 	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container d-flex align-items-center">
@@ -128,8 +124,38 @@
         </div>
         </div>
       </div>
+<style>
+	.slider-item h1 {
+  font-size: 3.5rem; /* Large font size for better visibility */
+  font-weight: bold; /* Makes the text bold */
+  color: #003366; /* A strong, dark color for better contrast */
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  padding: 10px 20px; /* Adds padding around the text */
+  border-radius: 10px; /* Adds rounded corners to the background */
+  display: inline-block; /* Ensures the background fits the text */
+  line-height: 1.2; /* Adjust line height for better spacing */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a polished look */
+}
 
-      <div class="slider-item" style="background-image:url(images/Rheumatologist.jpg);">
+.slider-item .overlay {
+  background-color: rgba(0, 0, 0, 0.4); /* Slightly darkens the background image */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.slider-item h1 span {
+  z-index: 2; /* Ensures text stays above the overlay */
+  position: relative;
+}
+
+
+</style>
+
+<div class="slider-item" style="background-image:url(images/Rheumatologist.jpg);">
       	<div class="overlay"></div>
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
@@ -1395,8 +1421,6 @@
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
     
   </body>
