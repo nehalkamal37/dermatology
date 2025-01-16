@@ -81,7 +81,10 @@ h1, h2, h3, h4, h5,
 	}
 }
 .ftco-navbar-light {
+	position: fixed;
 	background: transparent !important;
+	
+    background-color: white !important;
 	// position: absolute;
 	// top: 20px;
 	// left: 0;

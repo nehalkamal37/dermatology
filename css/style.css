@@ -8027,6 +8027,8 @@ h1, h2, h3, h4, h5,
     width: calc(100% - 60px); }
 
 .ftco-navbar-light {
+  position: fixed;
+  background-color: white;
   background: transparent !important;
   z-index: 3;
   padding: 0; }
@@ -8036,6 +8038,82 @@ h1, h2, h3, h4, h5,
       position: relative;
       top: 0;
       padding: 10px 15px; } }
+
+      /*navv*/
+      .ftco-navbar-light {
+        background: transparent !important;
+        background-color: wheat;
+        z-index: 1000; /* Higher z-index to ensure it stays on top */
+        padding: 0;
+        position: fixed; /* Makes it fixed */
+        top: 0;
+        width: 100%; /* Ensures it spans the full width */
+      }
+      
+      @media (max-width: 991.98px) {
+        .ftco-navbar-light {
+          background: #000000 !important;
+          position: fixed; /* Fixed for mobile as well */
+          top: 0;
+          padding: 10px 15px;
+          width: 100%; /* Ensures it spans full width on mobile */
+        }
+      }
+      
+
+      /* Adjust body padding to prevent content overlap */
+      body {
+        padding-top: 70px; /* Adjust this based on the navbar height */
+      }
+      
+/*new*/
+
+.ftco-navbar-light {
+  position: fixed; /* Makes it fixed at the top */
+  top: 0;
+  width: 100%; /* Full-width navbar */
+  z-index: 1000; /* Ensures it stays above other elements */
+  background-color: #003366; /* Change this color to match your desired background */
+  color: white; /* Text color */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for better appearance */
+  padding: 10px 20px; /* Adjusts spacing */
+  font-family: Arial, sans-serif; /* Consistent typography */
+    background-color: white !important;
+
+}
+
+/* Styling for nav links */
+.ftco-navbar-light .navbar-nav .nav-link {
+  color: white; /* Makes links white */
+  font-weight: bold; /* Adds bold text */
+  text-transform: uppercase; /* Optional for capitalized letters */
+  padding: 10px 15px; /* Adjusts link spacing */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for nav links */
+
+
+/* Mobile view adjustments */
+@media (max-width: 991.98px) {
+  .ftco-navbar-light {
+      background-color: #003366; /* Ensures it looks good on smaller screens */
+      padding: 10px 15px;
+  }
+  .ftco-navbar-light .navbar-toggler {
+      color: white; /* Ensures the toggler icon is visible */
+  }
+}
+
+/* Adjust body padding to prevent overlap */
+body {
+  padding-top: 70px; /* Matches the navbar height */
+}
+
+
+
+
+      /*end*/
   .ftco-navbar-light .navbar-brand {
     color: #000000; }
     .ftco-navbar-light .navbar-brand:hover, .ftco-navbar-light .navbar-brand:focus {
