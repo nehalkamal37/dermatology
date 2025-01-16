@@ -108,7 +108,56 @@
 	
 	
     <!-- END nav -->
-    
+    <style>
+		.slider-item h1 {
+	  font-size: 3.5rem; /* Large font size for better visibility */
+	  font-weight: bold; /* Makes the text bold */
+	  color: #003366; /* A strong, dark color for better contrast */
+	  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+	  padding: 10px 20px; /* Adds padding around the text */
+	  border-radius: 10px; /* Adds rounded corners to the background */
+	  display: inline-block; /* Ensures the background fits the text */
+	  line-height: 1.2; /* Adjust line height for better spacing */
+	  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a polished look */
+	}
+	
+	.slider-item .overlay {
+	  background-color: rgba(0, 0, 0, 0.4); /* Slightly darkens the background image */
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	  z-index: 1;
+	}
+	
+	.slider-item h1 span {
+	  z-index: 2; /* Ensures text stays above the overlay */
+	  position: relative;
+	}
+	
+	.btn-secondary {
+	  background-color: #ff6600; /* Bright orange for high contrast */
+	  color: white; /* Text color for better readability */
+	  font-size: 1rem; /* Adjust font size for clarity */
+	  font-weight: bold; /* Make the text stand out */
+	  padding: 10px 20px; /* Add padding for a larger clickable area */
+	  border: none; /* Remove border */
+	  border-radius: 5px; /* Rounded corners for a modern look */
+	  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
+	  transition: all 0.3s ease; /* Smooth hover effect */
+	}
+	
+	.btn-secondary:hover {
+	  background-color: #ff4500; /* Slightly darker orange on hover */
+	  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+	  transform: translateY(-2px); /* Slight "lift" effect */
+	  text-decoration: none; /* Ensure no underline on hover */
+	}
+	
+	
+	</style>
+	
     <section class="home-slider owl-carousel">
       <div class="slider-item" style="background-image:url(images/home.jpg);" data-stellar-background-ratio="0.5">
       	<div class="overlay"></div>
@@ -124,55 +173,6 @@
         </div>
         </div>
       </div>
-<style>
-	.slider-item h1 {
-  font-size: 3.5rem; /* Large font size for better visibility */
-  font-weight: bold; /* Makes the text bold */
-  color: #003366; /* A strong, dark color for better contrast */
-  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-  padding: 10px 20px; /* Adds padding around the text */
-  border-radius: 10px; /* Adds rounded corners to the background */
-  display: inline-block; /* Ensures the background fits the text */
-  line-height: 1.2; /* Adjust line height for better spacing */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a polished look */
-}
-
-.slider-item .overlay {
-  background-color: rgba(0, 0, 0, 0.4); /* Slightly darkens the background image */
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-}
-
-.slider-item h1 span {
-  z-index: 2; /* Ensures text stays above the overlay */
-  position: relative;
-}
-
-.btn-secondary {
-  background-color: #ff6600; /* Bright orange for high contrast */
-  color: white; /* Text color for better readability */
-  font-size: 1rem; /* Adjust font size for clarity */
-  font-weight: bold; /* Make the text stand out */
-  padding: 10px 20px; /* Add padding for a larger clickable area */
-  border: none; /* Remove border */
-  border-radius: 5px; /* Rounded corners for a modern look */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
-  transition: all 0.3s ease; /* Smooth hover effect */
-}
-
-.btn-secondary:hover {
-  background-color: #ff4500; /* Slightly darker orange on hover */
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
-  transform: translateY(-2px); /* Slight "lift" effect */
-  text-decoration: none; /* Ensure no underline on hover */
-}
-
-
-</style>
 
 <div class="slider-item" style="background-image:url(images/Rheumatologist.jpg);">
       	<div class="overlay"></div>
