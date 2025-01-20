@@ -109,178 +109,366 @@
 	
 	
     <!-- END nav -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Locations Section</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+    
+            .locations-section {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                padding: 20px;
+                background-color: #f4f4f4;
+            }
+    
+            .location-card {
+                width: 300px;
+                background-color: white;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+    
+            .location-card img {
+                width: 100%;
+                height: auto;
+                height: 270px;
+            }
+    
+            .location-card-content {
+                padding: 15px;
+            }
+    
+            .location-card h3 {
+                margin: 0 0 10px;
+                font-size: 1.2rem;
+                color: #333;
+            }
+    
+            .location-card p {
+                margin: 0;
+                color: #666;
+            }
 
 
-<style>
+            /* new css */
+            <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-.locations-section {
-  text-align: center;
-  background-color: #549DFB; /* Matches the background */
-  color: white; /* Text color */
-  padding: 50px 20px;
-}
+        .locations-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
 
-.section-title {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
+        .location-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
 
-.section-subtitle {
-  font-size: 16px;
-  margin-bottom: 30px;
-}
+        .location-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
 
-.locations-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
+        .location-card-content {
+            padding: 15px;
+        }
 
-.location-item {
-  background: white; /* White card background */
-  color: #003366; /* Dark text */
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
+        .location-card h3 {
+            margin: 0 0 10px;
+            font-size: 1.2rem;
+            color: #333;
+        }
 
-.location-item .icon {
-  margin-bottom: 15px;
-}
+        .location-card p {
+            margin: 0;
+            color: #666;
+        }
+        /* new css */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
 
-.location-item .icon img {
-  width: 70px; /* Adjust size */
-}
+        .locations-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Always 3 cards per row */
+            gap: 30px; /* Spacing between cards */
+            padding: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-.location-item h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
+        .location-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-.location-item p {
-  font-size: 14px;
-  line-height: 1.6;
-}
+        .location-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
 
-</style>
+        .location-card img {
+            width: 100%;
+            height: 270px;
+            object-fit: cover;
+        }
 
+        .location-card-content {
+            padding: 20px;
+            text-align: center;
+        }
 
+        .location-card h3 {
+            margin: 0 0 10px;
+            font-size: 1.5rem;
+            color: #333;
+        }
 
+        .location-card p {
+            margin: 0;
+            font-size: 1rem;
+            color: #666;
+        }
 
-<section class="locations-section">
-    <div class="container">
-      <h2 class="section-title">20 Convenient Locations Providing Quality Care</h2>
-      <p class="section-subtitle">Make an appointment today at any of our 20 locations.</p>
-      <div class="locations-grid">
-        <div class="location-item">
-          <div class="icon"><img src="images/location.png" alt="Location"></div>
-          <h3>Ventura</h3>
-          <p>1500 Palma Dr, Suite 187<br>Ventura, CA 93003</p>
-        </div>
-        <div class="location-item">
-          <div class="icon"><img src="images/location.png" alt="Location"></div>
-          <h3>Thousand Oaks</h3>
-          <p>3095 Old Conejo Rd, Suite 200<br>Thousand Oaks, CA 91320</p>
-        </div>
-        <div class="location-item">
-          <div class="icon"><img src="images/location.png" alt="Location"></div>
-          <h3>Northridge</h3>
-          <p>18433 Roscoe Blvd, Suite 104<br>Northridge, CA 91325</p>
-        </div>
-        <div class="location-item">
-          <div class="icon"><img src="images/location.png" alt="Location"></div>
-          <h3>Santa Clarita</h3>
-          <p>21050 Centre Pointe Parkway<br>Santa Clarita, CA 91350</p>
-        </div>
-        <div class="location-item">
-          <div class="icon"><img src="images/location.png" alt="Location"></div>
-          <h3>Los Angeles</h3>
-          <p>1701 E. Cesar E. Chavez Ave, Suite 305<br>Los Angeles, CA 90033</p>
-        </div>
-        <div class="location-item">
-          <div class="icon"><img src="images/location.png" alt="Location"></div>
-          <h3>Huntington Park</h3>
-          <p>5725 S Soto St<br>Huntington Park, CA 90255</p>
-        </div>
-        <div class="location-item">
-          <div class="icon"><img src="images/location.png" alt="Location"></div>
-          <h3>Palmdale</h3>
-          <p>520 W Palmdale Blvd Unit A<br>Palmdale, CA 93551</p>
-        </div>
-        <div class="location-item">
-          <div class="icon"><img src="images/location.png" alt="Location"></div>
-          <h3>Moorpark</h3>
-          <p>145 Park Lane, Suite 200<br>Moorpark, CA 93021</p>
-        </div>
-        <div class="location-item">
-          <div class="icon"><img src="images/location.png" alt="Location"></div>
-          <h3>San Bernardino</h3>
-          <p>980 N D St<br>San Bernardino, CA 92410</p>
-        </div>
-        <div class="location-item">
-          <div class="icon"><img src="images/location.png" alt="Location"></div>
-          <h3>Long Beach</h3>
-          <p>3490 Linden Ave, Ste 2<br>Long Beach, CA 90807</p>
-        </div>
-        <div class="location-item">
-          <div class="icon"><img src="images/location.png" alt="Location"></div>
-          <h3>Huntington Beach</h3>
-          <p>17822 Beach Blvd Suite 300<br>Huntington Beach, CA 92647</p>
-        </div>
-        <div class="location-item">
-          <div class="icon"><img src="images/location.png" alt="Location"></div>
-          <h3>Anaheim</h3>
-          <p>3400 West Ball Rd Suite 204<br>Anaheim, CA 92804</p>
-        </div>
-        <div class="location-item">
-          <div class="icon"><img src="images/location.png" alt="Location"></div>
-          <h3>Santa Ana</h3>
-          <p>1211 N Broadway<br>Santa Ana, CA 92701</p>
-        </div>
-        <div class="location-item">
-          <div class="icon"><img src="images/location.png" alt="Location"></div>
-          <h3>Santa Barbara</h3>
-          <p>504 W. Pueblo St Suite 301<br>Santa Barbara, CA 93105</p>
-        </div>
-        <div class="location-item">
-          <div class="icon"><img src="images/location.png" alt="Location"></div>
-          <h3>Chino</h3>
-          <p>5632 Philadelphia St, Suite 202<br>Chino, CA 91710</p>
-        </div>
-        <div class="location-item">
-          <div class="icon"><img src="images/location.png" alt="Location"></div>
-          <h3>Norwalk</h3>
-          <p>13132 Studebaker Road, Suite 7<br>Norwalk, CA 90650</p>
-        </div>
-        <div class="location-item">
-          <div class="icon"><img src="images/location.png" alt="Location"></div>
-          <h3>Montebello</h3>
-          <p>101 E. Beverly Blvd. Ste 204<br>Montebello, CA 90640</p>
-        </div>
-        <div class="location-item">
-          <div class="icon"><img src="images/location.png" alt="Location"></div>
-          <h3>Beaverton</h3>
-          <p>16100 Northwest Cornell Road Suite 100<br>Beaverton, OR 97006</p>
-        </div>
-        <div class="location-item">
-          <div class="icon"><img src="images/location.png" alt="Location"></div>
-          <h3>Beverly Hills</h3>
-          <p>Address TBD<br>Beverly Hills, CA</p>
-        </div>
-        <div class="location-item">
-          <div class="icon"><img src="images/location.png" alt="Location"></div>
-          <h3>Bakersfield</h3>
-          <p>Address TBD<br>Bakersfield, CA</p>
-        </div>
+        .section-header {
+            text-align: center;
+            padding: 30px 20px 10px;
+            background-color: #f4f4f4;
+        }
+        /* Media query for smaller screens */
+        @media (max-width: 992px) {
+            .locations-section {
+                grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .locations-section {
+                grid-template-columns: 1fr; /* 1 card per row */
+            }
+        }
+        </style>
+    </head>
+    <body>
+      <header class="section-header">
+        <h2 class="section-title">20 Convenient Locations Providing Quality Care</h2>
+        <p class="section-subtitle">Make an appointment today at any of our 20 locations.</p>
+    </header>
+  
+    <!-- newww   -->
+    <section class="locations-section">
+      <div class="location-card">
+          <a href="https://maps.google.com/?q=1701+E.+Cesar+E.+Chavez+Ave,+Suite+305,+Los+Angeles,+CA+90033" target="_blank">
+              <img src="images/locations/Los-Angeles-box5.webp" alt="Los Angeles">
+              <div class="location-card-content">
+                  <h3>Los Angeles</h3>
+                  <p>1701 E. Cesar E. Chavez Ave, Suite 305<br>Los Angeles, CA 90033</p>
+              </div>
+          </a>
       </div>
-    </div>
+      <div class="location-card">
+          <a href="https://maps.google.com/?q=3095+Old+Conejo+Rd,+Suite+200,+Thousand+Oaks,+CA+91320" target="_blank">
+              <img src="images/locations/box2.webp" alt="Thousand Oaks">
+              <div class="location-card-content">
+                  <h3>Thousand Oaks</h3>
+                  <p>3095 Old Conejo Rd, Suite 200<br>Thousand Oaks, CA 91320</p>
+              </div>
+          </a>
+      </div>
+      <div class="location-card">
+          <a href="https://maps.google.com/?q=18433+Roscoe+Blvd,+Suite+104,+Northridge,+CA+91325" target="_blank">
+              <img src="images/locations/Northridge-box3.webp" alt="Northridge">
+              <div class="location-card-content">
+                  <h3>Northridge</h3>
+                  <p>18433 Roscoe Blvd, Suite 104<br>Northridge, CA 91325</p>
+              </div>
+          </a>
+      </div>
+      <div class="location-card">
+          <a href="https://maps.google.com/?q=21050+Centre+Pointe+Parkway,+Santa+Clarita,+CA+91350" target="_blank">
+              <img src="images/locations/Santa-Clarita-1536x989.webp" alt="Santa Clarita">
+              <div class="location-card-content">
+                  <h3>Santa Clarita</h3>
+                  <p>21050 Centre Pointe Parkway<br>Santa Clarita, CA 91350</p>
+              </div>
+          </a>
+      </div>
+      <div class="location-card">
+          <a href="https://maps.google.com/?q=1500+Palma+Dr,+Suite+187,+Ventura,+CA+93003" target="_blank">
+              <img src="images/locations/1.jpg" alt="Ventura">
+              <div class="location-card-content">
+                  <h3>Ventura</h3>
+                  <p>1500 Palma Dr, Suite 187<br>Ventura, CA 93003</p>
+              </div>
+          </a>
+      </div>
+      <div class="location-card">
+          <a href="https://maps.google.com/?q=5725+S+Soto+St,+Huntington+Park,+CA+90255" target="_blank">
+              <img src="images/locations/Huntington-Park-1536x664.webp" alt="Huntington Park">
+              <div class="location-card-content">
+                  <h3>Huntington Park</h3>
+                  <p>5725 S Soto St<br>Huntington Park, CA 90255</p>
+              </div>
+          </a>
+      </div>
+      <div class="location-card">
+          <a href="https://maps.google.com/?q=145+Park+Lane,+Suite+200,+Moorpark,+CA+93021" target="_blank">
+              <img src="images/locations/Moorpark-Office.webp" alt="Moorpark">
+              <div class="location-card-content">
+                  <h3>Moorpark</h3>
+                  <p>145 Park Lane, Suite 200<br>Moorpark, CA 93021</p>
+              </div>
+          </a>
+      </div>
+      <div class="location-card">
+          <a href="https://maps.google.com/?q=520+W+Palmdale+Blvd+Unit+A,+Palmdale,+CA+93551" target="_blank">
+              <img src="images/locations/Palmdale-1536x1528.webp" alt="Palmdale">
+              <div class="location-card-content">
+                  <h3>Palmdale</h3>
+                  <p>520 W Palmdale Blvd Unit A<br>Palmdale, CA 93551</p>
+              </div>
+          </a>
+      </div>
+      <div class="location-card">
+          <a href="https://maps.google.com/?q=980+N+D+St,+San+Bernardino,+CA+92410" target="_blank">
+              <img src="images/locations/SanBernardino-box-img.webp" alt="San Bernardino">
+              <div class="location-card-content">
+                  <h3>San Bernardino</h3>
+                  <p>980 N D St<br>San Bernardino, CA 92410</p>
+              </div>
+          </a>
+      </div>
+      <div class="location-card">
+          <a href="https://maps.google.com/?q=3490+Linden+Ave,+Ste+2,+Long+Beach,+CA+90807" target="_blank">
+              <img src="images/locations/New-Long-Beach-Location.webp" alt="Long Beach">
+              <div class="location-card-content">
+                  <h3>Long Beach</h3>
+                  <p>3490 Linden Ave, Ste 2<br>Long Beach, CA 90807</p>
+              </div>
+          </a>
+      </div>
+      <div class="location-card">
+          <a href="https://maps.google.com/?q=17822+Beach+Blvd+Suite+300,+Huntington+Beach,+CA+92647" target="_blank">
+              <img src="images/locations/HuntingtonBeach-box-img.webp" alt="Huntington Beach">
+              <div class="location-card-content">
+                  <h3>Huntington Beach</h3>
+                  <p>17822 Beach Blvd Suite 300<br>Huntington Beach, CA 92647</p>
+              </div>
+          </a>
+      </div>
+      <div class="location-card">
+          <a href="https://maps.google.com/?q=3400+West+Ball+Rd+Suite+204,+Anaheim,+CA+92804" target="_blank">
+              <img src="images/locations/Anaheim-1536x866.webp" alt="Anaheim">
+              <div class="location-card-content">
+                  <h3>Anaheim</h3>
+                  <p>3400 West Ball Rd Suite 204<br>Anaheim, CA 92804</p>
+              </div>
+          </a>
+      </div>
+      <div class="location-card">
+          <a href="https://maps.google.com/?q=1211+N+Broadway,+Santa+Ana,+CA+92701" target="_blank">
+              <img src="images/locations/Santa-Ana.webp" alt="Santa Ana">
+              <div class="location-card-content">
+                  <h3>Santa Ana</h3>
+                  <p>1211 N Broadway<br>Santa Ana, CA 92701</p>
+              </div>
+          </a>
+      </div>
+      <div class="location-card">
+          <a href="https://maps.google.com/?q=504+W.+Pueblo+St+Suite+301,+Santa+Barbara,+CA+93105" target="_blank">
+              <img src="images/locations/Santa-Barbara.webp" alt="Santa Barbara">
+              <div class="location-card-content">
+                  <h3>Santa Barbara</h3>
+                  <p>504 W. Pueblo St Suite 301<br>Santa Barbara, CA 93105</p>
+              </div>
+          </a>
+      </div>
+      <div class="location-card">
+          <a href="https://maps.google.com/?q=5632+Philadelphia+St,+Suite+202,+Chino,+CA+91710" target="_blank">
+              <img src="images/locations/Chino-1536x1536.webp" alt="Chino">
+              <div class="location-card-content">
+                  <h3>Chino</h3>
+                  <p>5632 Philadelphia St, Suite 202<br>Chino, CA 91710</p>
+              </div>
+          </a>
+      </div>
+      <div class="location-card">
+          <a href="https://maps.google.com/?q=13132+Studebaker+Road,+Suite+7,+Norwalk,+CA+90650" target="_blank">
+              <img src="images/locations/Norwalk.webp" alt="Norwalk">
+              <div class="location-card-content">
+                  <h3>Norwalk</h3>
+                  <p>13132 Studebaker Road, Suite 7<br>Norwalk, CA 90650</p>
+              </div>
+          </a>
+      </div>
+      <div class="location-card">
+          <a href="https://maps.google.com/?q=101+E.+Beverly+Blvd.+Ste+204,+Montebello,+CA+90640" target="_blank">
+              <img src="images/locations/Montebello-1536x693.webp" alt="Montebello">
+              <div class="location-card-content">
+                  <h3>Montebello</h3>
+                  <p>101 E. Beverly Blvd. Ste 204<br>Montebello, CA 90640</p>
+              </div>
+          </a>
+      </div>
+      <div class="location-card">
+          <a href="https://maps.google.com/?q=16100+Northwest+Cornell+Road+Suite+100,+Beaverton,+OR+97006" target="_blank">
+              <img src="images/locations/Beaverton-1536x1536.webp" alt="Beaverton">
+              <div class="location-card-content">
+                  <h3>Beaverton</h3>
+                  <p>16100 Northwest Cornell Road Suite 100<br>Beaverton, OR 97006</p>
+              </div>
+          </a>
+      </div>
+      <div class="location-card">
+          <a href="https://maps.google.com/?q=9150+Wilshire+Blvd.,+Suite+205,+Beverly+Hills,+CA+90212" target="_blank">
+              <img src="images/locations/Dermatologists-in-Beverly-Hills-1.webp" alt="Beverly Hills">
+              <div class="location-card-content">
+                  <h3>Beverly Hills</h3>
+                  <p>9150 Wilshire Blvd., Suite 205<br>Beverly Hills, CA 90212</p>
+              </div>
+          </a>
+      </div>
+      <div class="location-card">
+          <a href="https://maps.google.com/?q=3543+San+Dimas+St,+Ste+A,+Bakersfield,+CA+93301" target="_blank">
+              <img src="images/locations/Bakersfield-img.webp" alt="Bakersfield">
+              <div class="location-card-content">
+                  <h3>Bakersfield</h3>
+                  <p>3543 San Dimas St, Ste A<br>Bakersfield, CA 93301</p>
+              </div>
+          </a>
+      </div>
   </section>
   
-
-
-
 
 
   	
@@ -332,7 +520,7 @@
               </div>
             </div>
             <div class="col-md">
-        <!--
+        
               <div class="ftco-footer-widget mb-5">
                 <h2 class="ftco-heading-2">Recent Blog</h2>
                 <div class="block-21 mb-4 d-flex">
