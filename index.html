@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <title>CA.Rheumatology institute</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -25,11 +27,51 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
   </head>
   <body>
+	<script>
+		$(document).ready(function () {
+		  $(".home-slider").owlCarousel({
+			items: 1,
+			loop: true,
+			autoplay: true,
+			autoplayTimeout: 5000,
+			autoplayHoverPause: true,
+			nav: true,
+			dots: true,
+			navText: [
+			  '<span class="owl-prev">‹</span>',
+			  '<span class="owl-next">›</span>',
+			],
+			responsive: {
+			  0: {
+				items: 1,
+			  },
+			  600: {
+				items: 1,
+			  },
+			  1000: {
+				items: 1,
+			  },
+			},
+		  });
+		});
+	  </script>
+	  
+
 <style>.text-class {
 	white-space: nowrap; /* Prevent text from breaking onto a new line */
 	
+}
+body{
+	font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 </style>
@@ -108,79 +150,29 @@
 	
 	
     <!-- END nav -->
-    <style>
-		.slider-item h1 {
-	  font-size: 3.5rem; /* Large font size for better visibility */
-	  font-weight: bold; /* Makes the text bold */
-	  color: #003366; /* A strong, dark color for better contrast */
-	  background: rgba(202, 201, 201, 0.8); /* Semi-transparent white background */
-	  padding: 10px 20px; /* Adds padding around the text */
-	  border-radius: 10px; /* Adds rounded corners to the background */
-	  display: inline-block; /* Ensures the background fits the text */
-	  line-height: 1.2; /* Adjust line height for better spacing */
-	  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a polished look */
-	}
-	.slider-item h1 {
-  font-size: 3.5rem; /* Large font size for better visibility */
-  font-weight: bold; /* Makes the text bold */
-  color: #003366; /* A strong, dark color for better contrast */
-  background: rgba(202, 201, 201, 0.3); /* Less visible background */
-  padding: 10px 20px; /* Adds padding around the text */
-  border-radius: 10px; /* Adds rounded corners to the background */
-  display: inline-block; /* Ensures the background fits the text */
-  line-height: 1.2; /* Adjust line height for better spacing */
-}
+    
 
-	
-	.slider-item .overlay {
-	  background-color: rgba(0, 0, 0, 0.4); /* Slightly darkens the background image */
-	  position: absolute;
-	  top: 0;
-	  left: 0;
-	  right: 0;
-	  bottom: 0;
-	  z-index: 1;
-	}
-	
-	.slider-item h1 span {
-	  z-index: 2; /* Ensures text stays above the overlay */
-	  position: relative;
-	}
-	
-	.btn-secondary {
-	  background-color: #ff6600; /* Bright orange for high contrast */
-	  color: white; /* Text color for better readability */
-	  font-size: 1rem; /* Adjust font size for clarity */
-	  font-weight: bold; /* Make the text stand out */
-	  padding: 10px 20px; /* Add padding for a larger clickable area */
-	  border: none; /* Remove border */
-	  border-radius: 5px; /* Rounded corners for a modern look */
-	  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
-	  transition: all 0.3s ease; /* Smooth hover effect */
-	}
-	
-	.btn-secondary:hover {
-	  background-color: #ff4500; /* Slightly darker orange on hover */
-	  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
-	  transform: translateY(-2px); /* Slight "lift" effect */
-	  text-decoration: none; /* Ensure no underline on hover */
-	}
-	
-	
-	</style>
-	
     <section class="home-slider owl-carousel">
       <div class="slider-item" style="background-image:url(images/Rheumatologist.jpg);" data-stellar-background-ratio="0.5">
       	<div class="overlay"></div>
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
-          <div class="col-md-6 text ftco-animate">
-            <h1 class="mb-4"> <span>Comprehensive Rheumatology Care for a Healthier, Pain-Free Life.
+          <div  class="col-md-12 text ftco-animate">
+            <h1 class="mb-4"> <span style="
+				color: rgba(255, 255, 255, 0.9); /* Light white text */
+				background-color: rgba(0, 0, 0, 0.6); /* Slightly dark background */
+				padding: 5px 10px; /* Add padding for readability */
+				border-radius: 5px; /* Rounded corners */
+				display: inline-block; /* Ensure the background only wraps around the text */
+				font-family: Georgia, 'Times New Roman', Times, serif; ">Comprehensive Rheumatology Care for a Healthier, Pain-Free Life.
+				
 			</span></h1>
             <h3 class="subheading">Specialized care for arthritis, autoimmune diseases, and joint health.
 			</h3>
-            <p><a href="services.html" class="btn btn-secondary px-4 py-3 mt-3">View our Services</a></p>
-          </div>
+            <p><a href="services.html" class="btn btn-secondary px-4 py-3 mt-3">View our services</a></p>
+				<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+			</div>
         </div>
         </div>
       </div>
@@ -189,83 +181,113 @@
       	<div class="overlay"></div>
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
-          <div class="col-md-6 text ftco-animate">
-            <h1 class="mb-4"> <span>Comprehensive Rheumatology Care for a Healthier, Pain-Free Life.
+          <div class="col-md-12 text ftco-animate">
+            <h1 class="mb-4"> <span style="
+				color: rgba(255, 255, 255, 0.9); /* Light white text */
+				background-color: rgba(0, 0, 0, 0.6); /* Slightly dark background */
+				padding: 5px 10px; /* Add padding for readability */
+				border-radius: 5px; /* Rounded corners */
+				display: inline-block; /* Ensure the background only wraps around the text */ 
+			 font-family: Georgia, 'Times New Roman', Times, serif;	">Comprehensive Rheumatology Care for a Healthier, Pain-Free Life.
 				
 			</span></h1>
             <h3 class="subheading">Specialized care for arthritis, autoimmune diseases, and joint health.
 				
 			</h3>
             <p><a href="services.html" class="btn btn-secondary px-4 py-3 mt-3">View our services</a></p>
-          </div>
+
+		
+		</div>
         </div>
         </div>
       </div>
+
+	  
     </section>
 		
-	
+<style>
+  .highlighted-text:hover {
+  color: #fff; /* Bright white on hover */
+  background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+ 
+  </style>
 
 
-    <section class="ftco-services ftco-no-pb">
-			<div class="container">
-				<div class="row no-gutters">
-          <div class="col-md-3 d-flex services align-self-stretch p-4 ftco-animate">
-            <div class="media block-6 d-block text-center">
-              <div class="icon d-flex justify-content-center align-items-center">
-            		<span class="flaticon-doctor"></span>
-              </div>
-              <div class="media-body p-2 mt-3">
-                <h3 class="heading">Arthritis Care</h3>
-                <p>  </p>
-				<a href="services.html" class="btn btn-secondary px-4 py-3 mt-3">learn more</a>
-
-              </div>
-            </div>      
-          </div>
-          <div class="col-md-3 d-flex services align-self-stretch p-4 ftco-animate">
-            <div class="media block-6 d-block text-center">
-              <div class="icon d-flex justify-content-center align-items-center">
-            		<span class="flaticon-ambulance"></span>
-              </div>
-              <div class="media-body p-2 mt-3">
-                <h3 class="heading">Autoimmune Disease Treatment</h3>
-                <p>  </p>
-				<a href="services.html" class="btn btn-secondary px-4 py-3 mt-3">learn more</a>
-
-              </div>
-            </div>    
-          </div>
-          <div class="col-md-3 d-flex services align-self-stretch p-4 ftco-animate">
-            <div class="media block-6 d-block text-center">
-              <div class="icon d-flex justify-content-center align-items-center">
-            		<span class="flaticon-stethoscope"></span>
-              </div>
-              <div class="media-body p-2 mt-3">
-                <h3 class="heading">Gout Management
-				</h3>
-                <p>  </p>
-				<a href="services.html" class="btn btn-secondary px-4 py-3 mt-3">learn more</a>
-
-              </div>
-            </div>      
-          </div>
-          <div class="col-md-3 d-flex services align-self-stretch p-4 ftco-animate">
-            <div class="media block-6 d-block text-center">
-              <div class="icon d-flex justify-content-center align-items-center">
-            		<span class="flaticon-24-hours"></span>
-              </div>
-              <div class="media-body p-2 mt-3">
-                <h3 class="heading">Osteoporosis Treatment
-				</h3>
-                <p>  </p>
-				<a href="services.html" class="btn btn-secondary px-4 py-3 mt-3">learn more</a>
-
-              </div>
-            </div>      
-          </div>
-        </div>
+	<section class="ftco-services ftco-no-pb">
+		<div class="container">
+		  <div class="row no-gutters">
+	  
+			<!-- Service 1 -->
+			<div class="col-md-3 d-flex services align-self-stretch p-4 ftco-animate">
+			  <a href="services.html" class="media block-6 d-block text-center text-decoration-none">
+				<div class="icon d-flex justify-content-center align-items-center">
+				  <span class="flaticon-doctor"></span>
+				</div>
+				<div class="media-body p-2 mt-3">
+				  <h3 class="heading">Arthritis Care</h3>
+				  <p></p>
+				</div>
+			  </a>
 			</div>
-		</section>
+	  
+			<!-- Service 2 -->
+			<div class="col-md-3 d-flex services align-self-stretch p-4 ftco-animate">
+			  <a href="services.html" class="media block-6 d-block text-center text-decoration-none">
+				<div class="icon d-flex justify-content-center align-items-center">
+				  <span class="flaticon-ambulance"></span>
+				</div>
+				<div class="media-body p-2 mt-3">
+				  <h3 class="heading">Autoimmune Disease Treatment</h3>
+				  <p></p>
+				</div>
+			  </a>
+			</div>
+	  
+			<!-- Service 3 -->
+			<div class="col-md-3 d-flex services align-self-stretch p-4 ftco-animate">
+			  <a href="services.html" class="media block-6 d-block text-center text-decoration-none">
+				<div class="icon d-flex justify-content-center align-items-center">
+				  <span class="flaticon-stethoscope"></span>
+				</div>
+				<div class="media-body p-2 mt-3">
+				  <h3 class="heading">Gout Management</h3>
+				  <p></p>
+				</div>
+			  </a>
+			</div>
+	  
+			<!-- Service 4 -->
+			<div class="col-md-3 d-flex services align-self-stretch p-4 ftco-animate">
+			  <a href="services.html" class="media block-6 d-block text-center text-decoration-none">
+				<div class="icon d-flex justify-content-center align-items-center">
+				  <span class="flaticon-24-hours"></span>
+				</div>
+				<div class="media-body p-2 mt-3">
+				  <h3 class="heading">Osteoporosis Treatment</h3>
+				  <p></p>
+				</div>
+			  </a>
+			</div>
+	  
+		  </div>
+		</div>
+	  </section>
+	  <style>
+	  .services a {
+		display: block;
+		text-decoration: none;
+		color: inherit; /* Ensures link inherits text color */
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+	  }
+	  
+	  .services a:hover {
+		transform: scale(1.05); /* Slight zoom on hover */
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add hover shadow */
+	  }
+	</style>
+
+
 		<!--
 	
 		
@@ -575,7 +597,7 @@
     	</div>
     </section>
 		
-	<section class="ftco-intro" style="background-image: url(images/bg_3.jpg);" data-stellar-background-ratio="0.5">
+	<section class="ftco-intro" style="background-image: url(images/learnmore.jpg);" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
@@ -971,7 +993,7 @@
 				</div>
 			</div>
 		</section>
-	-->
+	--
     <section class="ftco-section testimony-section bg-light">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-2">
@@ -1061,272 +1083,14 @@
         </div>
       </div>
     </section>
-<!--
-    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter" style="background-image: url(images/bg_3.jpg);" data-stellar-background-ratio="0.5">
-    	<div class="container">
-    		<div class="row">
-    			<div class="col-md-6 py-5 pr-md-5">
-	          <div class="heading-section heading-section-white ftco-animate mb-5">
-	          	<span class="subheading">Consultation</span>
-	            <h2 class="mb-4">Free Consultation</h2>
-	            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-	          </div>
-	          <form action="#" class="appointment-form ftco-animate">
-	    				<div class="d-md-flex">
-		    				<div class="form-group">
-		    					<input type="text" class="form-control" placeholder="First Name">
-		    				</div>
-		    				<div class="form-group ml-md-4">
-		    					<input type="text" class="form-control" placeholder="Last Name">
-		    				</div>
-	    				</div>
-	    				<div class="d-md-flex">
-	    					<div class="form-group">
-		    					<div class="form-field">
-          					<div class="select-wrap">
-                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                      <select name="" id="" class="form-control">
-                      	<option value="">Select Your Services</option>
-                        <option value="">Neurology</option>
-                        <option value="">Cardiology</option>
-                        <option value="">Dental</option>
-                        <option value="">Ophthalmology</option>
-                        <option value="">Other Services</option>
-                      </select>
-                    </div>
-		              </div>
-		    				</div>
-	    					<div class="form-group ml-md-4">
-		    					<input type="text" class="form-control" placeholder="Phone">
-		    				</div>
-	    				</div>
-	    				<div class="d-md-flex">
-		    				<div class="form-group">
-		    					<div class="input-wrap">
-		            		<div class="icon"><span class="ion-md-calendar"></span></div>
-		            		<input type="text" class="form-control appointment_date" placeholder="Date">
-	            		</div>
-		    				</div>
-		    				<div class="form-group ml-md-4">
-		    					<div class="input-wrap">
-		            		<div class="icon"><span class="ion-ios-clock"></span></div>
-		            		<input type="text" class="form-control appointment_time" placeholder="Time">
-	            		</div>
-		    				</div>
-	    				</div>
-	    				<div class="d-md-flex">
-	    					<div class="form-group">
-		              <textarea name="" id="" cols="30" rows="2" class="form-control" placeholder="Message"></textarea>
-		            </div>
-		            <div class="form-group ml-md-4">
-		              <input type="submit" value="Appointment" class="btn btn-secondary py-3 px-4">
-		            </div>
-	    				</div>
-	    			</form>
-    			</div>
-    			<div class="col-lg-6 p-5 bg-counter aside-stretch">
-						<h3 class="vr">About Dr.Care Facts</h3>
-    				<div class="row pt-4 mt-1">
-		          <div class="col-md-6 d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18 p-5 bg-light">
-		              <div class="text">
-		                <strong class="number" data-number="30">0</strong>
-		                <span>Years of Experienced</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md-6 d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18 p-5 bg-light">
-		              <div class="text">
-		                <strong class="number" data-number="4500">0</strong>
-		                <span>Happy Patients</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md-6 d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18 p-5 bg-light">
-		              <div class="text">
-		                <strong class="number" data-number="84">0</strong>
-		                <span>Number of Doctors</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md-6 d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18 p-5 bg-light">
-		              <div class="text">
-		                <strong class="number" data-number="300">0</strong>
-		                <span>Number of Staffs</span>
-		              </div>
-		            </div>
-		          </div>
-	          </div>
-          </div>
-        </div>
-    	</div>
-    </section>
 -->
-  
-<!--     <section class="ftco-section bg-light">
-    	<div class="container">
-    		<div class="row justify-content-center mb-5 pb-2">
-          <div class="col-md-8 text-center heading-section ftco-animate">
-          	<span class="subheading">Pricing</span>
-            <h2 class="mb-4">Our Pricing</h2>
-            <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-          </div>
-        </div>
-    		<div class="row">
-        	<div class="col-md-3 ftco-animate">
-        		<div class="pricing-entry pb-5 text-center">
-        			<div>
-	        			<h3 class="mb-4">Basic</h3>
-	        			<p><span class="price">$24.50</span> <span class="per">/ session</span></p>
-	        		</div>
-        			<ul>
-        				<li>Diagnostic Services</li>
-								<li>Professional Consultation</li>
-								<li>Tooth Implants</li>
-								<li>Surgical Extractions</li>
-								<li>Teeth Whitening</li>
-        			</ul>
-        			<p class="button text-center"><a href="#" class="btn btn-primary px-4 py-3">Get Offer</a></p>
-        		</div>
-        	</div>
-        	<div class="col-md-3 ftco-animate">
-        		<div class="pricing-entry pb-5 text-center">
-        			<div>
-	        			<h3 class="mb-4">Standard</h3>
-	        			<p><span class="price">$34.50</span> <span class="per">/ session</span></p>
-	        		</div>
-        			<ul>
-        				<li>Diagnostic Services</li>
-								<li>Professional Consultation</li>
-								<li>Tooth Implants</li>
-								<li>Surgical Extractions</li>
-								<li>Teeth Whitening</li>
-        			</ul>
-        			<p class="button text-center"><a href="#" class="btn btn-primary px-4 py-3">Get Offer</a></p>
-        		</div>
-        	</div>
-        	<div class="col-md-3 ftco-animate">
-        		<div class="pricing-entry active pb-5 text-center">
-        			<div>
-	        			<h3 class="mb-4">Premium</h3>
-	        			<p><span class="price">$54.50</span> <span class="per">/ session</span></p>
-	        		</div>
-        			<ul>
-        				<li>Diagnostic Services</li>
-								<li>Professional Consultation</li>
-								<li>Tooth Implants</li>
-								<li>Surgical Extractions</li>
-								<li>Teeth Whitening</li>
-        			</ul>
-        			<p class="button text-center"><a href="#" class="btn btn-primary px-4 py-3">Get Offer</a></p>
-        		</div>
-        	</div>
-        	<div class="col-md-3 ftco-animate">
-        		<div class="pricing-entry pb-5 text-center">
-        			<div>
-	        			<h3 class="mb-4">Platinum</h3>
-	        			<p><span class="price">$89.50</span> <span class="per">/ session</span></p>
-	        		</div>
-        			<ul>
-        				<li>Diagnostic Services</li>
-								<li>Professional Consultation</li>
-								<li>Tooth Implants</li>
-								<li>Surgical Extractions</li>
-								<li>Teeth Whitening</li>
-        			</ul>
-        			<p class="button text-center"><a href="#" class="btn btn-primary px-4 py-3">Get Offer</a></p>
-        		</div>
-        	</div>
-        </div>
-    	</div>
-    </section>
- -->
-		
- <!--
- <section class="ftco-section bg-light">
-			<div class="container">
-				<div class="row justify-content-center mb-5 pb-2">
-          <div class="col-md-8 text-center heading-section ftco-animate">
-          	<span class="subheading">Blog</span>
-            <h2 class="mb-4">Recent Blog</h2>
-            <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-          </div>
-        </div>
-				<div class="row">
-          <div class="col-md-4 ftco-animate">
-            <div class="blog-entry">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
-								<div class="meta-date text-center p-2">
-                  <span class="day">23</span>
-                  <span class="mos">January</span>
-                  <span class="yr">2019</span>
-                </div>
-              </a>
-              <div class="text bg-white p-4">
-                <h3 class="heading"><a href="#">Scary Thing That You Don’t Get Enough Sleep</a></h3>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                <div class="d-flex align-items-center mt-4">
-	                <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
-	                <p class="ml-auto mb-0">
-	                	<a href="#" class="mr-2">Admin</a>
-	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-	                </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="blog-entry">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
-								<div class="meta-date text-center p-2">
-                  <span class="day">23</span>
-                  <span class="mos">January</span>
-                  <span class="yr">2019</span>
-                </div>
-              </a>
-              <div class="text bg-white p-4">
-                <h3 class="heading"><a href="#">Scary Thing That You Don’t Get Enough Sleep</a></h3>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                <div class="d-flex align-items-center mt-4">
-	                <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
-	                <p class="ml-auto mb-0">
-	                	<a href="#" class="mr-2">Admin</a>
-	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-	                </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="blog-entry">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
-								<div class="meta-date text-center p-2">
-                  <span class="day">23</span>
-                  <span class="mos">January</span>
-                  <span class="yr">2019</span>
-                </div>
-              </a>
-              <div class="text bg-white p-4">
-                <h3 class="heading"><a href="#">Scary Thing That You Don’t Get Enough Sleep</a></h3>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                <div class="d-flex align-items-center mt-4">
-	                <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
-	                <p class="ml-auto mb-0">
-	                	<a href="#" class="mr-2">Admin</a>
-	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-	                </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-			</div>
-		</section>
-	-->
-		
+<section class="ftco-section testimony-section bg-light">
+	<div class="container">
+	 
+	</div>
+  </section>
+
+ 
   	
 	<footer class="ftco-footer ftco-bg-dark ftco-section">
 		<div class="container">
@@ -1376,7 +1140,7 @@
 			  </div>
 			</div>
 			<div class="col-md">
-		<!--
+	
 			  <div class="ftco-footer-widget mb-5">
 				<h2 class="ftco-heading-2">Recent Blog</h2>
 				<div class="block-21 mb-4 d-flex">
