@@ -1,0 +1,49 @@
+/* hero sec   */
+
+.button-container {
+display: flex;
+gap: 10px; /* Adjust spacing between buttons */
+align-items: center; /* Aligns buttons vertically */
+}
+
+/* nav   */
+/* Adjust padding to push content lower */
+.slider-item {
+    padding-top: 100px; /* Push hero section downward */
+}
+
+/* Lighten the overlay to make image clearer */
+.overlay {
+    background: rgba(0, 0, 0, 0.3); /* Reduce darkness */
+}
+
+/* Improve button spacing */
+.button-container p {
+    display: inline-block;
+    margin-right: 15px; /* Add spacing between buttons */
+}
+
+/* Improve the hero text readability */
+.slider-item h1,
+.slider-item h2,
+.slider-item h4 {
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Add shadow for readability */
+}
+
+/* Improve key info bar styling */
+.key-info {
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.key-info a {
+    color: #007bff; /* Highlight links */
+    font-weight: bold;
+}
+
+
+

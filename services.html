@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="updated-styles/services.css">
   </head>
   <body>
     
@@ -46,57 +47,95 @@
 }
 </style>
 
-<nav class="navbar py-4 navbar-expand-lg ftco_navbar navbar-light bg-light flex-row">
+ <!-- new nav -->
+ <nav class="navbar py-3 navbar-expand-lg ftco_navbar navbar-light bg-light flex-row">
 	<div class="container">
-	  <div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
-		<div class="col-lg-2 pr-4 align-items-center">
-		  <a class="navbar-brand" href="index.html">CA<span>Rheumatology</span></a>
-		</div>
-		<div class="col-lg-10 d-none d-md-block">
-		  <div class="row d-flex">
-			<div class="col-md-4 pr-4 d-flex topper align-items-center">
-			  <!-- Address placeholder -->
+		<div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0 w-100">
+			<!-- Logo Section -->
+			<div class="col-lg-3 d-flex align-items-center">
+				<a class="navbar-brand" href="index.html">CA<span style="color:#007bff;">Rheumatology</span></a>
 			</div>
-			<div class="col-md-8 d-flex justify-content-end align-items-center text-class">
-			  <div class="d-flex align-items-center mr-4">
-				<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
-				  <span class="icon-paper-plane"></span>
+<style>
+	.loca :hover{
+		color: #244772;
+	}
+</style>
+			<!-- Clinic Key Info Section -->
+			<div class="col-lg-9 d-none d-md-flex justify-content-between align-items-center key-info">
+				<div class="d-flex align-items-center">
+					<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
+						<span class="icon-map-marker text-primary"></span>
+					</div>
+					<a href="locations.html" ><span class="loca" class="text text-muted"><strong class="loca">Clinic Locations</strong> </a>
+					</span>
 				</div>
-				<span class="text">Email: cidsferreal@email.com</span>
-			  </div>
-			  <div class="d-flex align-items-center">
-				<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
-				  <span class="icon-phone2"></span>
+
+				<div class="d-flex align-items-center">
+					<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
+						 <span class="fa fa-clock text-primary"></span>
+					</div>
+					<span class="text text-muted"><strong>Hours:</strong> Mon-Fri 9AM-6PM | Sat 10AM-4PM</span>
 				</div>
-				<span class="text">Phone: 888-367-1850</span>
-			  </div>
+
+				<div class="d-flex align-items-center">
+					<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
+						<span class="icon-paper-plane text-primary"></span>
+					</div>
+					<span class="text text-muted">
+						<a href="mailto:cidsferreal@email.com" class="text-primary">cidsferreal@email.com</a>
+					</span>
+				</div>
+
+				<div class="d-flex align-items-center">
+					<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
+						<span class="icon-phone2 text-primary"></span>
+					</div>
+					<span class="text text-muted"> 
+						<a href="tel:8883671850" class="text-primary font-weight-bold">888-367-1850</a>
+					</span>
+				</div>
 			</div>
-		  </div>
 		</div>
+	</div>
+</nav>
+  
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
+	<div class="container d-flex align-items-center">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="oi oi-menu"></span> Menu
+	  </button>
+	  <p class="button-custom order-lg-last mb-0"><a href="appointment.html" class="btn btn-secondary py-2 px-3">Make An Appointment</a></p>
+	  <div class="collapse navbar-collapse" id="ftco-nav">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item " id=""><a href="index.html" class="nav-link pl-0">Home</a></li>
+
+					<li class="nav-item" id="about"><a href="about.html" class="nav-link">About</a></li>
+					<li class="nav-item active" id="services"><a href="services.html" class="nav-link ">Services</a></li>
+					<li class="nav-item" ><a href="fq.html" class="nav-link">F&Q</a></li>
+					<li class="nav-item" ><a href="blog.html" id="patient" class="nav-link"> Blog</a></li>
+					<li class="nav-item" ><a href="pat-resources.html" id="patient" class="nav-link"> Providers</a></li>
+
+					<li class="nav-item" id="contact"><a href="contact.html" class="nav-link">Contact</a></li>
+			
+		</ul>
+		
 	  </div>
 	</div>
   </nav>
-  
-
-	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container d-flex align-items-center">
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
-	      <p class="button-custom order-lg-last mb-0"><a href="appointment.html" class="btn btn-secondary py-2 px-3">Make An Appointment</a></p>
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav mr-auto">
-	        	<li class="nav-item "><a href="index.html" class="nav-link">Home</a></li>
-	        	<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-	        	<li class="nav-item active"><a href="services.html" class="nav-link pl-0">Services</a></li>
-				<li class="nav-item" ><a href="locations.html" class="nav-link">Locations</a></li>
-	        	<li class="nav-item"><a href="patient.html" class="nav-link">Patients Info</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
     <!-- END nav -->
+
+	
+	
+
+
+
+
+	
+	
+
+
+
     <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
@@ -109,32 +148,19 @@
       </div>
     </section>
 		
-		<section class="ftco-section">
+
+	<section class="ftco-section">
     	<div class="container">
     		<div class="row justify-content-center mb-5 pb-2">
           <div class="col-md-8 text-center heading-section ftco-animate">
-          	<span class="subheading">Services</span>
-            <h2 class="mb-4">Our Rheumatology Services</h2>
+          	<span class="subheading">Our Services</span>
+			  <h2 style="font-size: medium;" class="mb-2">At CA Rheumatology, we provide a comprehensive range of services specializing in the diagnosis and treatment of rheumatic diseases. Our clinic is equipped with advanced medical technology and a team of experienced specialists dedicated to improving patient outcomes through innovative and personalized treatment plans.</h2>
+            <p></p>
           </div>
         </div>
     		<div class="ftco-departments">
 					<div class="row">
-						<!--
-            <div class="col-md-12 nav-link-wrap">
-	            <div class="nav nav-pills d-flex text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-	              <a class="nav-link ftco-animate active" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Neurology</a>
-
-	              <a class="nav-link ftco-animate" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Surgical</a>
-
-	              <a class="nav-link ftco-animate" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false">Dental</a>
-
-	              <a class="nav-link ftco-animate" id="v-pills-4-tab" data-toggle="pill" href="#v-pills-4" role="tab" aria-controls="v-pills-4" aria-selected="false">Ophthalmology</a>
-
-	              <a class="nav-link ftco-animate" id="v-pills-5-tab" data-toggle="pill" href="#v-pills-5" role="tab" aria-controls="v-pills-5" aria-selected="false">Cardiology</a>
-
-	            </div>
-	          </div>
-			-->
+			
 	          <div class="col-md-12 tab-wrap">
 	            
 	            <div class="tab-content bg-light p-4 p-md-5 ftco-animate" id="v-pills-tabContent">
@@ -146,11 +172,23 @@
 	              		</div>
 	              		<div class="col-lg-8">
 	              					
-							
+							<style>
+								.small-icon {
+									width: 90px;
+									height: 90px;
+									border-radius: 80px;
+								}
+	
+
+								</style>
 							<div class="row mt-5 pt-2">
 												<div class="col-lg-6">
 													<div class="services-2 d-flex">
-														<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-first-aid-kit"></span></div>
+														
+														<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center">
+															<img src="images/suggestions/ser2/Arthritis-Treatment.jpg" alt="First Aid Kit" class="service-icon small-icon">
+														</div>
+														
 														<div class="text">
 															<h3>Arthritis Care:</h3>
 															<p>Comprehensive diagnosis and treatment of all forms of arthritis.</p>
@@ -159,7 +197,10 @@
 												</div>
 												<div class="col-lg-6">
 													<div class="services-2 d-flex">
-														<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-dropper"></span></div>
+														<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center">
+															<img src="images/suggestions/ser2/Diagnosis-Treatment-of-Osteoporosis.jpg" alt="First Aid Kit" class="service-icon small-icon">
+														</div>
+														
 														<div class="text">
 															<h3> Osteoporosis Treatment </h3>
 															<p> Bone density evaluations and tailored treatment plans.</p>
@@ -168,17 +209,20 @@
 												</div>
 												<div class="col-lg-6">
 													<div class="services-2 d-flex">
-														<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-experiment-results"></span></div>
+														<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center">
+															<img src="images/suggestions/services/rehm.jpg" alt="First Aid Kit" class="service-icon small-icon">
+														</div>
 														<div class="text">
-															<h3>Lupus Managemen</h3>
+															<h3>Lupus Management</h3>
 															<p>Helping patients manage lupus symptoms effectively.</p>
 														</div>
 													</div>
 												</div>
 												<div class="col-lg-6">
 													<div class="services-2 d-flex">
-														<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-heart-rate"></span></div>
-														<div class="text">
+														<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center">
+															<img src="images/suggestions/services/jout.jpg" alt="First Aid Kit" class="service-icon small-icon">
+														</div>														<div class="text">
 															<h3>Gout Management</h3>
 															<p> Effective therapies to reduce inflammation and prevent flare-ups.</p>
 														</div>
@@ -394,58 +438,555 @@
     	</div>
     </section>
 
-    <footer class="ftco-footer ftco-bg-dark py-4">
-		<div class="container text-center text-md-start">
-		  <div class="row">
-			<!-- Logo and Description -->
-			<div class="col-md-3 mb-3">
-				<h1 class="ftco-heading-2 logo" style="color:#007bff; font-size: 22px;">
-					CA.<span style="color: orange;">Rheumatology institute</span></h1>
-	
-			  <p>Comprehensive care for arthritis, autoimmune diseases, and joint health.</p>
+
+<!-- conditions  -->
+
+<section class="conditions-treated">
+	<div class="container">
+		<div class="row text-center">
+			<div class="col-md-12">
+				<h2 class="section-title">Conditions We Treat</h2>
+				<p class="section-subtitle">Expert care for a wide range of rheumatic diseases.</p>
 			</div>
-			<!-- Quick Links -->
-			<div class="col-md-3 mb-3">
-			  <h2 class="ftco-heading-2" style="color: azure;">Quick Links</h2>
-			  <ul class="list-unstyled">
-				<li><a href="index.html" class="d-block mb-2">Home</a></li>
-				<li><a href="about.html" class="d-block mb-2">About</a></li>
-				<li><a href="services.html" class="d-block mb-2">Services</a></li>
-				<li><a href="locations.html" class="d-block mb-2">Locations</a></li>
-				<li><a href="patient.html" class="d-block mb-2">Patient Info</a></li>
-				<li><a href="contact.html" class="d-block mb-2">Contact</a></li>
-			  </ul>
-			</div>
-			<!-- Services -->
-			<div class="col-md-3 mb-3">
-			  <h2 class="ftco-heading-2" style="color: azure;">Services</h2>
-			  <ul class="list-unstyled">
-				<li><a href="#" class="d-block mb-2">Arthritis Care</a></li>
-				<li><a href="#" class="d-block mb-2">Lupus Management</a></li>
-				<li><a href="#" class="d-block mb-2">Osteoporosis Treatment</a></li>
-				<li><a href="#" class="d-block mb-2">Gout Management</a></li>
-				<li><a href="#" class="d-block mb-2">Autoimmune Diseases</a></li>
-			  </ul>
-			</div>
-			<!-- Contact Information -->
-			<div class="col-md-3 mb-3">
-			  <h2 class="ftco-heading-2" style="color: azure;">Contact Us</h2>
-			  <p><a href="locations.html" class="d-block mb-2">View Our 20 Locations</a></p>
-			  <p><i class="icon icon-phone"></i> <a href="tel:1234567890"> (888) 367-1850</a></p>
-			  <p><i class="fas fa-fax"></i> <a href="fax:8052220323">
-				Fax: (805) 222-0323</a></p>
-			
-			</div>
-		  </div>
-		  <div class="row">
-			<div class="col-md-12 text-center mt-3">
-			  <p class="mb-0">
-				&copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | Designed by <a href="https://colorlib.com" target="_blank">spark LLC</a>
-			  </p>
-			</div>
-		  </div>
 		</div>
-	  </footer>
+		
+		<div class="row text-center mt-4">
+			<div class="col-md-4">
+				<div class="condition-box" onclick="toggleDetails('arthritis')">
+					<img src="images/suggestions/services/hand-joints-inflammatiot.webp" class="img-fluid rounded" alt="Inflammatory Arthritis">
+					<h4>Inflammatory Arthritis					<span class="arrow-down">&#9660;</span>
+					</h4>
+					<div id="arthritis" class="condition-details">
+						<p><strong>Overview:</strong> Inflammatory arthritis affects millions worldwide, causing joint pain and stiffness. Our specialists provide innovative treatments, ensuring optimal outcomes.</p>
+						<p><strong>Symptoms:</strong></p>
+						<ul>
+							<li>Joint pain and swelling</li>
+							<li>Morning stiffness</li>
+							<li>Fatigue</li>
+						</ul>
+						<p><strong>When Should I See a Doctor?</strong></p>
+						<p>If you experience persistent joint pain, swelling, or stiffness affecting daily life, seeking medical evaluation can help prevent long-term complications.</p>
+						<p><strong>How is It Treated?</strong></p>
+						<ul>
+							<li>Advanced medications & biologics</li>
+							<li>Regenerative medicine (PRP, stem cell therapy)</li>
+							<li>Personalized treatment plans</li>
+						</ul>
+						<p><strong>Why Choose Us?</strong> Our expert team provides innovative therapies, state-of-the-art diagnostics, and a patient-first approach.</p>
+						<p><a href="appointment.html"><strong>Get Help:</strong></a>  Schedule an appointment today to start your journey towards relief.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="condition-box" onclick="toggleDetails('spondylitis')">
+					<img src="images/suggestions/services/anky.jpg" class="img-fluid rounded" alt="Ankylosing Spondylitis">
+					<h4>Ankylosing Spondylitis					<span class="arrow-down">&#9660;</span>
+					</h4>
+					<div id="spondylitis" class="condition-details">
+						<p><strong>Overview:</strong> A chronic inflammatory disease affecting the spine, leading to reduced flexibility and discomfort.</p>
+						<p><strong>Symptoms:</strong></p>
+						<ul>
+							<li>Lower back pain</li>
+							<li>Stiffness, especially in the morning</li>
+							<li>Fatigue</li>
+						</ul>
+						<p><strong>When Should I See a Doctor?</strong></p>
+						<p>If you have prolonged back pain, limited mobility, or stiffness, early intervention can improve outcomes.</p>
+						<p><strong>How is It Treated?</strong></p>
+						<ul>
+							<li>Physical therapy</li>
+							<li>Anti-inflammatory medication</li>
+							<li>Exercise & lifestyle modifications</li>
+						</ul>
+						<p><strong>Why Choose Us?</strong> We offer specialized care with the latest treatments for long-term relief.</p>
+						<p><a href="appointment.html"><strong>Get Help:</strong></a> Book a consultation with our specialists.</p>
+					
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="condition-box" onclick="toggleDetails('psoriatic')">
+					<img src="images/suggestions/services/psoriaticRheumatoidArthritis.webp" class="img-fluid rounded" alt="Psoriatic Arthritis">
+					<h4>Psoriatic Arthritis					<span class="arrow-down">&#9660;</span>
+					</h4>
+					<div id="psoriatic" class="condition-details">
+						<p><strong>Overview:</strong> A form of arthritis linked to psoriasis, causing joint pain and swelling.</p>
+						<p><strong>Symptoms:</strong></p>
+						<ul>
+							<li>Swollen fingers and toes</li>
+							<li>Joint stiffness</li>
+							<li>Nail changes</li>
+						</ul>
+						<p><strong>When Should I See a Doctor?</strong></p>
+						<p>If you have joint pain with psoriasis or skin changes, timely treatment can prevent further damage.</p>
+						<p><strong>How is It Treated?</strong></p>
+						<ul>
+							<li>Biologic therapy</li>
+							<li>Targeted medication</li>
+							<li>Lifestyle & dietary changes</li>
+						</ul>
+						<p><strong>Why Choose Us?</strong> Our advanced treatments and expert team ensure the best care for psoriatic arthritis.</p>
+						<p><a href="appointment.html"><strong>Get Help:</strong></a> Contact us today to explore treatment options.</p>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row text-center mt-4">
+			<div class="col-md-4">
+				<div class="condition-box" onclick="toggleDetails('rheumatoid')">
+					<img src="images/suggestions/services/rehm.jpg" class="img-fluid rounded" alt="Rheumatoid Arthritis">
+					<h4>Rheumatoid Arthritis					<span class="arrow-down">&#9660;</span>
+					</h4>
+					<div id="rheumatoid" class="condition-details">
+						<p><strong>Overview:</strong> An autoimmune condition that causes chronic inflammation in joints, leading to pain and stiffness.</p>
+						<p><strong>Symptoms:</strong></p>
+						<ul>
+							<li>Joint tenderness and swelling</li>
+							<li>Morning stiffness lasting more than an hour</li>
+							<li>Fatigue, fever, and weight loss</li>
+							<li>Decreased range of motion</li>
+						</ul>
+						<p><strong>When Should I See a Doctor?</strong></p>
+						<p>If you experience persistent joint pain, swelling, or stiffness, particularly in multiple joints, it’s important to seek medical attention early to prevent long-term joint damage and improve quality of life.</p>
+						<p><strong>How is It Treated?</strong></p>
+						<ul>
+							<li>Biologic and targeted synthetic disease-modifying antirheumatic drugs (DMARDs)</li>
+							<li>Anti-inflammatory and immunosuppressive therapy</li>
+							<li>Regenerative treatments such as platelet-rich plasma (PRP) therapy</li>
+							<li>Physical therapy and lifestyle modifications</li>
+						</ul>
+						<p><strong>Why Choose Us?</strong></p>
+						<p>We provide advanced, patient-centered care using state-of-the-art diagnostics, the latest biologic treatments, and customized therapy plans to help manage RA effectively.</p>
+						<p><a href="appointment.html"><strong>Get Help:</strong></a> Contact us today for a personalized treatment plan that can help you regain mobility and reduce pain.</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-4">
+				<div class="condition-box" onclick="toggleDetails('autoimmune')">
+					<img src="images/suggestions/services/Autoimmune-DIseases.jpg" class="img-fluid rounded" alt="Systemic Autoimmune Diseases">
+					<h4>Systemic Autoimmune Diseases 					<span class="arrow-down">&#9660;</span>
+					</h4>
+
+					<div id="autoimmune" class="condition-details">
+						<p><strong>Overview:</strong> Conditions like lupus and Sjögren’s syndrome that affect multiple organs and tissues.</p>
+						<p><strong>Symptoms:</strong></p>
+						<ul>
+							<li>Chronic fatigue</li>
+							<li>Skin rashes and photosensitivity</li>
+							<li>Joint pain and stiffness</li>
+							<li>Dry eyes and dry mouth (specific to Sjögren’s syndrome)</li>
+							<li>Fever and general discomfort</li>
+						</ul>
+						<p><strong>When Should I See a Doctor?</strong></p>
+						<p>If you experience unexplained fatigue, persistent joint pain, or skin rashes that worsen with sun exposure, seeking medical evaluation early can help manage symptoms effectively and prevent organ damage.</p>
+						<p><strong>How is It Treated?</strong></p>
+						<ul>
+							<li>Immunosuppressive medications and corticosteroids</li>
+							<li>Biologic therapies to regulate immune responses</li>
+							<li>Anti-inflammatory and symptom-specific treatments</li>
+							<li>Supportive therapies like hydration strategies for dry eyes and mouth</li>
+						</ul>
+						<p><strong>Why Choose Us?</strong></p>
+						<p>Our multidisciplinary team provides cutting-edge treatment options, personalized care, and expert management strategies to improve long-term outcomes for autoimmune conditions.</p>
+						<p><a href="appointment.html"><strong>Get Help:</strong></a>  Book a consultation with our specialists today to start managing your autoimmune disease effectively.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="condition-box" onclick="toggleDetails('gout')">
+					<img src="images/suggestions/services/jout.jpg" class="img-fluid rounded" alt="Gout">
+					<h4>Metabolic and Crystal-Induced Diseases 					<span class="arrow-down">&#9660;</span>
+					</h4>
+					<div id="gout" class="condition-details">
+						<p><strong>Overview:</strong> A metabolic disorder causing sudden and severe joint pain due to uric acid buildup.</p>
+						<p><strong>Symptoms:</strong></p>
+						<ul>
+							<li>Severe pain in the big toe or other joints</li>
+							<li>Swelling, redness, and warmth in the affected area</li>
+							<li>Sudden onset of intense discomfort, usually at night</li>
+						</ul>
+						<p><strong>When Should I See a Doctor?</strong></p>
+						<p>If you experience repeated gout attacks, persistent joint pain, or notice swelling and redness in your joints, seek medical attention to prevent complications such as joint damage.</p>
+						<p><strong>How is It Treated?</strong></p>
+						<ul>
+							<li>Medications to reduce uric acid levels and prevent flare-ups</li>
+							<li>Anti-inflammatory drugs to relieve acute pain and swelling</li>
+							<li>Lifestyle modifications, including dietary adjustments to reduce purine intake</li>
+							<li>Hydration therapy to aid uric acid excretion</li>
+						</ul>
+						<p><strong>Why Choose Us?</strong></p>
+						<p>Our clinic offers advanced diagnostic tools and personalized treatment plans to effectively manage gout and prevent future flare-ups.</p>
+						<p><a href="appointment.html"><strong>Get Help:</strong></a>  Schedule an appointment today to receive expert guidance on gout management and treatment.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		
+				<!-- Inflammatory Arthritis -->
+				<div class="row text-center mt-4">
+					<!--
+					<div class="col-md-4">
+						<div class="condition-box" onclick="toggleDetails('ankylosing')">
+							<img src="images/suggestions/services/ankylosing.jpg" class="img-fluid rounded small-img" alt="Ankylosing Spondylitis">
+							<h4>Ankylosing Spondylitis <span class="arrow-down">&#9660;</span></h4>
+							<div id="ankylosing" class="condition-details">
+								<p><strong>Overview:</strong> Ankylosing Spondylitis is a chronic inflammatory arthritis affecting the spine and sacroiliac joints, leading to stiffness and pain.</p>
+								<p><strong>Symptoms:</strong></p>
+								<ul>
+									<li>Chronic back pain and stiffness</li>
+									<li>Reduced flexibility in the spine</li>
+									<li>Fatigue and inflammation in other joints</li>
+								</ul>
+								<p><strong>When Should I See a Doctor?</strong></p>
+								<p>If you experience persistent lower back pain, morning stiffness, or limited mobility, early intervention can help prevent spinal fusion.</p>
+								<p><strong>How is It Treated?</strong></p>
+								<ul>
+									<li>Biologic therapies targeting inflammation</li>
+									<li>Physical therapy for mobility improvement</li>
+									<li>Exercise programs to maintain spinal flexibility</li>
+								</ul>
+								<p><strong>Why Choose Us?</strong> We offer personalized treatment plans, advanced diagnostic tools, and expert care tailored to your needs.</p>
+								<p><strong>Get Help:</strong> Schedule an appointment to discuss your treatment options.</p>
+							</div>
+						</div>
+					</div>
+				
+				-->
+		
+				<!-- Systemic Autoimmune Diseases -->
+					<div class="col-md-4">
+						<div class="condition-box" onclick="toggleDetails('lupus')">
+							<img src="images/suggestions/services/systemic-lupus-eryt.webp" class="img-fluid rounded small-img" alt="Systemic Lupus Erythematosus">
+							<h4>Systemic Lupus Erythematosus <span class="arrow-down">&#9660;</span></h4>
+							<div id="lupus" class="condition-details">
+								<p><strong>Overview:</strong> Lupus is a systemic autoimmune disease where the immune system attacks healthy tissues, affecting the skin, joints, and organs.</p>
+								<p><strong>Symptoms:</strong></p>
+								<ul>
+									<li>Fatigue and joint pain</li>
+									<li>Butterfly-shaped facial rash</li>
+									<li>Kidney, heart, and lung complications</li>
+								</ul>
+								<p><strong>When Should I See a Doctor?</strong></p>
+								<p>If you have persistent joint pain, skin rashes, or unexplained fatigue, consult a specialist for early diagnosis.</p>
+								<p><strong>How is It Treated?</strong></p>
+								<ul>
+									<li>Immunosuppressive medications</li>
+									<li>Anti-inflammatory treatments</li>
+									<li>Lifestyle adjustments to manage symptoms</li>
+								</ul>
+								<p><strong>Why Choose Us?</strong> Our lupus specialists provide expert diagnostics and advanced treatment plans to manage symptoms effectively.</p>
+								<p><a href="appointment.html"><strong>Get Help:</strong></a>  Book a consultation for lupus management.</p>
+							</div>
+						</div>
+					</div>
+		
+				<!-- Degenerative Joint Diseases -->
+					<div class="col-md-4">
+						<div class="condition-box" onclick="toggleDetails('osteoarthritis')">
+							<img src="images/suggestions/services/osteoarthritis-hand.jpg" class="img-fluid rounded small-img" alt="Osteoarthritis">
+							<h4>Osteoarthritis <span class="arrow-down">&#9660;</span></h4>
+							<div id="osteoarthritis" class="condition-details">
+								<p><strong>Overview:</strong> Osteoarthritis is a degenerative joint disease that causes cartilage breakdown, leading to joint pain and stiffness.</p>
+								<p><strong>Symptoms:</strong></p>
+								<ul>
+									<li>Joint pain and stiffness</li>
+									<li>Swelling and decreased range of motion</li>
+									<li>Cracking sounds in joints</li>
+								</ul>
+								<p><strong>When Should I See a Doctor?</strong></p>
+								<p>If you experience joint stiffness, pain during movement, or limited mobility, seek medical attention for pain management options.</p>
+								<p><strong>How is It Treated?</strong></p>
+								<ul>
+									<li>Pain relief medications and injections</li>
+									<li>Physical therapy to maintain joint function</li>
+									<li>Weight management and lifestyle modifications</li>
+								</ul>
+								<p><strong>Why Choose Us?</strong> Our clinic offers advanced non-invasive treatments, including regenerative medicine and physical therapy.</p>
+								<p><a href="appointment.html"><strong>Get Help:</strong></a> Contact us today to explore osteoarthritis treatment options.</p>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+		<style>
+		.small-img {
+			width: 80%; /* Reduce image size */
+			height: auto;
+			max-height: 180px;
+			object-fit: cover;
+		}
+		.arrow-down {
+			font-size: 24px;
+			color: #007bff;
+			cursor: pointer;
+			margin-left: 10px;
+			font-weight: bold;
+		}
+		.condition-box h4 {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+		}
+		</style>
+		
+		
+
+	</div>
+</section>
+
+
+
+
+
+
+
+<script>
+	/*
+function toggleDetails(id) {
+	var details = document.getElementById(id);
+	if (details.style.display === "none" || details.style.display === "") {
+		details.style.display = "block";
+	} else {
+		details.style.display = "none";
+	}
+}
+*/
+</script>
+
+
+
+<!-- nee  -->
+<script>
+	// Function to toggle a single detail card
+	function toggleDetails(id) {
+	  var details = document.getElementById(id);
+	  if (details.style.display === "none" || details.style.display === "") {
+		details.style.display = "block";
+	  } else {
+		details.style.display = "none";
+	  }
+	}
+  
+	// Ensure all detail cards are hidden by default on page load
+	window.onload = function() {
+	  var detailsCards = document.querySelectorAll('.card-details');
+	  detailsCards.forEach(function(card) {
+		card.style.display = "none";
+	  });
+	}
+  </script>
+  
+		
+		<!-- Additional rows omitted for brevity -->
+		<style>
+			/* Ensure all condition boxes have the same fixed height */
+			.condition-box {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				height: 500px; /* Adjust the height as needed */
+				padding: 15px;
+				border: 1px solid #e0e0e0;
+				border-radius: 8px;
+				margin-bottom: 20px;
+				overflow: hidden;
+			}
+			/* Force images to maintain consistent size */
+			.condition-box img {
+				width: 100%;
+				height: auto;
+				max-height: 200px;
+				object-fit: cover;
+			}
+			.condition-box h4 {
+				margin: 10px 0;
+				flex-shrink: 0;
+			}
+			/* Make the details section fill remaining space and scroll if necessary */
+			.condition-details {
+				flex-grow: 1;
+				overflow-y: auto;
+				display: none; /* Default hidden; toggled via JavaScript */
+				margin-top: 10px;
+			}
+			.small-img {
+				width: 80%;
+				height: auto;
+				max-height: 180px;
+				object-fit: cover;
+			}
+			.arrow-down {
+				font-size: 24px;
+				color: #007bff;
+				cursor: pointer;
+				margin-left: 10px;
+				font-weight: bold;
+			}
+			.condition-box h4 {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 10px;
+			}
+		</style>
+	
+
+<script>
+	// Function to toggle a single detail card
+	function toggleDetails(id) {
+	  var details = document.getElementById(id);
+	  if (details.style.display === "none" || details.style.display === "") {
+		details.style.display = "block";
+	  } else {
+		details.style.display = "none";
+	  }
+	}
+  
+	// Ensure all detail cards are hidden by default on page load
+	window.onload = function() {
+	  var detailsCards = document.querySelectorAll('.condition-details');
+	  detailsCards.forEach(function(card) {
+		card.style.display = "none";
+	  });
+	}
+</script>
+
+
+<!-- hhhhh-->
+
+
+		<style>
+			/* Default condition-box height is 300px */
+			.condition-box {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				height: 300px; /* Default height */
+				padding: 15px;
+				border: 1px solid #e0e0e0;
+				border-radius: 8px;
+				margin-bottom: 20px;
+				overflow: hidden;
+				transition: height 0.3s ease;
+			}
+			/* Force images to maintain consistent size */
+			.condition-box img {
+				width: 100%;
+				height: auto;
+				max-height: 200px;
+				object-fit: cover;
+			}
+			.condition-box h4 {
+				margin: 10px 0;
+				flex-shrink: 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 10px;
+			}
+			/* Details section fills remaining space and scrolls if needed */
+			.condition-details {
+				flex-grow: 1;
+				overflow-y: auto;
+				display: none; /* Hidden by default; toggled via JS */
+				margin-top: 10px;
+			}
+			.small-img {
+				width: 80%;
+				height: auto;
+				max-height: 180px;
+				object-fit: cover;
+			}
+			.arrow-down {
+				font-size: 24px;
+				color: #007bff;
+				cursor: pointer;
+				margin-left: 10px;
+				font-weight: bold;
+			}
+		</style>
+
+
+<script>
+	// Toggle function that adjusts both the detail visibility and the card height
+	function toggleDetails(id) {
+	  var details = document.getElementById(id);
+	  // Assuming the detail container is a direct child of the condition-box
+	  var container = details.parentNode;
+	  if (details.style.display === "none" || details.style.display === "") {
+		details.style.display = "block";
+		container.style.height = "550px"; // Expand the card height to 500px
+	  } else {
+		details.style.display = "none";
+		container.style.height = "300px"; // Reset back to 300px
+	  }
+	}
+  
+	// Ensure all detail cards are hidden by default on page load
+	window.onload = function() {
+	  var detailsCards = document.querySelectorAll('.condition-details');
+	  detailsCards.forEach(function(card) {
+		card.style.display = "none";
+	  });
+	}
+</script>
+
+
+
+
+
+
+<footer class="ftco-footer ftco-bg-dark py-4">
+	<div class="container text-center text-md-start">
+	  <div class="row">
+		<!-- Logo and Description -->
+		<div class="col-md-3 mb-3">
+			<h1 class="ftco-heading-2 logo" style="color:#007bff; font-size: 22px;">
+				CA.<span style="color: orange;">Rheumatology institute</span></h1>
+
+		  <p>Comprehensive care for arthritis, autoimmune diseases, and joint health.</p>
+		</div>
+		<!-- Quick Links -->
+		<div class="col-md-3 mb-3">
+		  <h2 class="ftco-heading-2" style="color: azure;">Quick Links</h2>
+		  <ul class="list-unstyled">
+			<li><a href="index.html" class="d-block mb-2">Home</a></li>
+			<li><a href="about.html" class="d-block mb-2">About</a></li>
+			<li><a href="services.html" class="d-block mb-2">Services</a></li>
+			<li><a href="locations.html" class="d-block mb-2">Locations</a></li>
+			<li><a href="patient.html" class="d-block mb-2">Patient Info</a></li>
+			<li><a href="contact.html" class="d-block mb-2">Contact</a></li>
+		  </ul>
+		</div>
+		<!-- Services -->
+		
+		
+	    <!-- Contact Information -->
+		<div class="col-md-3 mb-3">
+			<h2 class="ftco-heading-2" style="color: azure;">Contact Us</h2>
+			<p><a href="locations.html" class="d-block mb-2">View Our 20 Locations</a></p>
+			  <div class="contact-box">
+			<p><strong>Phone:</strong> <a href="tel:8883671850">(888) 367-1850</a></p>
+			<p><strong>Email:</strong> <a href="mailto:cidsferreal@email.com">cidsferreal@email.com</a></p>
+		</div>
+	
+	  </div>
+	  <div class="row">
+		<div class="col-md-12 text-center mt-3">
+		  <p class="mb-0">
+			&copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | Designed by <a href="https://colorlib.com" target="_blank">spark LLC</a>
+		  </p>
+		</div>
+	  </div>
+	</div>
+  </footer>
+  
 	  
 	<style>
 		.ftco-footer {

@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 
-
+<link rel="stylesheet" href="updates.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -85,7 +85,7 @@ body{
 }
 
 </style>
-
+<!--  old nav --
 <nav class="navbar py-4 navbar-expand-lg ftco_navbar navbar-light bg-light flex-row">
 	<div class="container">
 	  <div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
@@ -95,7 +95,6 @@ body{
 		<div class="col-lg-10 d-none d-md-block">
 		  <div class="row d-flex">
 			<div class="col-md-4 pr-4 d-flex topper align-items-center">
-			  <!-- Address placeholder -->
 			</div>
 			<div class="col-md-8 d-flex justify-content-end align-items-center text-class">
 			  <div class="d-flex align-items-center mr-4">
@@ -119,7 +118,7 @@ body{
 	  </div>
 	</div>
   </nav>
-  
+-->
 	  <!-- END nav1 -->
     
 	<style>
@@ -147,7 +146,6 @@ body{
 	
 		  </style>  
 		  
-		  
 	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container d-flex align-items-center">
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -160,8 +158,10 @@ body{
 
 						<li class="nav-item" id="about"><a href="about.html" class="nav-link">About</a></li>
 	                    <li class="nav-item " id="services"><a href="services.html" class="nav-link ">Services</a></li>
-						<li class="nav-item" ><a href="locations.html" class="nav-link">Locations</a></li>
-						<li class="nav-item" ><a href="patient.html" id="patient" class="nav-link">Patient Info</a></li>
+						<li class="nav-item" ><a href="fq.html" class="nav-link">F&Q</a></li>
+						<li class="nav-item" ><a href="blog.html" id="patient" class="nav-link"> Blog</a></li>
+						<li class="nav-item" ><a href="pat-resources.html" id="patient" class="nav-link"> Providers</a></li>
+
 						<li class="nav-item" id="contact"><a href="contact.html" class="nav-link">Contact</a></li>
 				
 	        </ul>
@@ -169,12 +169,101 @@ body{
 	      </div>
 	    </div>
 	  </nav>
-	  
-    <!-- END nav -->
-    
+	
+    <!-- new nav -->
+	<nav class="navbar py-3 navbar-expand-lg ftco_navbar navbar-light bg-light flex-row">
+		<div class="container">
+			<div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0 w-100">
+				<!-- Logo Section -->
+				<div class="col-lg-3 d-flex align-items-center">
+					<a class="navbar-brand" href="index.html">CA<span style="color:#007bff;">Rheumatology</span></a>
+				</div>
+	<style>
+		.loca :hover{
+			color: #244772;
+		}
+	</style>
+				<!-- Clinic Key Info Section -->
+				<div class="col-lg-9 d-none d-md-flex justify-content-between align-items-center key-info">
+					<div class="d-flex align-items-center">
+						<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
+							<span class="icon-map-marker text-primary"></span>
+						</div>
+						<a href="locations.html" ><span class="loca" class="text text-muted"><strong class="loca">Clinic Locations</strong> </a>
+						</span>
+					</div>
+	
+					<div class="d-flex align-items-center">
+						<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
+							 <span class="fa fa-clock text-primary"></span>
+						</div>
+						<span class="text text-muted"><strong>Hours:</strong> Mon-Fri 9AM-6PM | Sat 10AM-4PM</span>
+					</div>
+	
+					<div class="d-flex align-items-center">
+						<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
+							<span class="icon-paper-plane text-primary"></span>
+						</div>
+						<span class="text text-muted">
+							<a href="mailto:cidsferreal@email.com" class="text-primary">cidsferreal@email.com</a>
+						</span>
+					</div>
+	
+					<div class="d-flex align-items-center">
+						<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
+							<span class="icon-phone2 text-primary"></span>
+						</div>
+						<span class="text text-muted"> 
+							<a href="tel:8883671850" class="text-primary font-weight-bold">888-367-1850</a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+	
+	<!-- Add FontAwesome for Icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	
+	<!-- Optional: Add Custom CSS for Better Styling -->
+	<style>
+		.navbar-brand {
+			font-size: 1.5rem;
+			font-weight: bold;
+		}
+		.navbar-brand span {
+			color: #4CAF50; /* Green color for the "Rheumatology" part */
+		}
+		.icon {
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: #f8f9fa;
+		}
+		.icon-map-marker, .icon-clock, .icon-paper-plane, .icon-phone2 {
+			color: #4CAF50; /* Green color for icons */
+		}
+		.text {
+			font-size: 0.9rem;
+		}
+		.text a {
+			text-decoration: none;
+		}
+		.text a:hover {
+			text-decoration: underline;
+		}
+		.navbar {
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for the navbar */
+		}
+	</style>
+
+	
 
     <section class="home-slider owl-carousel">
-      <div class="slider-item" style="background-image:url(images/home1.jpg);" data-stellar-background-ratio="0.5">
+      <div class="slider-item" style="background-image:url(images/suggestions/an-older-couple.jpg);" data-stellar-background-ratio="0.5">
       	<div class="overlay"></div>
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
@@ -190,21 +279,26 @@ body{
 			<h2 style="color: rgba(255, 255, 255, 0.9); ">for a Healthier, Pain-Free Life.</h2>
 		</span></h1>
 
-			<h4 class="headline" style="color: rgba(255, 255, 255, 0.9);" >
-					Specialized care for arthritis, autoimmune diseases, and joint health.</h4>
 
+			<h4 class="headline" style="color: rgba(255, 255, 255, 0.9);" >
+			We Offer advanced treatments with a patient-focused approach, ensuring personalized care and improved quality of life.
+	Expert care for arthritis, autoimmune diseases, and joint health.
+		</h4>
+					
+	
+			<div class="button-container">
+				<p><a href="services.html" class="btn btn-secondary px-4 py-3 mt-3">View our services</a></p>
+				<p class="button-custom order-lg-last mb-0"><a href="appointment.html" class="btn btn-secondary py-2 px-3">Make An Appointment</a></p>
+			</div>
 			
-				
-           
-            <p><a href="services.html" class="btn btn-secondary px-4 py-3 mt-3">View our services</a></p>
-				<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 
 			</div>
         </div>
         </div>
       </div>
 
-<div class="slider-item" style="background-image:url(images/rheumatologisthome.jpg);">
+<div class="slider-item" style="background-image:url(images/suggestions/1688505558352.jpg);">
       	<div class="overlay"></div>
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
@@ -219,19 +313,24 @@ body{
 				<h2 style="color: rgba(255, 255, 255, 0.9); ">for a Healthier, Pain-Free Life.</h2>
 			</span></h1>
 
-			<h4 class="headline" style="color: rgba(255, 255, 255, 0.9);" >
-					Specialized care for arthritis, autoimmune diseases, and joint health.</h4>
-
-            <p><a href="services.html" class="btn btn-secondary px-4 py-3 mt-3">View our services</a></p>
-
+				<h4 class="headline" style="color: rgba(255, 255, 255, 0.9);" >
+					We Offer advanced treatments with a patient-focused approach, ensuring personalized care and improved quality of life.
+			Expert care for arthritis, autoimmune diseases, and joint health.
+				</h4>
+			<div class="button-container">
+				<p><a href="services.html" class="btn btn-secondary px-4 py-3 mt-3">View our services</a></p>
+				<p class="button-custom order-lg-last mb-0"><a href="appointment.html" class="btn btn-secondary py-2 px-3">Make An Appointment</a></p>
+			</div>
 		
 		</div>
         </div>
         </div>
       </div>
 
+	
 	  
     </section>
+
 
 	<style>
 		.ftco-services .row {
@@ -302,6 +401,8 @@ body{
 			  <div class="icon d-flex justify-content-center align-items-center">
 				<span class="flaticon-doctor"></span>
 			  </div>
+			 
+			
 			  <div class="media-body mt-3">
 				<h3 class="heading">Arthritis Care</h3>
 			  </div>
@@ -395,22 +496,7 @@ body{
         </div>
     		<div class="ftco-departments">
 					<div class="row">
-						<!--
-            <div class="col-md-12 nav-link-wrap">
-	            <div class="nav nav-pills d-flex text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-	              <a class="nav-link ftco-animate active" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Neurology</a>
-
-	              <a class="nav-link ftco-animate" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Surgical</a>
-
-	              <a class="nav-link ftco-animate" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false">Dental</a>
-
-	              <a class="nav-link ftco-animate" id="v-pills-4-tab" data-toggle="pill" href="#v-pills-4" role="tab" aria-controls="v-pills-4" aria-selected="false">Ophthalmology</a>
-
-	              <a class="nav-link ftco-animate" id="v-pills-5-tab" data-toggle="pill" href="#v-pills-5" role="tab" aria-controls="v-pills-5" aria-selected="false">Cardiology</a>
-
-	            </div>
-	          </div>
-			-->
+			
 	          <div class="col-md-12 tab-wrap">
 	            
 	            <div class="tab-content bg-light p-4 p-md-5 ftco-animate" id="v-pills-tabContent">
@@ -422,11 +508,23 @@ body{
 	              		</div>
 	              		<div class="col-lg-8">
 	              					
-							
+							<style>
+								.small-icon {
+									width: 90px;
+									height: 90px;
+									border-radius: 80px;
+								}
+	
+
+								</style>
 							<div class="row mt-5 pt-2">
 												<div class="col-lg-6">
 													<div class="services-2 d-flex">
-														<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-first-aid-kit"></span></div>
+														
+														<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center">
+															<img src="images/suggestions/ser2/Arthritis-Treatment.jpg" alt="First Aid Kit" class="service-icon small-icon">
+														</div>
+														
 														<div class="text">
 															<h3>Arthritis Care:</h3>
 															<p>Comprehensive diagnosis and treatment of all forms of arthritis.</p>
@@ -435,7 +533,10 @@ body{
 												</div>
 												<div class="col-lg-6">
 													<div class="services-2 d-flex">
-														<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-dropper"></span></div>
+														<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center">
+															<img src="images/suggestions/ser2/Diagnosis-Treatment-of-Osteoporosis.jpg" alt="First Aid Kit" class="service-icon small-icon">
+														</div>
+														
 														<div class="text">
 															<h3> Osteoporosis Treatment </h3>
 															<p> Bone density evaluations and tailored treatment plans.</p>
@@ -444,17 +545,20 @@ body{
 												</div>
 												<div class="col-lg-6">
 													<div class="services-2 d-flex">
-														<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-experiment-results"></span></div>
+														<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center">
+															<img src="images/suggestions/services/rehm.jpg" alt="First Aid Kit" class="service-icon small-icon">
+														</div>
 														<div class="text">
-															<h3>Lupus Managemen</h3>
+															<h3>Lupus Management</h3>
 															<p>Helping patients manage lupus symptoms effectively.</p>
 														</div>
 													</div>
 												</div>
 												<div class="col-lg-6">
 													<div class="services-2 d-flex">
-														<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-heart-rate"></span></div>
-														<div class="text">
+														<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center">
+															<img src="images/suggestions/services/jout.jpg" alt="First Aid Kit" class="service-icon small-icon">
+														</div>														<div class="text">
 															<h3>Gout Management</h3>
 															<p> Effective therapies to reduce inflammation and prevent flare-ups.</p>
 														</div>
@@ -688,11 +792,205 @@ body{
 
 	
 
-<section class="ftco-section testimony-section bg-light">
-	<div class="container">
-	 
+
+
+
+  
+  <!-- mession  -->
+ 
+
+  <section class="mission-section">
+	<div class="container text-center">
+		<h2 class="section-title"><a href="about.html"> Our Mission</a></h2>
+		<p class="section-subtitle">Dedicated to providing exceptional care and improving the quality of life for our patients.</p>
+		<div id="missionCarousel" class="carousel slide" data-bs-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="images/suggestions/messions/Medical-Clinic.jpg" class="d-block w-75 mx-auto" alt="Clinic Location">
+				</div>
+				<div class="carousel-item">
+					<img src="images/suggestions/messions/Medical-doctors-and-nurse.jpg" class="d-block w-75 mx-auto" alt="Doctor Photo">
+				</div>
+				<div class="carousel-item">
+					<img src="images/suggestions/messions/bigstock-doctor-and-patient-doctor.webp" class="d-block w-75 mx-auto" alt="Doctor Treating a Patient">
+				</div>
+				<div class="carousel-item">
+					<img src="images/suggestions/messions/doo.jpg" class="d-block w-75 mx-auto" alt="Doctor on Desk">
+				</div>
+				<div class="carousel-item">
+					<img src="images/suggestions/messions/staff.jpg" class="d-block w-75 mx-auto" alt="Staff Photo">
+				</div>
+				<div class="carousel-item">
+					<img src="images/suggestions/messions/business-person.jpg" class="d-block w-75 mx-auto" alt="Attending Conference">
+				</div>
+				<div class="carousel-item">
+					<img src="images/suggestions/messions/isfront.jpg" class="d-block w-75 mx-auto" alt="Front Desk">
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#missionCarousel" role="button" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#missionCarousel" role="button" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</a>
+		</div>
+		
 	</div>
   </section>
+  
+  <style>
+  .mission-section {
+	padding: 60px 0;
+	background-color: #f9f9f9;
+	font-family: 'Poppins', sans-serif;
+  }
+  .carousel img {
+    border-radius: 10px;
+    max-height: 250px; /* Reduced height further */
+    object-fit: cover;
+	width: 600px;
+}
+
+  </style>
+  
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+	new bootstrap.Carousel(document.querySelector('#missionCarousel'), {
+		interval: 3000,
+		wrap: true
+	});
+  });
+  </script>
+
+
+<!--   insurances  -->
+<section class="appointment-section">
+    <div class="container">
+      
+    </div>
+</section>
+
+<br>
+
+<style>
+	.ins :hover {
+color: #000;
+font-size: larger;
+	}
+</style>
+<section class="insurance-section">
+    <div class="container">
+        <h2 class="ins" class="section-title"><a  href="pat-resources.html">Insurances</a></h2>
+        <p class="insurance-note"> If you do not see your insurance provider, please <strong>call us</strong> for additional information.</p>
+        <a href="tel:8883671850" class="btn btn-primary"> Call : (888) 367-1850</a>
+        
+        <div id="insuranceCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/suggestions/ins/an.png" class="d-block mx-auto" alt="Aetna">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/suggestions/ins/american-specialty-health-insurance.svg" class="d-block mx-auto" alt="American Specialty Health Networks">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/suggestions/ins/bl.png" class="d-block mx-auto" alt="Blue Cross Blue Shield">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/suggestions/ins/hn.png" class="d-block mx-auto" alt="Health Net">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#insuranceCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#insuranceCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<style>
+.insurance-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+.insurance-note {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+.btn-primary {
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+.insurance-section .carousel img {
+    max-height: 70px;
+    width: 288px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+}
+.insurance-section .carousel img:hover {
+    filter: grayscale(0%);
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    new bootstrap.Carousel(document.querySelector('#insuranceCarousel'), {
+        interval: 3000,
+        wrap: true
+    });
+});
+</script>
+<!---->
+
+
+
+<style>
+.insurance-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+.insurance-note {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+.btn-primary {
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+.insurance-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+}
+.insurance-logo img {
+    max-height: 60px;
+    width: auto;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+}
+.insurance-logo img:hover {
+    filter: grayscale(0%);
+}
+</style>
+
+<!-- certifications  -->
+
+
 
   <footer class="ftco-footer ftco-bg-dark py-4">
 	<div class="container text-center text-md-start">
@@ -717,25 +1015,17 @@ body{
 		  </ul>
 		</div>
 		<!-- Services -->
-		<div class="col-md-3 mb-3">
-		  <h2 class="ftco-heading-2" style="color: azure;">Services</h2>
-		  <ul class="list-unstyled">
-			<li><a href="#" class="d-block mb-2">Arthritis Care</a></li>
-			<li><a href="#" class="d-block mb-2">Lupus Management</a></li>
-			<li><a href="#" class="d-block mb-2">Osteoporosis Treatment</a></li>
-			<li><a href="#" class="d-block mb-2">Gout Management</a></li>
-			<li><a href="#" class="d-block mb-2">Autoimmune Diseases</a></li>
-		  </ul>
-		</div>
-		<!-- Contact Information -->
-		<div class="col-md-3 mb-3">
-		  <h2 class="ftco-heading-2" style="color: azure;">Contact Us</h2>
-		  <p><a href="locations.html" class="d-block mb-2">View Our 20 Locations</a></p>
-		  <p><i class="icon icon-phone"></i> <a href="tel:1234567890"> (888) 367-1850</a></p>
-		  <p><i class="fas fa-fax"></i> <a href="fax:8052220323">
-			Fax: (805) 222-0323</a></p>
 		
+		
+	    <!-- Contact Information -->
+		<div class="col-md-3 mb-3">
+			<h2 class="ftco-heading-2" style="color: azure;">Contact Us</h2>
+			<p><a href="locations.html" class="d-block mb-2">View Our 20 Locations</a></p>
+			  <div class="contact-box">
+			<p><strong>Phone:</strong> <a href="tel:8883671850">(888) 367-1850</a></p>
+			<p><strong>Email:</strong> <a href="mailto:cidsferreal@email.com">cidsferreal@email.com</a></p>
 		</div>
+	
 	  </div>
 	  <div class="row">
 		<div class="col-md-12 text-center mt-3">
