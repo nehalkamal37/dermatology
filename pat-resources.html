@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="updated-styles/res.css">
 
 <link rel="stylesheet" href="updates.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
@@ -139,56 +140,67 @@ body{
 	
     
   <!-- new nav -->
-	<nav class="navbar py-3 navbar-expand-lg ftco_navbar navbar-light bg-light flex-row">
-		<div class="container">
-			<div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0 w-100">
-				<!-- Logo Section -->
-				<div class="col-lg-3 d-flex align-items-center">
-					<a class="navbar-brand" href="index.html">CA<span style="color:#007bff;">Rheumatology</span></a>
-				</div>
-	<style>
-		.loca :hover{
-			color: #244772;
-		}
-	</style>
-				<!-- Clinic Key Info Section -->
-				<div class="col-lg-9 d-none d-md-flex justify-content-between align-items-center key-info">
-					<div class="d-flex align-items-center">
-						<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
-							<span class="icon-map-marker text-primary"></span>
-						</div>
-						<a href="locations.html" ><span class="loca" class="text text-muted"><strong class="loca">Clinic Locations</strong> </a>
-						</span>
-					</div>
-	
-					<div class="d-flex align-items-center">
-						<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
-							 <span class="fa fa-clock text-primary"></span>
-						</div>
-						<span class="text text-muted"><strong>Hours:</strong> Mon-Fri 9AM-6PM | Sat 10AM-4PM</span>
-					</div>
-	
-					<div class="d-flex align-items-center">
-						<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
-							<span class="icon-paper-plane text-primary"></span>
-						</div>
-						<span class="text text-muted">
-							<a href="mailto:cidsferreal@email.com" class="text-primary">cidsferreal@email.com</a>
-						</span>
-					</div>
-	
-					<div class="d-flex align-items-center">
-						<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
-							<span class="icon-phone2 text-primary"></span>
-						</div>
-						<span class="text text-muted"> 
-							<a href="tel:8883671850" class="text-primary font-weight-bold">888-367-1850</a>
-						</span>
-					</div>
-				</div>
+<!--  phones-->
+<nav  class="navbar navbar-expand-lg navbar-light bg-light">
+	<div class="container">
+	  <!-- Brand Name -->
+	  <a class="navbar-brand" href="index.html">
+		CA<span style="color:#007bff;">Rheumatology</span>
+	  </a>
+  
+	  <!-- Toggler for Mobile -->
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar"
+		aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	  </button>
+  
+	  <!-- Collapsible Content -->
+	  <div class="collapse navbar-collapse" id="mainNavbar">
+		<ul class="navbar-nav ml-auto align-items-lg-center">
+		  <!-- Clinic Locations -->
+		  <li class="nav-item px-3 d-flex align-items-center">
+			<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
+			  <span class="icon-map-marker text-primary"></span>
 			</div>
-		</div>
-	</nav>
+			<a href="locations.html" class="nav-link p-0 text-muted">
+			  <strong class="loca">Clinic Locations</strong>
+			</a>
+		  </li>
+  
+		  <!-- Hours -->
+		  <li class="nav-item px-3 d-flex align-items-center">
+			<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
+			  <span class="fa fa-clock text-primary"></span>
+			</div>
+			<span class="nav-link p-0 text-muted">
+			  <strong>Hours:</strong> Mon-Fri 9AM-6PM | Sat 10AM-4PM
+			</span>
+		  </li>
+  
+		  <!-- Email -->
+		  <li class="nav-item px-3 d-flex align-items-center">
+			<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
+			  <span class="icon-paper-plane text-primary"></span>
+			</div>
+			<a href="mailto:cidsferreal@email.com" class="nav-link p-0 text-primary">
+			  cidsferreal@email.com
+			</a>
+		  </li>
+  
+		  <!-- Phone -->
+		  <li class="nav-item px-3 d-flex align-items-center">
+			<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
+			  <span class="icon-phone2 text-primary"></span>
+			</div>
+			<a href="tel:8883671850" class="nav-link p-0 text-primary font-weight-bold">
+			  888-367-1850
+			</a>
+		  </li>
+		</ul>
+	  </div>
+	</div>
+  </nav>
+	  
 	
 	
 	<!-- Add FontAwesome for Icons -->
@@ -292,151 +304,8 @@ body{
 <!--  data -->
 
 
-<style>
-.patient-resources-section {
-    padding: 60px 0;
-    background-color: #f9f9f9;
-}
-.section-title {
-    font-size: 32px;
-    color: #2c3e50;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-.section-subtitle {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 40px;
-}
-.patient-forms {
-    list-style: none;
-    padding: 0;
-}
-.patient-forms li {
-    margin-bottom: 10px;
-}
-.patient-forms a {
-    color: #007bff;
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-.patient-forms a:hover {
-    color: #0056b3;
-    text-decoration: underline;
-}
-.hover-blue:hover {
-    color: #007bff !important;
-    text-decoration: none;
-}
-</style>
-<!--
-<section class="patient-resources-section">
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-md-12">
-                <h2 class="section-title">Patient Resources</h2>
-                <p class="section-subtitle">Access important forms, insurance details, and policies to ensure a seamless experience at our clinic.</p>
-            </div>
-        </div>
-
-        <div class="row mt-5 align-items-start">
-            <div class="col-md-6">
-                <div class="resource-box">
-                    <h3>📄 Patient Forms</h3>
-
-                    <p>Download and complete the necessary forms before your visit to save time at check-in.</p>
-                    <ul class="patient-forms">
-                        <li><a href="forms/patient-registration.pdf" download>📥 Patient Registration Form</a></li>
-                        <li><a href="forms/patient-questionnaire.pdf" download>📥 Patient Questionnaire Form</a></li>
-                        <li><a href="forms/consent-release.pdf" download>📥 Consent Release Form</a></li>
-                        <li><a href="forms/medical-record-release.pdf" download>📥 Medical Record Release Form</a></li>
-                        <li><a href="forms/office-policy.pdf" download>📥 Office Policy Notice</a></li>
-                        <li><a href="forms/billing-info.pdf" download>📥 Billing Information Form</a></li>
-                        <li><a href="forms/credit-card-auth.pdf" download>📥 Credit Card Authorization Form</a></li>
-                    </ul>
-                </div>
-            </div>
-		    
-            <div class="col-md-6">
-                <div class="resource-box">
-                    <h3> Insurance & Billing</h3>
-
-                    <p>We accept a wide range of insurance providers. If your provider is not listed, please <a href="contact.html" class="hover-blue">contact us</a> for assistance.</p>
-                    
-                    <h4>🚫 Cancellation Policy</h4>
-                    <p>To avoid cancellation fees, please notify us at least <strong>24 hours in advance</strong> if you need to cancel or reschedule your appointment.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
--->
-<style>
-.patient-resources-section {
-    padding: 80px 0;
-    background-color: #f9f9f9;
-    font-family: 'Poppins', sans-serif;
-}
-.section-title {
-    font-size: 36px;
-    color: #2c3e50;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-.section-subtitle {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 40px;
-}
-.resource-box {
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-.resource-box:hover {
-    transform: translateY(-5px);
-}
-.resource-box h3 {
-    color: #007bff;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-.resource-box p {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 15px;
-}
-.patient-forms {
-    list-style: none;
-    padding: 0;
-}
-.patient-forms li {
-    margin-bottom: 10px;
-}
-.patient-forms a {
-    color: #007bff;
-    font-weight: bold;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    transition: color 0.3s;
-}
-.patient-forms a:hover {
-    color: #0056b3;
-    text-decoration: underline;
-}
-.hover-blue:hover {
-    color: #007bff !important;
-    text-decoration: none;
-}
-</style>
 
 
-<!-- neww  d1 -->
 <!-- ins providers  -->
 <section class="insurance-section">
     <div class="container">
@@ -445,16 +314,16 @@ body{
         <div id="insuranceCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="images/suggestions/ins/an.png" class="d-block mx-auto" alt="Aetna">
+                    <img src="images/suggestions/ins/an.png" class="d-block mx-auto img-fluid w-10" alt="Aetna">
                 </div>
                 <div class="carousel-item">
-                    <img src="images/suggestions/ins/american-specialty-health-insurance.svg" class="d-block mx-auto" alt="American Specialty Health Networks">
+                    <img src="images/suggestions/ins/american-specialty-health-insurance.svg" class="d-block mx-auto img-fluid w-10" alt="American Specialty Health Networks">
                 </div>
                 <div class="carousel-item">
-                    <img src="images/suggestions/ins/bl.png" class="d-block mx-auto" alt="Blue Cross Blue Shield">
+                    <img src="images/suggestions/ins/bl.png" class="d-block mx-auto img-fluid w-10" alt="Blue Cross Blue Shield">
                 </div>
                 <div class="carousel-item">
-                    <img src="images/suggestions/ins/hn.png" class="d-block mx-auto" alt="Health Net">
+                    <img src="images/suggestions/ins/hn.png" class="d-block mx-auto img-fluid w-10" alt="Health Net">
                 </div>
             </div>
             <a class="carousel-control-prev" style="color: #555;" href="#insuranceCarousel" role="button" data-bs-slide="prev">
@@ -469,34 +338,8 @@ body{
     </div>
 </section>
 
-<style>
-.insurance-section {
-    padding: 60px 0;
-    background-color: #f9f9f9;
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-}
-.insurance-note {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 15px;
-}
-.btn-primary {
-    padding: 12px 20px;
-    font-size: 18px;
-    border-radius: 5px;
-}
-.insurance-section .carousel img {
-    max-height: 170px;
-    width: 388px;
-    filter: grayscale(100%);
-    transition: filter 0.3s ease-in-out;
-}
-.insurance-section .carousel img:hover {
-    filter: grayscale(0%);
-}
-</style>
 
+  
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     new bootstrap.Carousel(document.querySelector('#insuranceCarousel'), {
@@ -509,40 +352,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-<style>
-.insurance-section {
-    padding: 60px 0;
-    background-color: #f9f9f9;
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-}
-.insurance-note {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 15px;
-}
-.btn-primary {
-    padding: 12px 20px;
-    font-size: 18px;
-    border-radius: 5px;
-}
-.insurance-slider {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    overflow: hidden;
-}
-.insurance-logo img {
-    max-height: 60px;
-    width: auto;
-    filter: grayscale(100%);
-    transition: filter 0.3s ease-in-out;
-}
-.insurance-logo img:hover {
-    filter: grayscale(0%);
-}
-</style>
 
 <!-- ins p  -->
 
@@ -564,32 +373,7 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
 </section>
 
-<style>
-.patient-resources {
-    padding: 60px 0;
-    background-color: #f9f9f9;
-    font-family: 'Poppins', sans-serif;
-}
-.resource-box {
-    display: block;
-    text-align: center;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    transition: 0.3s;
-    text-decoration: none;
-    color: black;
-}
-.resource-box:hover {
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-.btn-primary {
-    padding: 8px 15px;
-    font-size: 14px;
-    border-radius: 5px;
-}
-</style>
+
 
 
 <section class="patient-resources">
@@ -658,37 +442,6 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
 </section>
 
-<style>
-.patient-resources {
-    padding: 60px 0;
-    background-color: #f9f9f9;
-    font-family: 'Poppins', sans-serif;
-}
-.resource-box {
-    display: block;
-    text-align: center;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    transition: 0.3s;
-    text-decoration: none;
-    color: black;
-}
-.resource-box:hover {
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-.resource-box i {
-    font-size: 40px;
-    margin-bottom: 10px;
-    color: #007bff;
-}
-.btn-primary {
-    padding: 8px 15px;
-    font-size: 14px;
-    border-radius: 5px;
-}
-</style>
 
 
 

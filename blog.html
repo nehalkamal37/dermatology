@@ -170,94 +170,71 @@ body{
 	  </nav>
 	
     <!-- new nav -->
-	<nav class="navbar py-3 navbar-expand-lg ftco_navbar navbar-light bg-light flex-row">
-		<div class="container">
-			<div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0 w-100">
-				<!-- Logo Section -->
-				<div class="col-lg-3 d-flex align-items-center">
-					<a class="navbar-brand" href="index.html">CA<span style="color:#007bff;">Rheumatology</span></a>
-				</div>
-	<style>
-		.loca :hover{
-			color: #244772;
-		}
-	</style>
-				<!-- Clinic Key Info Section -->
-				<div class="col-lg-9 d-none d-md-flex justify-content-between align-items-center key-info">
-					<div class="d-flex align-items-center">
-						<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
-							<span class="icon-map-marker text-primary"></span>
-						</div>
-						<a href="locations.html" ><span class="loca" class="text text-muted"><strong class="loca">Clinic Locations</strong> </a>
-						</span>
-					</div>
-	
-					<div class="d-flex align-items-center">
-						<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
-							 <span class="fa fa-clock text-primary"></span>
-						</div>
-						<span class="text text-muted"><strong>Hours:</strong> Mon-Fri 9AM-6PM | Sat 10AM-4PM</span>
-					</div>
-	
-					<div class="d-flex align-items-center">
-						<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
-							<span class="icon-paper-plane text-primary"></span>
-						</div>
-						<span class="text text-muted">
-							<a href="mailto:cidsferreal@email.com" class="text-primary">cidsferreal@email.com</a>
-						</span>
-					</div>
-	
-					<div class="d-flex align-items-center">
-						<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
-							<span class="icon-phone2 text-primary"></span>
-						</div>
-						<span class="text text-muted"> 
-							<a href="tel:8883671850" class="text-primary font-weight-bold">888-367-1850</a>
-						</span>
-					</div>
-				</div>
-			</div>
-		</div>
-	</nav>
+<!--  phones-->
+<nav  class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <!-- Brand Name -->
+    <a class="navbar-brand" href="index.html">
+    CA<span style="color:#007bff;">Rheumatology</span>
+    </a>
+  
+    <!-- Toggler for Mobile -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar"
+    aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <!-- Collapsible Content -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+    <ul class="navbar-nav ml-auto align-items-lg-center">
+      <!-- Clinic Locations -->
+      <li class="nav-item px-3 d-flex align-items-center">
+      <div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
+        <span class="icon-map-marker text-primary"></span>
+      </div>
+      <a href="locations.html" class="nav-link p-0 text-muted">
+        <strong class="loca">Clinic Locations</strong>
+      </a>
+      </li>
+  
+      <!-- Hours -->
+      <li class="nav-item px-3 d-flex align-items-center">
+      <div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
+        <span class="fa fa-clock text-primary"></span>
+      </div>
+      <span class="nav-link p-0 text-muted">
+        <strong>Hours:</strong> Mon-Fri 9AM-6PM | Sat 10AM-4PM
+      </span>
+      </li>
+  
+      <!-- Email -->
+      <li class="nav-item px-3 d-flex align-items-center">
+      <div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
+        <span class="icon-paper-plane text-primary"></span>
+      </div>
+      <a href="mailto:cidsferreal@email.com" class="nav-link p-0 text-primary">
+        cidsferreal@email.com
+      </a>
+      </li>
+  
+      <!-- Phone -->
+      <li class="nav-item px-3 d-flex align-items-center">
+      <div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
+        <span class="icon-phone2 text-primary"></span>
+      </div>
+      <a href="tel:8883671850" class="nav-link p-0 text-primary font-weight-bold">
+        888-367-1850
+      </a>
+      </li>
+    </ul>
+    </div>
+  </div>
+  </nav>
 	
 	<!-- Add FontAwesome for Icons -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 	
-	<!-- Optional: Add Custom CSS for Better Styling -->
-	<style>
-		.navbar-brand {
-			font-size: 1.5rem;
-			font-weight: bold;
-		}
-		.navbar-brand span {
-			color: #4CAF50; /* Green color for the "Rheumatology" part */
-		}
-		.icon {
-			width: 30px;
-			height: 30px;
-			border-radius: 50%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			background-color: #f8f9fa;
-		}
-		.icon-map-marker, .icon-clock, .icon-paper-plane, .icon-phone2 {
-			color: #4CAF50; /* Green color for icons */
-		}
-		.text {
-			font-size: 0.9rem;
-		}
-		.text a {
-			text-decoration: none;
-		}
-		.text a:hover {
-			text-decoration: underline;
-		}
-		.navbar {
-			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for the navbar */
-		}
-	</style>
+	
 
 
 <!DOCTYPE html>

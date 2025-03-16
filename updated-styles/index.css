@@ -1,0 +1,165 @@
+
+	/*for buttons on slider*/
+.button-container {
+  position: relative;
+  z-index: 10;
+}
+
+@media (max-width: 480px) {
+  .slider-item, .container, .row {
+    overflow: visible;
+    height: auto;
+  }
+}
+@media (max-width: 480px) {
+  .button-container p {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  h4.headline {
+    font-size: 18px;      /* Reduce font size */
+    margin-bottom: 10px;  /* Adjust bottom margin */
+  }
+}
+@media (max-width: 480px) {
+  .slider-text {
+    margin-top: 20px; /* Moves the text container upward */
+    padding-top: 0;   /* Adjust if there's existing padding pushing it down */
+  }
+}
+.slider-text {
+  align-items: flex-start; /* Align items at the top */
+  justify-content: flex-start; /* Optional: adjust horizontal alignment if needed */
+}
+.slider-text {
+  margin-top: 0;    /* Remove any top margin */
+  padding-top: 20px; /* Reduce padding to move the text upward */
+}
+.slider-text {
+  transform: translateY(-20%);
+}
+
+/* service section */
+
+		.ftco-services .row {
+		  display: flex;
+		  flex-wrap: wrap; /* Ensure responsiveness */
+		}
+	  
+		.services {
+		  display: flex;
+		  flex-direction: column;
+		  justify-content: center; /* Vertically center content */
+		  align-items: center; /* Horizontally center content */
+		  text-align: center;
+		  color: #fff; /* White text for better contrast */
+		  height: 100%; /* Ensure the content fills the box */
+		  padding: 20px; /* Add padding inside the box */
+		  transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+	  
+		.services a {
+		  text-decoration: none;
+		  color: inherit; /* Ensure the link inherits text color */
+		  display: flex;
+		  flex-direction: column; /* Stack content vertically */
+		  height: 100%; /* Make the link fill the container */
+		}
+	  
+		.services .icon {
+		  font-size: 50px; /* Increase icon size */
+		  margin-bottom: 20px; /* Add space below the icon */
+		}
+	  
+		.services .media-body h3 {
+		  font-size: 1.25rem; /* Adjust heading size */
+		  margin-bottom: 10px; /* Add space below heading */
+		}
+	  
+		/* Default color for service boxes */
+		.services {
+		  background-color: #007bff; /* Default blue background */
+		}
+	  
+		/* Darker color for second service box */
+		.col-md-3:nth-of-type(2) .services {
+		  background-color: #0a68cc; /* Darker blue */
+		  background-color: #1c77d8;
+		}
+	  
+		/* Darker color for fourth service box */
+		.col-md-3:nth-of-type(4) .services {
+		  background-color: #1c77d8; /* Even darker blue */
+		}
+	  
+		.services:hover {
+		  transform: scale(1.05); /* Slight zoom on hover */
+		  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add hover shadow */
+		}
+	  
+/* insurance */
+
+.insurance-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+.insurance-note {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+.btn-primary {
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+.insurance-section .carousel img {
+    max-height: 70px;
+    width: 288px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+}
+.insurance-section .carousel img:hover {
+    filter: grayscale(0%);
+}
+
+
+
+.insurance-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+.insurance-note {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+.btn-primary {
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+.insurance-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+}
+.insurance-logo img {
+    max-height: 60px;
+    width: auto;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+}
+.insurance-logo img:hover {
+    filter: grayscale(0%);
+}
