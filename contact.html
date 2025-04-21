@@ -160,75 +160,7 @@ body{
         </div>
       </div>
     </section>
-<!--
-    <section class="ftco-section ftco-no-pt ftco-no-pb contact-section pt-5" >
-			<div class="container">
-				<div class="row d-flex align-items-stretch no-gutters">
-					<div class="col-md p-4 p-md-5 order-md-last bg-light">
-						<form action="#">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Email">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject">
-              </div>
-              <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
-              </div>
-              <div class="form-group">
-                <a href="learn.html" class="btn btn-primary py-3 px-5">Send Message</a>
-              </div>
-            </form>
-					</div>
 
-				</div>
-			</div>
-		</section>
-  --
-		<section class="ftco-section contact-section">
-      <div class="container">
-        <div class="row d-flex mb-5 contact-info">
-          <div class="col-md-12 mb-4">
-            <h2 class="h4">Contact Information</h2>
-          </div>
-          <div class="w-100"></div>
-          <div class="col-md-3 d-flex">
-          	<div class="bg-light d-flex align-self-stretch box p-4">
-              <p><span>Address:</span> 3095 Old Conejo Rd Ste 200,
-                Thousand Oaks, CA 91320</p>	          </div>
-          </div>
-          <div class="col-md-3 d-flex">
-          	<div class="bg-light d-flex align-self-stretch box p-4">
-	            <p><span>Phone:</span> <a href="tel://1234567920">+ 888 367 1850</a></p>
-	          </div>
-          </div>
-          <div class="col-md-3 d-flex">
-          	<div class="bg-light d-flex align-self-stretch box p-4">
-	            <p><span>Email:</span> <a href="mailto:cdireferral@gmail.com">cdireferral@gmail.com</a></p>
-	          </div>
-          </div>
-          <div class="col-md-3 d-flex">
-          	<div class="bg-light d-flex align-self-stretch box p-4">
-	            <p><span>Website</span> <a href="#">yoursite.com</a></p>
-	          </div>
-          </div>
-        </div>
-
-        !-- Google Maps Section --
-
-        <div class="mb-5" data-aos="fade-up" data-aos-delay="200">
-          <iframe style="border:0; width: 100%; height: 270px;" 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.967098439785!2d-74.00077498424225!3d40.74297537932885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259bb665a5b95%3A0x37d23ed9e6c9479e!2s198%20W%2021st%20St%20%23721%2C%20New%20York%2C%20NY%2010011%2C%20USA!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" 
-          frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div><-- End Google Maps --
-        
-
-      </div>
-    </section>
-  -->
     <!--  neww  -->
    
   
@@ -569,7 +501,70 @@ document.addEventListener('DOMContentLoaded', function () {
 <footer class="ftco-footer ftco-bg-dark py-4">
 	<div class="container text-center text-md-start">
 	  <div class="row">
-		<!-- Logo and Description -->
+      <div class="col-auto mb-3" style="background:#333; padding:1rem; text-align:center;">
+        <!-- hidden source -->
+        <img id="logo-src" src="images/logos/CRI Logo-01.png" style="display:none;">
+        <!-- this will become the cropped, transparent canvas -->
+        <canvas id="logo-canvas" style="width: 277px;color: #000;"></canvas>
+      </div>
+      
+      <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        const src    = document.getElementById('logo-src');
+        const out    = document.getElementById('logo-canvas');
+      
+        src.onload = () => {
+          // draw onto a temp canvas
+          const temp    = document.createElement('canvas');
+          const tCtx    = temp.getContext('2d');
+          temp.width    = src.width;
+          temp.height   = src.height;
+          tCtx.drawImage(src, 0, 0);
+      
+          // get pixel data & strip white
+          const imgData = tCtx.getImageData(0, 0, temp.width, temp.height);
+          const d       = imgData.data;
+          for (let i = 0; i < d.length; i += 4) {
+            if (d[i] > 240 && d[i+1] > 240 && d[i+2] > 240) {
+              d[i+3] = 0;
+            }
+          }
+          tCtx.putImageData(imgData, 0, 0);
+      
+          // find non-transparent bounds
+          let minX = temp.width, minY = temp.height;
+          let maxX = 0,        maxY = 0;
+          for (let y = 0; y < temp.height; y++) {
+            for (let x = 0; x < temp.width; x++) {
+              if (imgData.data[(y*temp.width + x)*4 + 3] > 0) {
+                minX = Math.min(minX, x);
+                minY = Math.min(minY, y);
+                maxX = Math.max(maxX, x);
+                maxY = Math.max(maxY, y);
+              }
+            }
+          }
+      
+          // size the output canvas to the logo’s box
+          const w = maxX - minX + 1;
+          const h = maxY - minY + 1;
+          out.width  = w;
+          out.height = h;
+      
+          // copy the cropped image into the visible canvas
+          const oCtx = out.getContext('2d');
+          oCtx.putImageData(
+            tCtx.getImageData(minX, minY, w, h),
+            0, 0
+          );
+        };
+      
+        // trigger onload if cached
+        if (src.complete) src.onload();
+      });
+      </script>
+      
+		<!-- Logo and Description 
 		<div class="col-md-3 mb-3">
       <h1 class="ftco-heading-2 logo" style="color:#007bff; font-size: 22px;">
 
@@ -578,6 +573,56 @@ document.addEventListener('DOMContentLoaded', function () {
         </span></h1>
 		  <p>Comprehensive care for arthritis, autoimmune diseases, and joint health.</p>
 		</div>
+  
+    <div class="col-md-3 mb-3" style="background:#333; padding:1rem;">
+       hidden source image 
+      <img id="logo-src" src="images/logos/CRI Logo-01.png" style="display:none">
+       canvas where we'll draw the “background‑stripped” version 
+      <canvas id="logo-canvas"></canvas>
+     
+    </div>
+    <div class="col-md-3 mb-3" style="background:#333; padding:1rem; display:inline-block;">
+      <svg
+        width="auto"
+        height="57px"
+        xmlns="http://www.w3.org/2000/svg"
+        style="vertical-align: middle;"
+      >
+        <defs>
+          <filter id="remove-white">
+            
+              The last row here is the alpha transform:
+              new‑alpha = (–1 * R) + (–1 * G) + (–1 * B) + (1 * A) + 1
+              => white (1,1,1,1) → 0, anything darker stays >0
+          
+            <feColorMatrix
+              in="SourceGraphic"
+              type="matrix"
+              values="
+                1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+               -1 -1 -1 1 1
+              "
+            />
+          </filter>
+        </defs>
+    
+        <image
+          filter="url(#remove-white)"
+          xlink:href="images/logos/CRI Logo-01.png"
+          width="100%"
+          height="100%"
+          preserveAspectRatio="xMidYMid meet"
+        />
+      </svg>
+    
+      <p style="color:white; margin-top:.5rem;">
+        Comprehensive care for arthritis, autoimmune diseases, and joint health.
+      </p>
+    </div>
+  -->
+      
 		<!-- Quick Links -->
 		<div class="col-md-3 mb-3">
 		  <h2 class="ftco-heading-2" style="color: azure;">Quick Links</h2>
@@ -621,7 +666,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     
     .ftco-footer a {
-      color: #007bff; /* Blue links */
+      color: #56a3f5; /* Blue links */
       text-decoration: none;
     }
     
