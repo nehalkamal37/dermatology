@@ -44,84 +44,160 @@
 }
     </style>
     
-    <nav class="navbar py-4 navbar-expand-lg ftco_navbar navbar-light bg-light flex-row">
+  <!--  old nav --
+<nav class="navbar py-4 navbar-expand-lg ftco_navbar navbar-light bg-light flex-row">
+	<div class="container">
+	  <div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
+		<div class="col-lg-2 pr-4 align-items-center">
+		  <a class="navbar-brand" href="index.html">CA<span>Rheumatology</span></a>
+		</div>
+		<div class="col-lg-10 d-none d-md-block">
+		  <div class="row d-flex">
+			<div class="col-md-4 pr-4 d-flex topper align-items-center">
+			</div>
+			<div class="col-md-8 d-flex justify-content-end align-items-center text-class">
+			  <div class="d-flex align-items-center mr-4">
+				<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
+				  <span class="icon-paper-plane"></span>
+				</div>
+				<span class="text">Email: cidsferreal@email.com</span>
+			  </div>
+			
+
+			  <div class="d-flex align-items-center">
+				<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
+				  <span class="icon-phone2"></span>
+				</div>
+				<span class="text" >Phone: 888-367-1850</span>
+				</div>
+
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </nav>
+-->
+	  <!-- END nav1 -->
+    
+	<style>
+	
+    .nav-link {
+      color: black;
+      text-decoration: none;
+    }
+    
+    .nav-link.active {
+      color: white;
+      background-color: blue;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+  
+    .headline{
+      color: rgba(255, 255, 255, 0.9); /* Light white text */
+          background-color: rgba(0, 0, 0, 0.6); /* Slightly dark background */
+          padding: 5px 10px; /* Add padding for readability */
+          border-radius: 5px; /* Rounded corners */
+          display: inline-block; /* Ensure the background only wraps around the text */
+          font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    
+        </style>  
+        
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container d-flex align-items-center">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"> 		
+  </span> Menu
+          </button>
+          <p class="button-custom order-lg-last mb-0"><a href="appointment.html" class="btn btn-secondary py-2 px-3">Make An Appointment</a></p>
+          <div class="collapse navbar-collapse" id="ftco-nav">
+        <img src="images/logos/CRI Logo-01.png" style="width: auto;height: 57px; margin-right: 133px;">
+  
+            <ul class="navbar-nav mr-auto">
+          <li class="nav-item active" id=""><a href="index.html" class="nav-link pl-0">Home</a></li>
+  
+              <li class="nav-item" id="about"><a href="about.html" class="nav-link">About</a></li>
+                        <li class="nav-item " id="services"><a href="services.html" class="nav-link ">Services</a></li>
+              <li class="nav-item" ><a href="fq.html" class="nav-link">FAQ</a></li>
+              <li class="nav-item" ><a href="blog.html" id="patient" class="nav-link"> Blog</a></li>
+              <li class="nav-item" ><a href="pat-resources.html" id="patient" class="nav-link"> Providers</a></li>
+  
+              <li class="nav-item" id="contact"><a href="contact.html" class="nav-link">Contact</a></li>
+          
+            </ul>
+        
+          </div>
+        </div>
+      </nav>
+    
+      <!-- new nav -->
+    
+    <!--  phones-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
-        <div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
-        <div class="col-lg-2 pr-4 align-items-center">
-          <a class="navbar-brand" href="index.html">CA<span>Rheumatology</span></a>
-        </div>
-        <div class="col-lg-10 d-none d-md-block">
-          <div class="row d-flex">
-          <div class="col-md-4 pr-4 d-flex topper align-items-center">
-            <!-- Address placeholder -->
+        <!-- Brand Name -->
+        <a  style="font-size: medium;" class="navbar-brand" href="index.html">
+        California <span style="color:#007bff;font-size: medium; ">Rheumatology</span>
+        </a>
+      
+        <!-- Toggler for Mobile -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar"
+        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <!-- Collapsible Content -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ml-auto align-items-lg-center">
+          <!-- Clinic Locations -->
+          <li class="nav-item px-3 d-flex align-items-center">
+          <div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
+            <span class="icon-map-marker text-primary"></span>
           </div>
-          <div class="col-md-8 d-flex justify-content-end align-items-center text-class">
-            <div class="d-flex align-items-center mr-4">
-            <div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
-              <span class="icon-paper-plane"></span>
-            </div>
-            <span class="text">Email: cidsferreal@email.com</span>
-            </div>
-            <div class="d-flex align-items-center">
-            <div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
-              <span class="icon-phone2"></span>
-            </div>
-            <span class="text">Phone: 888-367-1850</span>
-            </div>
+          <a href="locations.html" class="nav-link p-0 text-muted">
+            <strong class="loca">Clinic Locations</strong>
+          </a>
+          </li>
+      
+          <!-- Hours -->
+          <li class="nav-item px-3 d-flex align-items-center">
+          <div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
+            <span class="fa fa-clock text-primary"></span>
           </div>
+          <span class="nav-link p-0 text-muted">
+            <strong>Hours:</strong> Mon-Fri 9AM-6PM | Sat 10AM-4PM
+          </span>
+          </li>
+      
+          <!-- Email -->
+          <li class="nav-item px-3 d-flex align-items-center">
+          <div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
+            <span class="icon-paper-plane text-primary"></span>
           </div>
-        </div>
+          <a href="mailto:cidsferreal@email.com" class="nav-link p-0 text-primary">
+            cidsferreal@email.com
+          </a>
+          </li>
+      
+          <!-- Phone -->
+          <li class="nav-item px-3 d-flex align-items-center">
+          <div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
+            <span class="icon-phone2 text-primary"></span>
+          </div>
+          <a href="tel:8883671850" class="nav-link p-0 text-primary font-weight-bold">
+            888-367-1850
+          </a>
+          </li>
+        </ul>
         </div>
       </div>
       </nav>
       
+    <!-- Add FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     
-
-	<style>.nav-link {
-		color: black;
-		text-decoration: none;
-	}
-	
-	.nav-link.active {
-		color: white;
-		background-color: blue;
-		padding: 5px 10px;
-		border-radius: 5px;
-	}
-	
-	/* Navbar Styling */
-/* Keep the original styling but make it fixed */
-
-
-
-
-		  </style>   
-	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container d-flex align-items-center">
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu">
-            <img src="images/logos/CRI Logo-01.png" style="width: auto;height: 47px; margin-right: 133px;">
-
-          </span> 
-	      </button>
-	      <p class="button-custom order-lg-last mb-0"><a href="appointment.html" class="btn btn-secondary py-2 px-3">Make An Appointment</a></p>
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-          <img src="images/logos/CRI Logo-01.png" style="width: auto;height: 57px; margin-right: 133px;">
-
-	        <ul class="navbar-nav mr-auto">
-				<li class="nav-item" id=""><a href="index.html" class="nav-link ">Home</a></li>
-
-						<li class="nav-item" id="about"><a href="about.html" class="nav-link">About</a></li>
-	                    <li class="nav-item " id="services"><a href="services.html" class="nav-link ">Services</a></li>
-						<li class="nav-item" ><a href="locations.html" class="nav-link">Locations</a></li>
-						<li class="nav-item active" ><a href="patient.html" id="patient" class="nav-link pl-0">Patient Info</a></li>
-						<li class="nav-item" id="contact"><a href="contact.html" class="nav-link">Contact</a></li>
-				
-	        </ul>
-			
-	      </div>
-	    </div>
-	  </nav>
 	
     <!-- END nav -->
 
@@ -131,7 +207,7 @@
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
             <h1 class="mb-2 bread">Patient Info</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Patien Info <i class="ion-ios-arrow-forward"></i></span></p>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Patient Info <i class="ion-ios-arrow-forward"></i></span></p>
           </div>
         </div>
       </div>
