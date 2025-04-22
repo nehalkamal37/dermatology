@@ -84,9 +84,7 @@ body{
   text-decoration: underline; /* Underline on hover */
   color: #0056b3; /* Slightly darker blue on hover */
 }
-.loca {
-	color: #007bff;
-}
+
 </style>
 <style>
 	/*ada */
@@ -99,6 +97,10 @@ body{
 .navbar-dark .navbar-nav .nav-link:hover {
   color: #41B5E5 !important;       /* your light blue on hover */
 }
+.navbar-dark .navbar-nav .nav-item.active a {
+  color: #41B5E5 !important;
+}
+
 
 /* “Clinic Locations” link uses .loca */
 .loca {
@@ -147,7 +149,8 @@ body{
 				font-family: Georgia, 'Times New Roman', Times, serif;
 	}
 	.nav-item .active a {
-		
+
+		color: #41B5E5 !important; /* Light blue text */
 	}
 		  </style>  
 		  
@@ -163,7 +166,7 @@ body{
 			<img src="images/logos/CRI Logo-01.png" style="width: auto;height: 57px; margin-right: 133px;">
 
 	        <ul class="navbar-nav mr-auto">
-				<li class="nav-item active" id=""><a href="index.html" class="nav-link pl-0">Home</a></li>
+				<li class="nav-item active" id=""><a href="index.html" class="nav-link  pl-0">Home</a></li>
 
 						<li class="nav-item" id="about"><a href="about.html" class="nav-link">About</a></li>
 	                    <li class="nav-item " id="services"><a href="services.html" class="nav-link ">Services</a></li>

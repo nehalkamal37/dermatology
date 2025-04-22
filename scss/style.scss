@@ -189,7 +189,7 @@ h1, h2, h3, h4, h5,
 			}
 			&.active {
 				> a {
-					color: #2f89fc!important;
+					color: $primary;
 					@include media-breakpoint-down(md){
 						color: $white;
 					}
