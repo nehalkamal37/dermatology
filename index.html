@@ -88,40 +88,40 @@ body{
 	color: #007bff;
 }
 </style>
-<!--  old nav --
-<nav class="navbar py-4 navbar-expand-lg ftco_navbar navbar-light bg-light flex-row">
-	<div class="container">
-	  <div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
-		<div class="col-lg-2 pr-4 align-items-center">
-		  <a class="navbar-brand" href="index.html">CA<span>Rheumatology</span></a>
-		</div>
-		<div class="col-lg-10 d-none d-md-block">
-		  <div class="row d-flex">
-			<div class="col-md-4 pr-4 d-flex topper align-items-center">
-			</div>
-			<div class="col-md-8 d-flex justify-content-end align-items-center text-class">
-			  <div class="d-flex align-items-center mr-4">
-				<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
-				  <span class="icon-paper-plane"></span>
-				</div>
-				<span class="text">Email: cidsferreal@email.com</span>
-			  </div>
-			
+<style>
+	/*ada */
+	/* your-custom.css */
 
-			  <div class="d-flex align-items-center">
-				<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
-				  <span class="icon-phone2"></span>
-				</div>
-				<span class="text" >Phone: 888-367-1850</span>
-				</div>
+/* NAV LINKS */
+.navbar-dark .navbar-nav .nav-link {
+  color: #333333 !important;       /* neutral dark */
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #41B5E5 !important;       /* your light blue on hover */
+}
 
-			</div>
-		  </div>
-		</div>
-	  </div>
-	</div>
-  </nav>
--->
+/* “Clinic Locations” link uses .loca */
+.loca {
+  color: #005A8C !important;       /* darker brand on white bg */
+}
+.loca:hover {
+  color: #41B5E5 !important;
+}
+
+/* SECONDARY BUTTONS */
+.btn-secondary {
+  background-color: #005A8C !important;  /* dark brand bg */
+  border-color:     #005A8C !important;
+  color:            #ffffff !important;
+}
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: #41B5E5 !important;  /* light brand on hover */
+  border-color:     #41B5E5 !important;
+}
+
+</style>
+
 	  <!-- END nav1 -->
     
 	<style>
@@ -146,14 +146,16 @@ body{
 				display: inline-block; /* Ensure the background only wraps around the text */
 				font-family: Georgia, 'Times New Roman', Times, serif;
 	}
-	
+	.nav-item .active a {
+		
+	}
 		  </style>  
 		  
 	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container d-flex align-items-center">
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"> 		
-					<img src="images/logos/CRI Logo-01.png" style="width: auto;height: 47px; margin-right: 133px;">
+					<img src="images/logos/CRI Logo-01.png" alt="logo" style="width: auto;height: 47px; margin-right: 133px;">
 </span> 
 	      </button>
 	      <p class="button-custom order-lg-last mb-0"><a href="appointment.html" class="btn btn-secondary py-2 px-3">Make An Appointment</a></p>
@@ -184,7 +186,7 @@ body{
 		<div class="container">
 		  <!-- Brand Name -->
 		  <a  style="font-size: medium;" class="navbar-brand" href="index.html">
-			California <span style="color:#007bff;font-size: medium; ">Rheumatology</span>
+			California <span style="color:#41B5E5;font-size: medium; ">Rheumatology</span>
 		  </a>
 	  
 		  <!-- Toggler for Mobile -->
@@ -202,7 +204,7 @@ body{
 				  <span class="icon-map-marker text-primary"></span>
 				</div>
 				<a href="locations.html" class="nav-link p-0 text-muted">
-				  <strong class="loca">Clinic Locations</strong>
+				  <strong class="loca" style="color: #41B5E5;" >Clinic Locations</strong>
 				</a>
 			  </li>
 	  
@@ -221,7 +223,7 @@ body{
 				<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
 				  <span class="icon-paper-plane text-primary"></span>
 				</div>
-				<a href="mailto:cidsferreal@email.com" class="nav-link p-0 text-primary">
+				<a href="mailto:cidsferreal@email.com" style="color: #41B5E5;" class="nav-link p-0 text-primary">
 					cidsferreal@email.com
 				</a>
 			  </li>
@@ -231,7 +233,7 @@ body{
 				<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
 				  <span class="icon-phone2 text-primary"></span>
 				</div>
-				<a href="tel:8883671850" class="nav-link p-0 text-primary font-weight-bold">
+				<a href="tel:8883671850" style="color: #41B5E5;" class="nav-link p-0 text-primary font-weight-bold">
 				  888-367-1850
 				</a>
 			  </li>
@@ -243,41 +245,7 @@ body{
 	<!-- Add FontAwesome for Icons -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 	
-	<!-- Optional: Add Custom CSS for Better Styling 
-	<style>
-		.navbar-brand {
-			font-size: 1.5rem;
-			font-weight: bold;
-		}
-		.navbar-brand span {
-			color: #4CAF50; /* Green color for the "Rheumatology" part */
-		}
-		.icon {
-			width: 30px;
-			height: 30px;
-			border-radius: 50%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			background-color: #f8f9fa;
-		}
-		.icon-map-marker, .icon-clock, .icon-paper-plane, .icon-phone2 {
-			color: #4CAF50; /* Green color for icons */
-		}
-		.text {
-			font-size: 0.9rem;
-		}
-		.text a {
-			text-decoration: none;
-		}
-		.text a:hover {
-			text-decoration: underline;
-		}
-		.navbar {
-			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for the navbar */
-		}
-	</style>
--->
+
 	
 
     <section class="home-slider owl-carousel">
@@ -356,8 +324,8 @@ body{
 	  <div class="row no-gutters">
   
 		<!-- Service 1 -->
-		<div class="col-md-3 d-flex">
-		  <div class="services p-4 ftco-animate">
+		<div class="col-md-3 d-flex" >
+		  <div class="services p-4 ftco-animate" style="background-color: #41B5E5;">
 			<a href="services.html">
 			  <div class="icon d-flex justify-content-center align-items-center">
 				<span class="flaticon-doctor"></span>
@@ -372,8 +340,8 @@ body{
 		</div>
   
 		<!-- Service 2 -->
-		<div class="col-md-3 d-flex">
-		  <div class="services p-4 ftco-animate">
+		<div class="col-md-3 d-flex" >
+		  <div class="services p-4 ftco-animate" style="background-color: #1c94c7;">
 			<a href="services.html">
 			  <div class="icon d-flex justify-content-center align-items-center">
 				<span class="flaticon-ambulance"></span>
@@ -386,8 +354,8 @@ body{
 		</div>
   
 		<!-- Service 3 -->
-		<div class="col-md-3 d-flex">
-		  <div class="services p-4 ftco-animate">
+		<div class="col-md-3 d-flex" >
+		  <div class="services p-4 ftco-animate" style="background-color: #41B5E5;">
 			<a href="services.html">
 			  <div class="icon d-flex justify-content-center align-items-center">
 				<span class="flaticon-stethoscope"></span>
@@ -400,8 +368,8 @@ body{
 		</div>
   
 		<!-- Service 4 -->
-		<div class="col-md-3 d-flex">
-		  <div class="services p-4 ftco-animate">
+		<div class="col-md-3 d-flex" >
+		  <div class="services p-4 ftco-animate" style="background-color: #1c94c7;">
 			<a href="services.html">
 			  <div class="icon d-flex justify-content-center align-items-center">
 				<span class="flaticon-24-hours"></span>
@@ -711,7 +679,7 @@ body{
     	</div>
     </section>
 		
-	<section class="ftco-intro" style="background-image: url(images/learnmore.jpg);" data-stellar-background-ratio="0.5">
+	<section class="ftco-intro"  style="background-image: url(images/learnmore.jpg); " data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
@@ -866,7 +834,7 @@ font-size: larger;
 
 <section class="insurance-section" style="height: 388px;">
     <div class="container">
-        <h2 class="ins" class="section-title"><a  href="pat-resources.html">Insurances</a></h2>
+        <h2 class="ins" class="section-title"><a  href="pat-resources.html" style="color: #41B5E5;">Insurances</a></h2>
 		<p style="color: #000;">All of our providers are certified and meet the highest standards of care</p>
         <p class="insurance-note"> If you do not see your insurance provider, please <strong>call us</strong> for additional information.</p>
         <a href="tel:8883671850" class="btn btn-primary"> Call (888) 367-1850</a>
@@ -915,20 +883,74 @@ document.addEventListener('DOMContentLoaded', function () {
 <!-- certifications  -->
 
 
-
-  <footer class="ftco-footer ftco-bg-dark py-4">
+<footer class="ftco-footer ftco-bg-dark py-4">
 	<div class="container text-center text-md-start">
 	  <div class="row">
-		<!-- Logo and Description -->
-		<div class="col-md-3 mb-3">
-			<h1 class="ftco-heading-2 logo" style="color:#007bff; font-size: 22px;">
+      <div class="col-auto mb-3" style="background:#333; padding:1rem; text-align:center;">
+        <!-- hidden source -->
+        <img id="logo-src" src="images/logos/CRI Logo-01.png" alt="CA.logo" style="display:none;">
+        <!-- this will become the cropped, transparent canvas -->
+        <canvas id="logo-canvas" style="width: 255px;color: #000;"></canvas>
+      </div>
+      
+      <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        const src    = document.getElementById('logo-src');
+        const out    = document.getElementById('logo-canvas');
+      
+        src.onload = () => {
+          // draw onto a temp canvas
+          const temp    = document.createElement('canvas');
+          const tCtx    = temp.getContext('2d');
+          temp.width    = src.width;
+          temp.height   = src.height;
+          tCtx.drawImage(src, 0, 0);
+      
+          // get pixel data & strip white
+          const imgData = tCtx.getImageData(0, 0, temp.width, temp.height);
+          const d       = imgData.data;
+          for (let i = 0; i < d.length; i += 4) {
+            if (d[i] > 240 && d[i+1] > 240 && d[i+2] > 240) {
+              d[i+3] = 0;
+            }
+          }
+          tCtx.putImageData(imgData, 0, 0);
+      
+          // find non-transparent bounds
+          let minX = temp.width, minY = temp.height;
+          let maxX = 0,        maxY = 0;
+          for (let y = 0; y < temp.height; y++) {
+            for (let x = 0; x < temp.width; x++) {
+              if (imgData.data[(y*temp.width + x)*4 + 3] > 0) {
+                minX = Math.min(minX, x);
+                minY = Math.min(minY, y);
+                maxX = Math.max(maxX, x);
+                maxY = Math.max(maxY, y);
+              }
+            }
+          }
+      
+          // size the output canvas to the logo’s box
+          const w = maxX - minX + 1;
+          const h = maxY - minY + 1;
+          out.width  = w;
+          out.height = h;
+      
+          // copy the cropped image into the visible canvas
+          const oCtx = out.getContext('2d');
+          oCtx.putImageData(
+            tCtx.getImageData(minX, minY, w, h),
+            0, 0
+          );
+        };
+      
+        // trigger onload if cached
+        if (src.complete) src.onload();
+      });
+      </script>
+      
 
-				 <span style="color: orange;">			
-       <img src="images/logos/CRI Logo-01.png" style="width: auto;height: 57px; margin-right: 13px;">
-				</span></h1>
-
-		  <p>Comprehensive care for arthritis, autoimmune diseases, and joint health.</p>
-		</div>
+      
 		<!-- Quick Links -->
 		<div class="col-md-3 mb-3">
 		  <h2 class="ftco-heading-2" style="color: azure;">Quick Links</h2>
@@ -962,42 +984,41 @@ document.addEventListener('DOMContentLoaded', function () {
 	  </div>
 	</div>
   </footer>
-  
-<style>
-	.ftco-footer {
-  background-color: #333; /* Dark background */
-  color: #fff; /* White text */
-  font-size: 0.9rem; /* Compact font size */
-}
-
-.ftco-footer a {
-  color: #007bff; /* Blue links */
-  text-decoration: none;
-}
-
-.ftco-footer a:hover {
-  text-decoration: underline;
-  color: #0056b3; /* Darker blue on hover */
-}
-
-.ftco-footer .ftco-heading-2 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-
-.ftco-footer p, .ftco-footer ul {
-  margin: 0;
-  padding: 0;
-}
-
-.ftco-footer .icon {
-  color: #ffc107; /* Yellow icon color */
-  margin-right: 5px;
-}
-
-  </style>  
-
+    <style>
+      .ftco-footer {
+      background-color: #333; /* Dark background */
+      color: #fff; /* White text */
+      font-size: 0.9rem; /* Compact font size */
+    }
+    
+    .ftco-footer a {
+      color: #41B5E5; /* Blue links */
+      text-decoration: none;
+    }
+    
+    .ftco-footer a:hover {
+      text-decoration: underline;
+      color: #0056b3; /* Darker blue on hover */
+    }
+    
+    .ftco-footer .ftco-heading-2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    
+    .ftco-footer p, .ftco-footer ul {
+      margin: 0;
+      padding: 0;
+    }
+    
+    .ftco-footer .icon {
+      color: #ffc107; /* Yellow icon color */
+      margin-right: 5px;
+    }
+    
+      </style>  
+    
 
 
   

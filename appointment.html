@@ -26,6 +26,8 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="updated-styles/appointment.css">
+    <link rel="stylesheet" href="updated-styles/ada.css">
+
   </head>
   <body>
     <style>
@@ -88,7 +90,7 @@
 	<div class="container">
 	  <!-- Brand Name -->
     <a  style="font-size: medium;" class="navbar-brand" href="index.html">
-			California <span style="color:#007bff;font-size: medium; ">Rheumatology</span>
+			California <span style="color:#41B5E5;font-size: medium; ">Rheumatology</span>
 		  </a>
   
 	  <!-- Toggler for Mobile -->
@@ -125,7 +127,7 @@
 			<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
 			  <span class="icon-paper-plane text-primary"></span>
 			</div>
-			<a href="mailto:cidsferreal@email.com" class="nav-link p-0 text-primary">
+			<a href="mailto:cidsferreal@email.com" style="color: #41B5E5;" class="nav-link p-0 text-primary">
 			  cidsferreal@email.com
 			</a>
 		  </li>
@@ -135,7 +137,7 @@
 			<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
 			  <span class="icon-phone2 text-primary"></span>
 			</div>
-			<a href="tel:8883671850" class="nav-link p-0 text-primary font-weight-bold">
+			<a href="tel:8883671850" style="color: #41B5E5;" class="nav-link p-0 text-primary font-weight-bold">
 			  888-367-1850
 			</a>
 		  </li>
@@ -268,7 +270,7 @@
     </div>
 
     <!-- Submit Button -->
-    <button type="submit">Submit</button>
+    <button style="background-color: #41B5E5;" type="submit">Submit</button>
   </form>
 
               </div>
@@ -295,7 +297,7 @@
       <div class="row mt-5">
           <div class="col-md-6">
               <div class="payment-box">
-                  <h3>Accepted Payment Methods</h3>
+                  <h3 style="color: #41B5E5;">Accepted Payment Methods</h3>
                   <ul class="payment-methods">
                       <li>✔ Visa</li>
                       <li>✔ Mastercard</li>
@@ -309,9 +311,9 @@
           
           <div class="col-md-6">
               <div class="payment-box">
-                  <h3>Insurance Information</h3>
-                  <p>We accept a variety of <a href="pat-resources.html">insurance providers</a>. If you have questions about coverage, please call us.</p>
-                  <a href="tel:8883671850" class="btn btn-primary"> Call for Insurance Inquiry</a>
+                  <h3 style="color: #41B5E5;">Insurance Information</h3>
+                  <p>We accept a variety of <a href="pat-resources.html" style="color: #41B5E5;">insurance providers</a>. If you have questions about coverage, please call us.</p>
+                  <a href="tel:8883671850" class="btn btn-primary" style="background-color: #41B5E5;"> Call for Insurance Inquiry</a>
               </div>
           </div>
       </div>
@@ -336,15 +338,15 @@
       <div class="row mt-5">
           <div class="col-md-6">
               <div class="privacy-box">
-                  <h3>HIPAA Compliance</h3>
+                  <h3 style="color: #41B5E5;">HIPAA Compliance</h3>
                   <p>We strictly follow HIPAA regulations to ensure the protection of your personal health information.</p>
               </div>
           </div>
           
           <div class="col-md-6">
               <div class="privacy-box">
-                  <h3>Terms & Conditions</h3>
-                  <p>By using our website, you agree to our <a href="#" class="hover-blue">Terms and Conditions</a> and <a href="#" class="hover-blue">Privacy Policy</a>.</p>
+                  <h3 style="color: #41B5E5;">Terms & Conditions</h3>
+                  <p>By using our website, you agree to our <a href="#" class="hover-blue" style="color: #41B5E5;">Terms and Conditions</a> and <a href="#" class="hover-blue" style="color: #41B5E5;">Privacy Policy</a>.</p>
               </div>
           </div>
       </div>
@@ -466,18 +468,75 @@ button[type="submit"]:hover {
 
 </style>
 
+
 <footer class="ftco-footer ftco-bg-dark py-4">
 	<div class="container text-center text-md-start">
 	  <div class="row">
-		<!-- Logo and Description -->
-		<div class="col-md-3 mb-3">
-		  <h1 class="ftco-heading-2 logo" style="color:#007bff; font-size: 22px;">
+      <div class="col-auto mb-3" style="background:#333; padding:1rem; text-align:center;">
+        <!-- hidden source -->
+        <img id="logo-src" src="images/logos/CRI Logo-01.png" style="display:none;">
+        <!-- this will become the cropped, transparent canvas -->
+        <canvas id="logo-canvas" style="width: 255px;color: #000;"></canvas>
+      </div>
+      
+      <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        const src    = document.getElementById('logo-src');
+        const out    = document.getElementById('logo-canvas');
+      
+        src.onload = () => {
+          // draw onto a temp canvas
+          const temp    = document.createElement('canvas');
+          const tCtx    = temp.getContext('2d');
+          temp.width    = src.width;
+          temp.height   = src.height;
+          tCtx.drawImage(src, 0, 0);
+      
+          // get pixel data & strip white
+          const imgData = tCtx.getImageData(0, 0, temp.width, temp.height);
+          const d       = imgData.data;
+          for (let i = 0; i < d.length; i += 4) {
+            if (d[i] > 240 && d[i+1] > 240 && d[i+2] > 240) {
+              d[i+3] = 0;
+            }
+          }
+          tCtx.putImageData(imgData, 0, 0);
+      
+          // find non-transparent bounds
+          let minX = temp.width, minY = temp.height;
+          let maxX = 0,        maxY = 0;
+          for (let y = 0; y < temp.height; y++) {
+            for (let x = 0; x < temp.width; x++) {
+              if (imgData.data[(y*temp.width + x)*4 + 3] > 0) {
+                minX = Math.min(minX, x);
+                minY = Math.min(minY, y);
+                maxX = Math.max(maxX, x);
+                maxY = Math.max(maxY, y);
+              }
+            }
+          }
+      
+          // size the output canvas to the logo’s box
+          const w = maxX - minX + 1;
+          const h = maxY - minY + 1;
+          out.width  = w;
+          out.height = h;
+      
+          // copy the cropped image into the visible canvas
+          const oCtx = out.getContext('2d');
+          oCtx.putImageData(
+            tCtx.getImageData(minX, minY, w, h),
+            0, 0
+          );
+        };
+      
+        // trigger onload if cached
+        if (src.complete) src.onload();
+      });
+      </script>
+      
 
-         <span style="color: orange;">			
-       <img src="images/logos/CRI Logo-01.png" style="width: auto;height: 57px; margin-right: 11px;">
-        </span></h1>
-		  <p>Comprehensive care for arthritis, autoimmune diseases, and joint health.</p>
-		</div>
+      
 		<!-- Quick Links -->
 		<div class="col-md-3 mb-3">
 		  <h2 class="ftco-heading-2" style="color: azure;">Quick Links</h2>
@@ -511,8 +570,6 @@ button[type="submit"]:hover {
 	  </div>
 	</div>
   </footer>
-  
-      
     <style>
       .ftco-footer {
       background-color: #333; /* Dark background */
@@ -521,7 +578,7 @@ button[type="submit"]:hover {
     }
     
     .ftco-footer a {
-      color: #007bff; /* Blue links */
+      color: #41B5E5; /* Blue links */
       text-decoration: none;
     }
     

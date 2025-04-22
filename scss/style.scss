@@ -189,7 +189,7 @@ h1, h2, h3, h4, h5,
 			}
 			&.active {
 				> a {
-					color: $primary;
+					color: #2f89fc!important;
 					@include media-breakpoint-down(md){
 						color: $white;
 					}
@@ -604,8 +604,7 @@ h1, h2, h3, h4, h5,
 }
 
 .bg-primary{
-	background: $primary;
-}
+	background: $primary;}
 
 .ftc-no-pb{
 	padding-bottom: 0 !important;

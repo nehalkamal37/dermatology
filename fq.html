@@ -28,6 +28,8 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="updated-styles/ada.css">
+
 
 <link rel="stylesheet" href="updates.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
@@ -145,7 +147,7 @@ body{
 		<div class="container">
 		  <!-- Brand Name -->
         <a  style="font-size: medium;" class="navbar-brand" href="index.html">
-        California <span style="color:#007bff;font-size: medium; ">Rheumatology</span>
+        California <span style="color:#41B5E5;font-size: medium; ">Rheumatology</span>
         </a>
 	  
 		  <!-- Toggler for Mobile -->
@@ -182,7 +184,7 @@ body{
 				<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
 				  <span class="icon-paper-plane text-primary"></span>
 				</div>
-				<a href="mailto:cidsferreal@email.com" class="nav-link p-0 text-primary">
+				<a href="mailto:cidsferreal@email.com" style="color: #41B5E5;" class="nav-link p-0 text-primary">
 				  cidsferreal@email.com
 				</a>
 			  </li>
@@ -192,7 +194,7 @@ body{
 				<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
 				  <span class="icon-phone2 text-primary"></span>
 				</div>
-				<a href="tel:8883671850" class="nav-link p-0 text-primary font-weight-bold">
+				<a href="tel:8883671850" style="color: #41B5E5;" class="nav-link p-0 text-primary font-weight-bold">
 				  888-367-1850
 				</a>
 			  </li>
@@ -480,65 +482,7 @@ function toggleFAQ(id) {
 }
 </script>
 
-<!-- Footer --
-<section class="faq-section">
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-md-12">
-                <h2 class="section-title">Frequently Asked Questions</h2>
-                <p class="section-subtitle">Find answers to common concerns about our treatments, insurance, and appointments.</p>
-            </div>
-        </div>
-        
-        <div class="row mt-4 justify-content-center">
-            <div class="col-md-10">
-                <div class="accordion" id="faqAccordion">
-                    
-                    <div class="faq-item">
-                        <div class="faq-header" id="faq1" onclick="toggleFAQ('collapse1')">
-                            <h5>What is the difference between osteoarthritis and rheumatoid arthritis?</h5>
-                            <span class="faq-arrow">&#9660;</span>
-                        </div>
-                        <div id="collapse1" class="faq-body">
-                            <p><strong>Answer:</strong> <br> Osteoarthritis is a degenerative joint disease caused by cartilage breakdown, leading to pain and stiffness. Rheumatoid arthritis is an autoimmune disorder where the immune system attacks joint tissues, causing inflammation and damage.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-header" id="faq2" onclick="toggleFAQ('collapse2')">
-                            <h5>How long does treatment take?</h5>
-                            <span class="faq-arrow">&#9660;</span>
-                        </div>
-                        <div id="collapse2" class="faq-body">
-                            <p><strong>Answer:</strong> <br> Treatment duration varies depending on the condition and severity. Some treatments provide immediate relief, while others require ongoing management with medications, therapy, and lifestyle adjustments.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-header" id="faq3" onclick="toggleFAQ('collapse3')">
-                            <h5>What should I expect during my first visit?</h5>
-                            <span class="faq-arrow">&#9660;</span>
-                        </div>
-                        <div id="collapse3" class="faq-body">
-                            <p><strong>Answer:</strong> <br> Your first visit will include a detailed medical history review, physical examination, and potentially diagnostic tests such as blood work or imaging. We will create a personalized treatment plan tailored to your condition.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-header" id="faq4" onclick="toggleFAQ('collapse4')">
-                            <h5>What insurances do you accept?</h5>
-                            <span class="faq-arrow">&#9660;</span>
-                        </div>
-                        <div id="collapse4" class="faq-body">
-                            <p><strong>Answer:</strong> <br> We accept most major insurance providers, including Medicare and private health plans. Please contact our office for a full list of accepted insurances.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
--->
+
 <style>
 .faq-section {
     padding: 60px 0;
@@ -573,7 +517,7 @@ function toggleFAQ(id) {
     justify-content: space-between;
     align-items: center;
     font-size: 20px;
-    color: #007bff;
+    color: #41B5E5;
     font-weight: bold;
     padding: 15px 0;
     cursor: pointer;
@@ -591,7 +535,7 @@ function toggleFAQ(id) {
 }
 .faq-arrow {
     font-size: 24px;
-    color: #007bff;
+    color: #41B5E5;
     transition: transform 0.3s ease;
 }
 .faq-item.open .faq-arrow {
@@ -625,18 +569,75 @@ function toggleFAQ(id) {
 </script>
 
 
+
 <footer class="ftco-footer ftco-bg-dark py-4">
 	<div class="container text-center text-md-start">
 	  <div class="row">
-		<!-- Logo and Description -->
-		<div class="col-md-3 mb-3">
-            <h1 class="ftco-heading-2 logo" style="color:#007bff; font-size: 22px;">
+      <div class="col-auto mb-3" style="background:#333; padding:1rem; text-align:center;">
+        <!-- hidden source -->
+        <img id="logo-src" src="images/logos/CRI Logo-01.png" style="display:none;">
+        <!-- this will become the cropped, transparent canvas -->
+        <canvas id="logo-canvas" style="width: 255px;color: #000;"></canvas>
+      </div>
+      
+      <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        const src    = document.getElementById('logo-src');
+        const out    = document.getElementById('logo-canvas');
+      
+        src.onload = () => {
+          // draw onto a temp canvas
+          const temp    = document.createElement('canvas');
+          const tCtx    = temp.getContext('2d');
+          temp.width    = src.width;
+          temp.height   = src.height;
+          tCtx.drawImage(src, 0, 0);
+      
+          // get pixel data & strip white
+          const imgData = tCtx.getImageData(0, 0, temp.width, temp.height);
+          const d       = imgData.data;
+          for (let i = 0; i < d.length; i += 4) {
+            if (d[i] > 240 && d[i+1] > 240 && d[i+2] > 240) {
+              d[i+3] = 0;
+            }
+          }
+          tCtx.putImageData(imgData, 0, 0);
+      
+          // find non-transparent bounds
+          let minX = temp.width, minY = temp.height;
+          let maxX = 0,        maxY = 0;
+          for (let y = 0; y < temp.height; y++) {
+            for (let x = 0; x < temp.width; x++) {
+              if (imgData.data[(y*temp.width + x)*4 + 3] > 0) {
+                minX = Math.min(minX, x);
+                minY = Math.min(minY, y);
+                maxX = Math.max(maxX, x);
+                maxY = Math.max(maxY, y);
+              }
+            }
+          }
+      
+          // size the output canvas to the logo’s box
+          const w = maxX - minX + 1;
+          const h = maxY - minY + 1;
+          out.width  = w;
+          out.height = h;
+      
+          // copy the cropped image into the visible canvas
+          const oCtx = out.getContext('2d');
+          oCtx.putImageData(
+            tCtx.getImageData(minX, minY, w, h),
+            0, 0
+          );
+        };
+      
+        // trigger onload if cached
+        if (src.complete) src.onload();
+      });
+      </script>
+      
 
-                 <span style="color: orange;">			
-               <img src="images/logos/CRI Logo-01.png" style="width: auto;height: 57px; margin-right: 11px;">
-                </span></h1>
-		  <p>Comprehensive care for arthritis, autoimmune diseases, and joint health.</p>
-		</div>
+      
 		<!-- Quick Links -->
 		<div class="col-md-3 mb-3">
 		  <h2 class="ftco-heading-2" style="color: azure;">Quick Links</h2>
@@ -670,43 +671,41 @@ function toggleFAQ(id) {
 	  </div>
 	</div>
   </footer>
-  
-  
-<style>
-	.ftco-footer {
-  background-color: #333; /* Dark background */
-  color: #fff; /* White text */
-  font-size: 0.9rem; /* Compact font size */
-}
-
-.ftco-footer a {
-  color: #007bff; /* Blue links */
-  text-decoration: none;
-}
-
-.ftco-footer a:hover {
-  text-decoration: underline;
-  color: #0056b3; /* Darker blue on hover */
-}
-
-.ftco-footer .ftco-heading-2 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-
-.ftco-footer p, .ftco-footer ul {
-  margin: 0;
-  padding: 0;
-}
-
-.ftco-footer .icon {
-  color: #ffc107; /* Yellow icon color */
-  margin-right: 5px;
-}
-
-  </style>  
-
+    <style>
+      .ftco-footer {
+      background-color: #333; /* Dark background */
+      color: #fff; /* White text */
+      font-size: 0.9rem; /* Compact font size */
+    }
+    
+    .ftco-footer a {
+      color: #41B5E5; /* Blue links */
+      text-decoration: none;
+    }
+    
+    .ftco-footer a:hover {
+      text-decoration: underline;
+      color: #0056b3; /* Darker blue on hover */
+    }
+    
+    .ftco-footer .ftco-heading-2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    
+    .ftco-footer p, .ftco-footer ul {
+      margin: 0;
+      padding: 0;
+    }
+    
+    .ftco-footer .icon {
+      color: #ffc107; /* Yellow icon color */
+      margin-right: 5px;
+    }
+    
+      </style>  
+    
 
 
   
