@@ -508,7 +508,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <!-- hidden source -->
         <img id="logo-src" src="images/logos/CRI Logo-01.png" style="display:none;">
         <!-- this will become the cropped, transparent canvas -->
-        <canvas id="logo-canvas" style="width: 277px;color: #000;"></canvas>
+        <canvas id="logo-canvas" style="width: 255px;color: #000;"></canvas>
       </div>
       
       <script>
@@ -567,64 +567,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
       </script>
       
-		<!-- Logo and Description 
-		<div class="col-md-3 mb-3">
-      <h1 class="ftco-heading-2 logo" style="color:#007bff; font-size: 22px;">
 
-         <span style="color: orange;">			
-       <img src="images/logos/CRI Logo-01.png" style="width: auto;height: 57px; margin-right: 11px;">
-        </span></h1>
-		  <p>Comprehensive care for arthritis, autoimmune diseases, and joint health.</p>
-		</div>
-  
-    <div class="col-md-3 mb-3" style="background:#333; padding:1rem;">
-       hidden source image 
-      <img id="logo-src" src="images/logos/CRI Logo-01.png" style="display:none">
-       canvas where we'll draw the “background‑stripped” version 
-      <canvas id="logo-canvas"></canvas>
-     
-    </div>
-    <div class="col-md-3 mb-3" style="background:#333; padding:1rem; display:inline-block;">
-      <svg
-        width="auto"
-        height="57px"
-        xmlns="http://www.w3.org/2000/svg"
-        style="vertical-align: middle;"
-      >
-        <defs>
-          <filter id="remove-white">
-            
-              The last row here is the alpha transform:
-              new‑alpha = (–1 * R) + (–1 * G) + (–1 * B) + (1 * A) + 1
-              => white (1,1,1,1) → 0, anything darker stays >0
-          
-            <feColorMatrix
-              in="SourceGraphic"
-              type="matrix"
-              values="
-                1 0 0 0 0
-                0 1 0 0 0
-                0 0 1 0 0
-               -1 -1 -1 1 1
-              "
-            />
-          </filter>
-        </defs>
-    
-        <image
-          filter="url(#remove-white)"
-          xlink:href="images/logos/CRI Logo-01.png"
-          width="100%"
-          height="100%"
-          preserveAspectRatio="xMidYMid meet"
-        />
-      </svg>
-    
-      <p style="color:white; margin-top:.5rem;">
-        Comprehensive care for arthritis, autoimmune diseases, and joint health.
-      </p>
-    </div>
-  -->
       
 		<!-- Quick Links -->
 		<div class="col-md-3 mb-3">
@@ -651,14 +594,27 @@ document.addEventListener('DOMContentLoaded', function () {
 		</div>
 	
 	  </div>
+
+    <div class="col-md-3 mb-3">
+      <h2 class="ftco-heading-2" style="color: azure;">About Us</h2>
+      <ul class="list-unstyled d-flex justify-content-center">
+        <p>
+          We offer advanced treatments with a patient-focused approach, ensuring personalized care and improved quality of life.
+            Expert care for arthritis, autoimmune diseases, and joint health.</p>
+            
+        </ul>
+        </div>
+      
 	  <div class="row">
 		<div class="col-md-12 text-center mt-3">
 		  <p class="mb-0">
+    
 		  </p>
 		</div>
 	  </div>
 	</div>
   </footer>
+
   
       
     <style>
