@@ -34,7 +34,7 @@
     
     body{
       font-family: Georgia, 'Times New Roman', Times, serif;
-    
+   
     }
 
   .text-class {
@@ -49,7 +49,6 @@
     nav.navbar:nth-of-type(2) {
   position: relative;
   z-index: 9999; /* bring above the first navbar */
-  margin-top: 56px; /* space below the first navbar's height */
 }
 
     </style>
@@ -85,8 +84,8 @@
 	
     <!-- END nav -->
 		<!--  phones-->
-<nav  class="navbar navbar-expand-lg navbar-light bg-light">
-	<div class="container">
+<nav  class="navbar navbar-expand-lg navbar-light bg-light" >
+	<div class="container " style="height: -44px;">
 	  <!-- Brand Name -->
     <a  style="font-size: medium;" class="navbar-brand" href="index.html">
 			California <span style="color:#41B5E5;font-size: medium; ">Rheumatology</span>
@@ -360,14 +359,8 @@
   /* Basic reset */
 
 
-body {
-  font-family: Arial, sans-serif;
-  background: #f9f9f9;
- /* padding: 20px;*/
-  color: #333;
-}
 
-/* Page Title and Description */
+/* Page Title and Description 
 h1 {
   margin-bottom: 10px;
   font-size: 2rem;
@@ -378,10 +371,18 @@ p {
   font-size: 1.1rem;
   color: #555;
 }
-
+*/
 /* Form Container */
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+ /* padding: 20px;*/
+  color: #333;
+}
+
 .appointment-form {
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
   background: #fff;
   padding: 20px;
