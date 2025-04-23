@@ -32,3 +32,34 @@
   background-color: #41B5E5 !important;  /* light brand on hover */
   border-color:     #41B5E5 !important;
 }
+
+/* nav on mobile a colors */
+  /* — Desktop: black links — */
+  @media (min-width: 992px) {
+    /* only when the navbar is fully expanded */
+    .navbar-expand-lg .nav-link {
+      color: black !important;
+    }
+  }
+  
+  /* — Mobile: white links on dark bg — */
+  @media (max-width: 991.98px) {
+    /* ensure the collapsed menu container stays dark */
+    #ftco-nav {
+     /* background-color: #343a40; /* same as bg-dark */
+    }
+    /* force the links to white for readability */
+    #ftco-nav .nav-link {
+      color: #fff !important;
+    }
+    /* optional: give them your brand-blue hover */
+    #ftco-nav .nav-link:hover {
+      color: #41B5E5 !important;
+    }
+    #ftco-nav .nav-item.active a {
+      color: #41B5E5 !important;
+      
+    }
+  
+  }
+  
