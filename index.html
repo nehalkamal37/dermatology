@@ -140,18 +140,32 @@ body{
 		border-radius: 5px;
 	}
 
-	.headline{
-		color: rgba(255, 255, 255, 0.9); /* Light white text */
-				background-color: rgba(0, 0, 0, 0.6); /* Slightly dark background */
-				padding: 5px 10px; /* Add padding for readability */
-				border-radius: 5px; /* Rounded corners */
-				display: inline-block; /* Ensure the background only wraps around the text */
-				font-family: Georgia, 'Times New Roman', Times, serif;
-	}
+	
 	.nav-item .active a {
 
 		color: #41B5E5 !important; /* Light blue text */
 	}
+
+
+	/* common “boxed text” style */
+.headline {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 94%;                  /* ← tweak this % (or use px) so it looks right */
+  background-color: rgba(0,0,0,0.6);
+  color:              rgba(255,255,255,0.9);
+  padding:            5px 10px;
+  border-radius:      5px;
+  font-family:        Georgia, 'Times New Roman', serif;
+  line-height:        1.2;     /* keeps multi-line text evenly spaced */
+}
+
+/* if you want the H2 to match too */
+h2 .headline {
+  display: inline-block;
+  width: inherit;
+}
+
 		  </style>  
 		  
 	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -269,7 +283,7 @@ body{
 		</span></h1>
 
 
-			<h4 class="headline" style="color: rgba(255, 255, 255, 0.9);" >
+			<h4  class="headline" style="color: rgba(255, 255, 255, 0.9); " >
 			We offer advanced treatments with a patient-focused approach, ensuring personalized care and improved quality of life.
 	        Expert care for arthritis, autoimmune diseases, and joint health.
 	     	</h4>
