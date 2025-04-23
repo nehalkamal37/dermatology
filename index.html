@@ -172,8 +172,7 @@ h2 .headline {
 	    <div class="container d-flex align-items-center">
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"> 		
-					<img src="images/logos/CRI Logo-01.png" alt="logo" style="width: auto;height: 47px; margin-right: 133px;">
-</span> 
+</span> Menu
 	      </button>
 	      <p class="button-custom order-lg-last mb-0"><a href="appointment.html" class="btn btn-secondary py-2 px-3">Make An Appointment</a></p>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
@@ -718,10 +717,10 @@ h2 .headline {
 
 
   
-  <!-- mession  -->
-  <section class="mission-section py-5" style="background: linear-gradient(135deg, #ffffff, #fcfeff);">
-	<div class="container" style="width: 888px;">
-	  <div class="text-center mb-5">
+  <!-- mission-section -->
+<section class="mission-section py-5" style="background: linear-gradient(135deg, #ffffff, #fcfeff);">
+	<div class="container" style="max-width: 888px; width: 100%;">
+	  <div class="text-center mb-5 px-3">
 		<h2 class="section-title display-4 fw-bold">
 		  <a href="about.html" class="text-decoration-none text-dark">Our Mission</a>
 		</h2>
@@ -731,33 +730,40 @@ h2 .headline {
 	  </div>
 	  <div id="missionCarousel" class="carousel slide" data-bs-ride="carousel">
 		<div class="carousel-inner rounded shadow">
+		  <!-- Slide 1 -->
 		  <div class="carousel-item active">
-			<img src="images/suggestions/messions/Medical-Clinic.jpg" class="d-block w-75 mx-auto img-fluid rounded" alt="Clinic Location">
+			<img src="images/suggestions/messions/Medical-Clinic.jpg"
+				 class="d-block w-100 mx-auto img-fluid rounded"
+				 alt="Clinic Location">
+		  </div>
+		  <!-- Slide 2 -->
+		  <div class="carousel-item">
+			<img src="images/suggestions/messions/Medical-doctors-and-nurse.jpg"
+				 class="d-block w-100 mx-auto img-fluid rounded"
+				 alt="Doctor Photo">
+		  </div>
+		  <!-- ...other slides... -->
+		  <div class="carousel-item">
+			<img src="images/suggestions/messions/staff.jpg" class="d-block w-75 mx-auto img-fluid rounded" 
+			alt="Staff Photo"
+			class="d-block w-100 mx-auto img-fluid rounded">
+
+		</div>
+		  <div class="carousel-item">
+			<img src="images/suggestions/messions/business-person.jpg" 
+			class="d-block w-100 mx-auto img-fluid rounded" alt="Attending Conference">
 		  </div>
 		  <div class="carousel-item">
-			<img src="images/suggestions/messions/Medical-doctors-and-nurse.jpg" class="d-block w-75 mx-auto img-fluid rounded" alt="Doctor Photo">
-		  </div>
-		  <div class="carousel-item">
-			<img src="images/suggestions/messions/bigstock-doctor-and-patient-doctor.webp" class="d-block w-75 mx-auto img-fluid rounded" alt="Doctor Treating a Patient">
-		  </div>
-		  <div class="carousel-item">
-			<img src="images/suggestions/messions/doo.jpg" class="d-block w-75 mx-auto img-fluid rounded" alt="Doctor on Desk">
-		  </div>
-		  <div class="carousel-item">
-			<img src="images/suggestions/messions/staff.jpg" class="d-block w-75 mx-auto img-fluid rounded" alt="Staff Photo">
-		  </div>
-		  <div class="carousel-item">
-			<img src="images/suggestions/messions/business-person.jpg" class="d-block w-75 mx-auto img-fluid rounded" alt="Attending Conference">
-		  </div>
-		  <div class="carousel-item">
-			<img src="images/suggestions/messions/isfront.jpg" class="d-block w-75 mx-auto img-fluid rounded" alt="Front Desk">
+			<img src="images/suggestions/messions/isfront.jpg" class="d-block w-100 mx-auto img-fluid rounded" alt="Front Desk">
 		  </div>
 		</div>
-		<button class="carousel-control-prev" type="button" data-bs-target="#missionCarousel" data-bs-slide="prev">
+		<button class="carousel-control-prev" type="button"
+				data-bs-target="#missionCarousel" data-bs-slide="prev">
 		  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
 		  <span class="visually-hidden">Previous</span>
 		</button>
-		<button class="carousel-control-next" type="button" data-bs-target="#missionCarousel" data-bs-slide="next">
+		<button class="carousel-control-next" type="button"
+				data-bs-target="#missionCarousel" data-bs-slide="next">
 		  <span class="carousel-control-next-icon" aria-hidden="true"></span>
 		  <span class="visually-hidden">Next</span>
 		</button>
@@ -765,6 +771,45 @@ h2 .headline {
 	</div>
   </section>
   
+  <style>
+	/* Put this in your custom stylesheet, after Bootstrap */
+
+/* 1) Make container fluid down to its max-width */
+.mission-section .container {
+  max-width: 888px;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* 2) Tighten up the text wrap on small screens */
+@media (max-width: 576px) {
+  .mission-section .display-4 {
+    font-size: 1.75rem;  /* smaller heading on xs */
+  }
+  .mission-section .lead {
+    font-size: 1rem;
+  }
+}
+
+/* 3) Ensure carousel images fill width on all devices */
+.mission-section .carousel-inner img {
+  width: 100%;    /* full width of its container */
+  height: auto;
+  object-fit: cover;
+}
+
+/* 4) Optionally reduce shadow/padding on very small screens */
+@media (max-width: 576px) {
+  .mission-section .carousel-inner {
+    box-shadow: none;
+  }
+  .mission-section .carousel-item {
+    padding: 0;  /* remove any default padding */
+  }
+}
+
+  </style>
 <!--
   <section class="mission-section">
 	<div class="container text-center">
@@ -883,6 +928,75 @@ font-size: larger;
     </div>
 </section>
 
+<section class="insurance-section py-5">
+	<div class="container">
+	 
+	</div>
+  </section>
+
+  <style>
+	/* Make the section padding adapt */
+.insurance-section {
+  background: #f9f9f9;
+  width: 100%;
+}
+
+/* Container fluid up to a max width */
+.insurance-section .container {
+  max-width: 888px;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Title link styling */
+.insurance-section .section-title a {
+  color: #41B5E5;
+  text-decoration: none;
+}
+.insurance-section .section-title a:hover {
+  text-decoration: underline;
+}
+
+/* Paragraphs spacing */
+.insurance-section .lead,
+.insurance-section .insurance-note {
+  margin-bottom: 1rem;
+}
+
+/* Make the call button full-width on xs, auto on md+ */
+.insurance-section .btn-primary {
+  min-width: 200px;
+}
+@media (max-width: 576px) {
+  .insurance-section .btn-primary {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* Carousel images scale nicely */
+.insurance-section .carousel-inner img {
+  width: 60%;           /* default image width */
+  max-width: 250px;     /* never get too big */
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+/* On small phones, shrink images and remove side controls */
+@media (max-width: 576px) {
+  .insurance-section .carousel-inner img {
+    width: 80%;
+    max-width: 180px;
+  }
+  .insurance-section .carousel-control-prev,
+  .insurance-section .carousel-control-next {
+    display: none;  /* hide arrows for simpler UX */
+  }
+}
+
+  </style>
 
 
 <script>
