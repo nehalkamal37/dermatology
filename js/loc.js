@@ -272,7 +272,7 @@ function findNearestFromInput() {
     findNearest(lat, lon);
 }
 
-// Get user's current location
+/*Get user's current location
 function getUserLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(position => {
@@ -285,8 +285,30 @@ function getUserLocation() {
     } else {
         alert("المتصفح لا يدعم تحديد الموقع الجغرافي.");
     }
-}
-
+}*/
+function getUserLocation() {
+    if (!navigator.geolocation) {
+      return alert("Geolocation not supported by your browser.");
+    }
+  
+    navigator.geolocation.getCurrentPosition(
+      position => {
+        findNearest(
+          position.coords.latitude,
+          position.coords.longitude
+        );
+      },
+      error => {
+        alert("Error getting location: " + error.message);
+      },
+      {
+        enableHighAccuracy: false,    // don’t wait for precise GPS fix
+        timeout: 30000,               // give it up to 30 seconds
+        maximumAge: 600000            // accept a cached position up to 10 minutes old
+      }
+    );
+  }
+  
 // Initialize locations with coordinates
 populateLocations();
 
