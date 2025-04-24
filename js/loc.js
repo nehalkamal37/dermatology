@@ -289,3 +289,77 @@ function getUserLocation() {
 
 // Initialize locations with coordinates
 populateLocations();
+
+
+/*  */
+
+ 
+
+  
+
+    // Haversine
+    function getDistance(lat1, lon1, lat2, lon2) {
+      const R = 6371;
+      const dLat = (lat2 - lat1) * Math.PI/180;
+      const dLon = (lon2 - lon1) * Math.PI/180;
+      const a = Math.sin(dLat/2)**2 +
+                Math.cos(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180) *
+                Math.sin(dLon/2)**2;
+      return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    }
+
+    function highlightNearest(nearest, distance) {
+      document.getElementById("nearest-location").innerHTML = `
+        <div class="card mt-3">
+          <div class="card-body">
+            <h4 class="card-title text-primary">${nearest.name}</h4>
+            <p class="card-text">${nearest.address}</p>
+            <p class="text-muted">Distance: <strong>${distance.toFixed(2)} km</strong></p>
+          </div>
+        </div>`;
+    }
+
+    function findNearest(lat, lon) {
+      let nearest = locations[0];
+      let minDist = getDistance(lat, lon, nearest.lat, nearest.lon);
+
+      locations.forEach(loc => {
+        const d = getDistance(lat, lon, loc.lat, loc.lon);
+        if (d < minDist) {
+          minDist = d;
+          nearest = loc;
+        }
+      });
+
+      highlightNearest(nearest, minDist);
+    }
+
+    function findNearestFromInput() {
+      const lat = parseFloat(document.getElementById("latitude").value);
+      const lon = parseFloat(document.getElementById("longitude").value);
+
+      if (isNaN(lat) || isNaN(lon)) {
+        return alert("Please enter valid coordinates!");
+      }
+      findNearest(lat, lon);
+    }
+
+    function getUserLocation() {
+      if (!navigator.geolocation) {
+        return alert("Geolocation not supported by your browser.");
+      }
+      navigator.geolocation.getCurrentPosition(
+        pos => findNearest(pos.coords.latitude, pos.coords.longitude),
+        err => alert("Error getting location: " + err.message),
+        { enableHighAccuracy: true, timeout: 10000 }
+      );
+    }
+
+    // Wire up buttons after DOM is ready
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("btn-find")
+              .addEventListener("click", findNearestFromInput);
+      document.getElementById("btn-locate")
+              .addEventListener("click", getUserLocation);
+    });
+  
