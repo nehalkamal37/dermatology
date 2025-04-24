@@ -1,5 +1,106 @@
+/* main */
 
-	/*for buttons on slider*/
+
+body{
+	font-family: Georgia, 'Times New Roman', Times, serif;   
+	position: sticky;
+	top: 0;
+	z-index: 9999;
+}
+.text-class {
+	white-space: nowrap; /* Prevent text from breaking onto a new line */
+	font-family: Arial, Helvetica, sans-serif;
+}
+.text-class .text:hover {
+  text-decoration: underline; /* Underline on hover */
+  color: #0056b3; /* Slightly darker blue on hover */
+}
+
+	/*ada */
+	/* your-custom.css */
+
+/* NAV LINKS */
+.navbar-dark .navbar-nav .nav-link {
+  color: #333333 !important;       /* neutral dark */
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #41B5E5 !important;       /* your light blue on hover */
+}
+.navbar-dark .navbar-nav .nav-item.active a {
+  color: #41B5E5 !important;
+}
+
+
+/* “Clinic Locations” link uses .loca */
+.loca {
+  color: #005A8C !important;       /* darker brand on white bg */
+}
+.loca:hover {
+  color: #41B5E5 !important;
+}
+
+/* SECONDARY BUTTONS */
+.btn-secondary {
+  background-color: #005A8C !important;  /* dark brand bg */
+  border-color:     #005A8C !important;
+  color:            #ffffff !important;
+}
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: #41B5E5 !important;  /* light brand on hover */
+  border-color:     #41B5E5 !important;
+}
+
+
+	
+	.nav-link {
+		color: black;
+		text-decoration: none;
+	}
+	
+	.nav-link.active {
+		color: white;
+		background-color: blue;
+		padding: 5px 10px;
+		border-radius: 5px;
+	}
+
+	
+	.nav-item .active a {
+
+		color: #41B5E5 !important; /* Light blue text */
+	}
+
+
+	/* common “boxed text” style */
+.headline {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 94%;                  /* ← tweak this % (or use px) so it looks right */
+  background-color: rgba(0,0,0,0.6);
+  color:              rgba(255,255,255,0.9);
+  padding:            5px 10px;
+  border-radius:      5px;
+  font-family:        Georgia, 'Times New Roman', serif;
+  line-height:        1.2;     /* keeps multi-line text evenly spaced */
+}
+
+/* if you want the H2 to match too */
+h2 .headline {
+  display: inline-block;
+  width: inherit;
+}
+
+
+/* ADA  */
+
+
+
+		  
+
+
+
+/*for buttons on slider*/
 .button-container {
   position: relative;
   z-index: 10;
@@ -163,3 +264,126 @@
 .insurance-logo img:hover {
     filter: grayscale(0%);
 }
+
+
+/* mession  */
+
+
+  
+/* Put this in your custom stylesheet, after Bootstrap */
+
+/* 1) Make container fluid down to its max-width */
+.mission-section .container {
+max-width: 888px;
+width: 100%;
+padding-left: 1rem;
+padding-right: 1rem;
+}
+
+/* 2) Tighten up the text wrap on small screens */
+@media (max-width: 576px) {
+.mission-section .display-4 {
+  font-size: 1.75rem;  /* smaller heading on xs */
+}
+.mission-section .lead {
+  font-size: 1rem;
+}
+}
+
+/* 3) Ensure carousel images fill width on all devices */
+.mission-section .carousel-inner img {
+width: 100%;    /* full width of its container */
+height: auto;
+object-fit: cover;
+}
+
+/* 4) Optionally reduce shadow/padding on very small screens */
+@media (max-width: 576px) {
+.mission-section .carousel-inner {
+  box-shadow: none;
+}
+.mission-section .carousel-item {
+  padding: 0;  /* remove any default padding */
+}
+}
+
+
+.mission-section {
+padding: 60px 0;
+background-color: #f9f9f9;
+font-family: 'Poppins', sans-serif;
+}
+.carousel img {
+  border-radius: 10px;
+  max-height: 250px; /* Reduced height further */
+  object-fit: cover;
+width: 600px;
+}
+
+
+/* insurance */
+
+/* Make the section padding adapt */
+.insurance-section {
+background: #f9f9f9;
+width: 100%;
+}
+
+/* Container fluid up to a max width */
+.insurance-section .container {
+max-width: 888px;
+width: 100%;
+padding-left: 1rem;
+padding-right: 1rem;
+}
+
+/* Title link styling */
+.insurance-section .section-title a {
+color: #41B5E5;
+text-decoration: none;
+}
+.insurance-section .section-title a:hover {
+text-decoration: underline;
+}
+
+/* Paragraphs spacing */
+.insurance-section .lead,
+.insurance-section .insurance-note {
+margin-bottom: 1rem;
+}
+
+/* Make the call button full-width on xs, auto on md+ */
+.insurance-section .btn-primary {
+min-width: 200px;
+}
+@media (max-width: 576px) {
+.insurance-section .btn-primary {
+  display: block;
+  width: 100%;
+}
+}
+
+/* Carousel images scale nicely */
+.insurance-section .carousel-inner img {
+width: 60%;           /* default image width */
+max-width: 250px;     /* never get too big */
+height: auto;
+object-fit: contain;
+margin-bottom: 1rem;
+}
+
+/* On small phones, shrink images and remove side controls */
+@media (max-width: 576px) {
+.insurance-section .carousel-inner img {
+  width: 80%;
+  max-width: 180px;
+margin-bottom: 1rem;
+
+
+}
+.insurance-section .carousel-control-prev,
+.insurance-section .carousel-control-next {
+  display: none;  /* hide arrows for simpler UX */
+}
+}
+

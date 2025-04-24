@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="updated-styles/ada.css">
-
+     <link rel="stylesheet" href="updated-styles/fq.css">
 
 <link rel="stylesheet" href="updates.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
@@ -69,61 +69,18 @@
 	  </script>
 	  
 
-<style>
-
-body{
-	font-family: Georgia, 'Times New Roman', Times, serif;   
-	position: sticky;
-	top: 0;
-	z-index: 9999;
-}
-.text-class {
-	white-space: nowrap; /* Prevent text from breaking onto a new line */
-	font-family: Arial, Helvetica, sans-serif;
-}
-.text-class .text:hover {
-  text-decoration: underline; /* Underline on hover */
-  color: #0056b3; /* Slightly darker blue on hover */
-}
-
-</style>
-
-    
-	<style>
-	
-	.nav-link {
-		color: black;
-		text-decoration: none;
-	}
-	
-	.nav-link.active {
-		color: white;
-		background-color: blue;
-		padding: 5px 10px;
-		border-radius: 5px;
-	}
-
-	.headline{
-		color: rgba(255, 255, 255, 0.9); /* Light white text */
-				background-color: rgba(0, 0, 0, 0.6); /* Slightly dark background */
-				padding: 5px 10px; /* Add padding for readability */
-				border-radius: 5px; /* Rounded corners */
-				display: inline-block; /* Ensure the background only wraps around the text */
-				font-family: Georgia, 'Times New Roman', Times, serif;
-	}
-	
-		  </style>  
 		  
           <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
             <div class="container d-flex align-items-center">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="oi oi-menu">
+                <span class="oi oi-menu" >
 
                 </span> Menu
               </button>
               <p class="button-custom order-lg-last mb-0"><a href="appointment.html" class="btn btn-secondary py-2 px-3">Make An Appointment</a></p>
               <div class="collapse navbar-collapse" id="ftco-nav">
-                <img src="images/logos/CRI Logo-01.png" style="width: auto;height: 57px; margin-right: 133px;">
+                <img src="images/logos/CRI Logo-01.png"         class="navbar-logo"
+                alt="logo" style="width: auto;height: 57px; margin-right: 133px;">
 
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item " id=""><a href="index.html" class="nav-link pl-0">Home</a></li>
@@ -276,306 +233,7 @@ body{
     </div>
 </section>
 
-<style>
-.faq-section {
-    padding: 60px 0;
-    background-color: #ffffff;
-}
-.section-title {
-    font-size: 32px;
-    color: #333;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-.section-subtitle {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 40px;
-}
-.faq-item {
-    border-bottom: 1px solid #ddd;
-    padding: 15px 0;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-.faq-item:hover {
-    background-color: #f9f9f9;
-}
-.faq-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 20px;
-    color: #007bff;
-    font-weight: bold;
-    padding: 10px 0;
-    cursor: pointer;
-}
-.faq-body {
-    display: none;
-    padding: 10px 15px;
-    font-size: 18px;
-    color: #333;
-    line-height: 1.6;
-}
-.faq-arrow {
-    font-size: 22px;
-    color: #007bff;
-}
-</style>
 
-<script>
-function toggleFAQ(id) {
-    var faqBody = document.getElementById(id);
-    var allFAQs = document.querySelectorAll('.faq-body');
-    var allArrows = document.querySelectorAll('.faq-arrow');
-    
-    allFAQs.forEach(function(faq) {
-        if (faq.id !== id) {
-            faq.style.display = 'none';
-        }
-    });
-    
-    allArrows.forEach(function(arrow) {
-        arrow.innerHTML = '&#9662;';
-    });
-    
-    if (faqBody.style.display === 'none' || faqBody.style.display === '') {
-        faqBody.style.display = 'block';
-        document.querySelector("#" + id).previousElementSibling.querySelector(".faq-arrow").innerHTML = '&#9652;';
-    } else {
-        faqBody.style.display = 'none';
-    }
-}
-</script>
-
-
-<!-- Footer --
-
-<section class="faq-section">
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-md-12">
-                <h2 class="section-title">Frequently Asked Questions</h2>
-                <p class="section-subtitle">Find answers to common concerns about our treatments, insurance, and appointments.</p>
-            </div>
-        </div>
-        
-        <div class="row mt-4 justify-content-center">
-            <div class="col-md-10">
-                <div class="accordion" id="faqAccordion">
-                    
-                    <div class="faq-item">
-                        <div class="faq-header" id="faq1" onclick="toggleFAQ('collapse1')">
-                            <h5>What is the difference between osteoarthritis and rheumatoid arthritis?</h5>
-                            <span class="faq-arrow">&#9660;</span>
-                        </div>
-                        <div id="collapse1" class="faq-body">
-                            <p>Osteoarthritis is a degenerative joint disease caused by cartilage breakdown, leading to pain and stiffness. Rheumatoid arthritis is an autoimmune disorder where the immune system attacks joint tissues, causing inflammation and damage.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-header" id="faq2" onclick="toggleFAQ('collapse2')">
-                            <h5>How long does treatment take?</h5>
-                            <span class="faq-arrow">&#9660;</span>
-                        </div>
-                        <div id="collapse2" class="faq-body">
-                            <p>Treatment duration varies depending on the condition and severity. Some treatments provide immediate relief, while others require ongoing management with medications, therapy, and lifestyle adjustments.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-header" id="faq3" onclick="toggleFAQ('collapse3')">
-                            <h5>What should I expect during my first visit?</h5>
-                            <span class="faq-arrow">&#9660;</span>
-                        </div>
-                        <div id="collapse3" class="faq-body">
-                            <p>Your first visit will include a detailed medical history review, physical examination, and potentially diagnostic tests such as blood work or imaging. We will create a personalized treatment plan tailored to your condition.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-header" id="faq4" onclick="toggleFAQ('collapse4')">
-                            <h5>What insurances do you accept?</h5>
-                            <span class="faq-arrow">&#9660;</span>
-                        </div>
-                        <div id="collapse4" class="faq-body">
-                            <p>We accept most major insurance providers, including Medicare and private health plans. Please contact our office for a full list of accepted insurances.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
--->
-<style>
-.faq-section {
-    padding: 60px 0;
-    background-color: #ffffff;
-    font-family: 'Arial', sans-serif;
-}
-.section-title {
-    font-size: 32px;
-    color: #2c3e50;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-.section-subtitle {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 40px;
-}
-.faq-item {
-    border-bottom: 1px solid #ddd;
-    padding: 15px 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    background: #f8f9fa;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-.faq-item:hover {
-    background-color: #e9ecef;
-}
-.faq-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 20px;
-    color: #007bff;
-    font-weight: bold;
-    padding: 15px 0;
-    cursor: pointer;
-}
-.faq-body {
-    display: none;
-    padding: 10px 20px;
-    font-size: 18px;
-    color: #333;
-    line-height: 1.6;
-}
-.faq-arrow {
-    font-size: 24px;
-    color: #007bff;
-    transition: transform 0.3s ease;
-}
-.faq-item.open .faq-arrow {
-    transform: rotate(180deg);
-}
-</style>
-
-<script>
-function toggleFAQ(id) {
-    var faqBody = document.getElementById(id);
-    var allFAQs = document.querySelectorAll('.faq-body');
-    var allHeaders = document.querySelectorAll('.faq-item');
-    
-    allFAQs.forEach(function(faq) {
-        if (faq.id !== id) {
-            faq.style.display = 'none';
-        }
-    });
-    
-    allHeaders.forEach(function(header) {
-        header.classList.remove('open');
-    });
-    
-    if (faqBody.style.display === 'none' || faqBody.style.display === '') {
-        faqBody.style.display = 'block';
-        faqBody.parentElement.classList.add('open');
-    } else {
-        faqBody.style.display = 'none';
-    }
-}
-</script>
-
-
-<style>
-.faq-section {
-    padding: 60px 0;
-    background-color: #ffffff;
-    font-family: 'Arial', sans-serif;
-}
-.section-title {
-    font-size: 32px;
-    color: #2c3e50;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-.section-subtitle {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 40px;
-}
-.faq-item {
-    border-bottom: 1px solid #ddd;
-    padding: 15px 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    background: #f8f9fa;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-.faq-item:hover {
-    background-color: #e9ecef;
-}
-.faq-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 20px;
-    color: #41B5E5;
-    font-weight: bold;
-    padding: 15px 0;
-    cursor: pointer;
-}
-.faq-body {
-    display: none;
-    padding: 15px 20px;
-    font-size: 18px;
-    color: #444;
-    line-height: 1.6;
-    background: #fff;
-    border-left: 4px solid #007bff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-.faq-arrow {
-    font-size: 24px;
-    color: #41B5E5;
-    transition: transform 0.3s ease;
-}
-.faq-item.open .faq-arrow {
-    transform: rotate(180deg);
-}
-</style>
-
-<script>
-function toggleFAQ(id) {
-    var faqBody = document.getElementById(id);
-    var allFAQs = document.querySelectorAll('.faq-body');
-    var allHeaders = document.querySelectorAll('.faq-item');
-    
-    allFAQs.forEach(function(faq) {
-        if (faq.id !== id) {
-            faq.style.display = 'none';
-        }
-    });
-    
-    allHeaders.forEach(function(header) {
-        header.classList.remove('open');
-    });
-    
-    if (faqBody.style.display === 'none' || faqBody.style.display === '') {
-        faqBody.style.display = 'block';
-        faqBody.parentElement.classList.add('open');
-    } else {
-        faqBody.style.display = 'none';
-    }
-}
-</script>
 
 
 
@@ -735,7 +393,6 @@ function toggleFAQ(id) {
   
 
   <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
   <script src="js/jquery.min.js"></script>
@@ -753,6 +410,7 @@ function toggleFAQ(id) {
   <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="scripts/fq.js"></script>
     
   </body>
 </html>

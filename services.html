@@ -32,7 +32,23 @@
   <body>
     
    <style>
- 
+ /*  ada */
+ /* in ada.css, loaded last */
+ button {
+  
+  min-width: 40px !important;
+  min-height: 44px !important;
+}
+
+.nav-link { color: #333; }      /* 21:1 on white */
+.btn-secondary { background: #005A8C; color: #fff; } /* 8.2:1 */
+body { font-size: 100%; /* equals user’s default */ }
+h1 { font-size: 2rem; }
+p   { font-size: 1rem; }
+
+
+
+ /*     ada end  */
  body{
       font-family: Georgia, 'Times New Roman', Times, serif;
 	  position: sticky;
@@ -51,7 +67,7 @@
 
  <!-- new nav -->
 	<!--  phones-->
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light" aria-label="Main menu">
 		<div class="container">
 		  <!-- Brand Name -->
 		  <a  style="font-size: medium;" class="navbar-brand" href="index.html">
@@ -120,7 +136,7 @@
 	  </button>
 	  <p class="button-custom order-lg-last mb-0"><a href="appointment.html" class="btn btn-secondary py-2 px-3">Make An Appointment</a></p>
 	  <div class="collapse navbar-collapse" id="ftco-nav">
-		<img src="images/logos/CRI Logo-01.png" style="width: auto;height: 57px; margin-right: 133px;">
+		<img src="images/logos/CRI Logo-01.png"  alt="logo" style="width: auto;height: 57px; margin-right: 133px;">
 
 		<ul class="navbar-nav mr-auto">
 			<li class="nav-item " id=""><a href="index.html" class="nav-link pl-0">Home</a></li>
@@ -644,34 +660,7 @@
 		
 				<!-- Inflammatory Arthritis -->
 				<div class="row text-center mt-4">
-					<!--
-					<div class="col-md-4">
-						<div class="condition-box" onclick="toggleDetails('ankylosing')">
-							<img src="images/suggestions/services/ankylosing.jpg" class="img-fluid rounded small-img" alt="Ankylosing Spondylitis">
-							<h4>Ankylosing Spondylitis <span class="arrow-down">&#9660;</span></h4>
-							<div id="ankylosing" class="condition-details">
-								<p><strong>Overview:</strong> Ankylosing Spondylitis is a chronic inflammatory arthritis affecting the spine and sacroiliac joints, leading to stiffness and pain.</p>
-								<p><strong>Symptoms:</strong></p>
-								<ul>
-									<li>Chronic back pain and stiffness</li>
-									<li>Reduced flexibility in the spine</li>
-									<li>Fatigue and inflammation in other joints</li>
-								</ul>
-								<p><strong>When Should I See a Doctor?</strong></p>
-								<p>If you experience persistent lower back pain, morning stiffness, or limited mobility, early intervention can help prevent spinal fusion.</p>
-								<p><strong>How is It Treated?</strong></p>
-								<ul>
-									<li>Biologic therapies targeting inflammation</li>
-									<li>Physical therapy for mobility improvement</li>
-									<li>Exercise programs to maintain spinal flexibility</li>
-								</ul>
-								<p><strong>Why Choose Us?</strong> We offer personalized treatment plans, advanced diagnostic tools, and expert care tailored to your needs.</p>
-								<p><strong>Get Help:</strong> Schedule an appointment to discuss your treatment options.</p>
-							</div>
-						</div>
-					</div>
 				
-				-->
 		
 				<!-- Systemic Autoimmune Diseases -->
 					<div class="col-md-4">
@@ -1114,7 +1103,6 @@ function toggleDetails(id) {
 
 
   <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
   <script src="js/jquery.min.js"></script>

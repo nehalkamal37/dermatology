@@ -112,6 +112,20 @@ body{
 				font-family: Georgia, 'Times New Roman', Times, serif;
 	}
 	
+  /* example: bump link color for better contrast on white */
+a { color: #005A8C; /* 7.4:1 on #fff */ }
+/* example: darken card background behind light text */
+.headline { background-color: rgba(0,0,0,0.75); /* instead of 0.6 */ }
+
+a {
+  color: #005A8C;
+  text-decoration: underline;         /* always underlined */
+}
+a:hover, a:focus {
+  text-decoration: none;
+  outline: 2px dashed #005A8C;       /* focus indicator */
+}
+
 		  </style>  
 		  
           <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -299,29 +313,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	  </div>
 	</div>
   </section>
-  
-
-<!-- patient resources  
-
-<section class="patient-resources">
-    <div class="container text-center">
-        <h2 class="section-title"> Patient Resources</h2>
-        
-        <div class="row mt-4">
-            <div class="col-md-6 offset-md-3">
-                <div class="resource-box">
-					
-                    <h3>Insurance & Billing</h3>
-                    <p>We accept a wide range of insurance providers. If your provider is not listed, please <a href="contact.html" class="hover-blue">contact us</a> for assistance.</p>
-                    <h4>🚫 Cancellation Policy</h4>
-                    <p>To avoid cancellation fees, please notify us at least <strong>24 hours in advance</strong> if you need to cancel or reschedule your appointment.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
--->
-
 
   
 
@@ -513,6 +504,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     <style>
       .ftco-footer {
+		/*height: 355px; /* Set a fixed height */
+		
       background-color: #333; /* Dark background */
       color: #fff; /* White text */
       font-size: 0.9rem; /* Compact font size */
@@ -554,7 +547,6 @@ document.addEventListener('DOMContentLoaded', function () {
   
 
   <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
   <script src="js/jquery.min.js"></script>

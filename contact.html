@@ -42,6 +42,22 @@
 body{
       font-family: Georgia, 'Times New Roman', Times, serif;
     }
+
+
+    a:focus {
+  outline: 3px solid #FFD500;
+  outline-offset: 2px;
+}
+
+
+a:hover, a:focus {
+  text-decoration: underline;  /* optional hover effect */
+  outline: 2px dashed #005A8C;
+}
+.btn-link { text-decoration: underline; font-weight: 600; }
+
+
+
 </style>
 
   <!-- new nav -->
@@ -126,12 +142,11 @@ body{
     <div class="container d-flex align-items-center">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="oi oi-menu">
-          <img src="images/logos/CRI Logo-01.png" style="width: auto;height: 28px; margin-right: 1px;">
-        </span> 
+        </span> Menu
       </button>
       <p class="button-custom order-lg-last mb-0"><a href="appointment.html" class="btn btn-secondary py-2 px-3">Make An Appointment</a></p>
       <div class="collapse navbar-collapse" id="ftco-nav">
-        <img src="images/logos/CRI Logo-01.png" style="width: auto;height: 57px; margin-right: 133px;">
+        <img src="images/logos/CRI Logo-01.png" alt="logo" style="width: auto;height: 57px; margin-right: 133px;">
 
         <ul class="navbar-nav mr-auto">
             <li class="nav-item " id=""><a href="index.html" class="nav-link pl-0">Home</a></li>
@@ -334,13 +349,32 @@ body{
                   <p><strong> Phone:</strong> <a href="tel:8883671850">888-367-1850</a></p>
                   <p><strong>📧 Email:</strong> <a href="mailto:cidsferreal@email.com">cidsferreal@email.com</a></p>
                   <p><strong>🕒 Business Hours:</strong></p>
-                  <select id="business-hours" class="form-control">
+                  <div class="form-group">
+                    <label for="business-hours"></label>
+                    <select
+                      id="business-hours"
+                      name="business-hours"
+                      class="form-control"
+                      aria-describedby="business-hours-help"
+                    >
                       <option value="">Explore Business Hours</option>
-                      <option value="general">Monday - Friday: 9:00 AM - 6:00 PM | Saturday: 10:00 AM - 4:00 PM</option>
-                      <option value="beaverton">Beaverton & Beverly Hills: Monday - Friday: 8:30 AM - 5:30 PM | Closed Sat & Sun</option>
-                      <option value="palmdale">Palmdale & San Bernardino: Monday - Friday: 10:00 AM - 6:00 PM | Saturday: 9:00 AM - 2:00 PM</option>
-                      <option value="anaheim">Anaheim, Santa Ana & Montebello: Monday - Friday: 9:00 AM - 7:00 PM | Saturday: 10:00 AM - 3:00 PM</option>
-                  </select>
+                      <option value="general">
+                        Monday – Friday: 9:00 AM – 6:00 PM | Saturday: 10:00 AM – 4:00 PM
+                      </option>
+                      <option value="beaverton">
+                        Beaverton & Beverly Hills: Monday – Friday: 8:30 AM – 5:30 PM | Closed Sat & Sun
+                      </option>
+                      <option value="palmdale">
+                        Palmdale & San Bernardino: Monday – Friday: 10:00 AM – 6:00 PM | Saturday: 9:00 AM – 2:00 PM
+                      </option>
+                      <option value="anaheim">
+                        Anaheim, Santa Ana & Montebello: Monday – Friday: 9:00 AM – 7:00 PM | Saturday: 10:00 AM – 3:00 PM
+                      </option>
+                    </select>
+                   
+                  </div>
+                  
+               
                   <a href="book-appointment.html" class="btn btn-primary btn-lg mt-3" >Book an Appointment</a>
               </div>
           </div>
@@ -365,30 +399,41 @@ body{
                           <input type="text" id="address" name="address" class="form-control" placeholder="Address (Optional)">
                       </div>
                       <div class="form-group">
-                          <select id="office-location" name="location" class="form-control" required>
-                              <option value="">Select Office Location *</option>
-                              <option value="los-angeles">Los Angeles - 1701 E. Cesar E. Chavez Ave, Suite 305</option>
-                              <option value="thousand-oaks">Thousand Oaks - 3095 Old Conejo Rd, Suite 200</option>
-                              <option value="northridge">Northridge - 18433 Roscoe Blvd, Suite 104</option>
-                              <option value="santa-clarita">Santa Clarita - 21050 Centre Pointe Parkway</option>
-                              <option value="ventura">Ventura - 1500 Palma Dr, Suite 187</option>
-                              <option value="huntington-park">Huntington Park - 5725 S Soto St</option>
-                              <option value="moorpark">Moorpark - 145 Park Lane, Suite 200</option>
-                              <option value="palmdale">Palmdale - 520 W Palmdale Blvd Unit A</option>
-                              <option value="san-bernardino">San Bernardino - 980 N D St</option>
-                              <option value="long-beach">Long Beach - 3490 Linden Ave, Ste 2</option>
-                              <option value="huntington-beach">Huntington Beach - 17822 Beach Blvd Suite 300</option>
-                              <option value="anaheim">Anaheim - 3400 West Ball Rd Suite 204</option>
-                              <option value="santa-ana">Santa Ana - 1211 N Broadway</option>
-                              <option value="santa-barbara">Santa Barbara - 504 W. Pueblo St Suite 301</option>
-                              <option value="chino">Chino - 5632 Philadelphia St, Suite 202</option>
-                              <option value="norwalk">Norwalk - 13132 Studebaker Road, Suite 7</option>
-                              <option value="montebello">Montebello - 101 E. Beverly Blvd. Ste 204</option>
-                              <option value="beaverton">Beaverton - 16100 Northwest Cornell Road Suite 100</option>
-                              <option value="beverly-hills">Beverly Hills - 9150 Wilshire Blvd., Suite 205</option>
-                              <option value="bakersfield">Bakersfield - 3543 San Dimas St, Ste A</option>
-                          </select>
+                        <label for="office-location">Office Location</label>
+                        <select
+                          id="office-location"
+                          name="location"
+                          class="form-control"
+                          required
+                          aria-describedby="office-location-help"
+                        >
+                          <option value="">Select Office Location *</option>
+                          <option value="los-angeles">Los Angeles – 1701 E. Cesar E. Chavez Ave, Suite 305</option>
+                          <option value="thousand-oaks">Thousand Oaks – 3095 Old Conejo Rd, Suite 200</option>
+                          <option value="northridge">Northridge – 18433 Roscoe Blvd, Suite 104</option>
+                          <option value="santa-clarita">Santa Clarita – 21050 Centre Pointe Parkway</option>
+                          <option value="ventura">Ventura – 1500 Palma Dr, Suite 187</option>
+                          <option value="huntington-park">Huntington Park – 5725 S Soto St</option>
+                          <option value="moorpark">Moorpark – 145 Park Lane, Suite 200</option>
+                          <option value="palmdale">Palmdale – 520 W Palmdale Blvd Unit A</option>
+                          <option value="san-bernardino">San Bernardino – 980 N D St</option>
+                          <option value="long-beach">Long Beach – 3490 Linden Ave, Ste 2</option>
+                          <option value="huntington-beach">Huntington Beach – 17822 Beach Blvd Suite 300</option>
+                          <option value="anaheim">Anaheim – 3400 West Ball Rd Suite 204</option>
+                          <option value="santa-ana">Santa Ana – 1211 N Broadway</option>
+                          <option value="santa-barbara">Santa Barbara – 504 W. Pueblo St Suite 301</option>
+                          <option value="chino">Chino – 5632 Philadelphia St, Suite 202</option>
+                          <option value="norwalk">Norwalk – 13132 Studebaker Road, Suite 7</option>
+                          <option value="montebello">Montebello – 101 E. Beverly Blvd. Ste 204</option>
+                          <option value="beaverton">Beaverton – 16100 Northwest Cornell Road Suite 100</option>
+                          <option value="beverly-hills">Beverly Hills – 9150 Wilshire Blvd., Suite 205</option>
+                          <option value="bakersfield">Bakersfield – 3543 San Dimas St, Ste A</option>
+                        </select>
+                        <small id="office-location-help" class="form-text text-muted">
+                          Please choose the office location nearest you.
+                        </small>
                       </div>
+               
                       <button type="submit" id="submit-btn" class="btn btn-secondary btn-lg w-100">Submit</button>
                   </form>
               </div>
@@ -446,6 +491,8 @@ body{
           <div class="col-md-12">
               <div class="map-container">
                 <iframe style="border:0; width: 100%; height: 270px;" 
+                title="Map showing California Rheumatology Institute location at 198 W 21st St #721, New York, NY"
+
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.967098439785!2d-74.00077498424225!3d40.74297537932885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259bb665a5b95%3A0x37d23ed9e6c9479e!2s198%20W%2021st%20St%20%23721%2C%20New%20York%2C%20NY%2010011%2C%20USA!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" 
                 frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
@@ -657,7 +704,6 @@ document.addEventListener('DOMContentLoaded', function () {
     
 
   <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
   <script src="js/jquery.min.js"></script>

@@ -60,6 +60,27 @@
       color: #41B5E5 !important;
       
     }
+    .navbar-logo{
+      height: 50px !important;
+      margin-top: 7px !important;
+      margin-right: 3px !important;
+      width: 48% !important;
+    }
   
   }
+  
+
+
+  /* —————————————— 2.5.5 Target Size (Enhanced) —————————————— */
+  button {
+  
+    min-width: 40px !important;
+    min-height: 44px !important;
+  }
+  
+  .nav-link { color: #333; }      /* 21:1 on white */
+  .btn-secondary { background: #005A8C; color: #fff; } /* 8.2:1 */
+  body { font-size: 100%; /* equals user’s default */ }
+  h1 { font-size: 2rem; }
+  p   { font-size: 1rem; }
   

@@ -2096,7 +2096,9 @@ fieldset:disabled a.btn {
 .btn-secondary {
   color: #fff;
   background-color: #6c757d;
-  border-color: #6c757d; }
+  border-color: #6c757d; 
+
+}
   .btn-secondary:hover {
     color: #fff;
     background-color: #5a6268;
@@ -3512,6 +3514,7 @@ input[type="button"].btn-block {
   padding: 0.25rem 0.75rem;
   font-size: 1.25rem;
   line-height: 1;
+  color:  black !important;
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 0.25rem; }
@@ -3527,7 +3530,8 @@ input[type="button"].btn-block {
   vertical-align: middle;
   content: "";
   background: no-repeat center center;
-  background-size: 100% 100%; }
+  background-size: 100% 100%;
+}
 
 @media (max-width: 575.98px) {
   .navbar-expand-sm > .container,
