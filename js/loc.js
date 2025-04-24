@@ -272,7 +272,7 @@ function findNearestFromInput() {
     findNearest(lat, lon);
 }
 
-// Get user's current location
+/* Get user's current location
 function getUserLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(position => {
@@ -286,6 +286,47 @@ function getUserLocation() {
         alert("المتصفح لا يدعم تحديد الموقع الجغرافي.");
     }
 }
-
+*/
+function getUserLocation() {
+    if (!navigator.geolocation) {
+      return alert("Your browser doesn’t support geolocation.");
+    }
+  
+    navigator.geolocation.getCurrentPosition(
+      position => {
+        findNearest(position.coords.latitude, position.coords.longitude);
+      },
+      error => {
+        if (error.code === error.PERMISSION_DENIED) {
+          showLocationDeniedFallback();
+        } else {
+          alert("Error getting location: " + error.message);
+        }
+      },
+      {
+        enableHighAccuracy: false,
+        timeout: 30000,
+        maximumAge: 600000
+      }
+    );
+  }
+  
+  function showLocationDeniedFallback() {
+    // Hide the “use my location” button, show manual form instead
+    document.getElementById("use-location-btn").style.display = "none";
+    document.getElementById("manual-coords-form").style.display = "block";
+  
+    // Let them know what happened
+    const msg = document.createElement("div");
+    msg.className = "alert alert-warning mt-3";
+    msg.innerHTML = `
+      <strong>Location access denied.</strong><br>
+      If you’d like us to find the closest office automatically, please
+      enable location services in your browser settings,<br>
+      or enter your latitude/longitude below.
+    `;
+    document.querySelector(".container").prepend(msg);
+  }
+  
 // Initialize locations with coordinates
 populateLocations();

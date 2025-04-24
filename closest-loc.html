@@ -229,6 +229,21 @@ body{
         <button class="btn btn-success" onclick="getUserLocation()">use my location </button>
     </div>
 
+	<!-- your buttons -->
+<button id="use-location-btn" class="btn btn-success" onclick="getUserLocation()">
+	Use my location
+  </button>
+  
+  <!-- hidden by default, reveal when permission is denied -->
+  <div id="manual-coords-form" style="display:none;">
+	<input id="latitude"  class="form-control my-2" placeholder="Enter Latitude">
+	<input id="longitude" class="form-control my-2" placeholder="Enter Longitude">
+	<button class="btn btn-primary" onclick="findNearestFromInput()">
+	  Find manually
+	</button>
+  </div>
+  
+
     
     <!-- Display the nearest location result here -->
     <div id="nearest-location"></div>
