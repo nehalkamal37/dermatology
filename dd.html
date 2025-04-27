@@ -535,3 +535,58 @@ body{
 	  </style>
 	  
 <!--  data -->
+
+<form    id="appointment-form"
+class="appointment-form"
+onsubmit="return sendEmail(event)"
+>
+  <!-- ... all your fields ... -->
+  <div class="form-group">
+    <label for="language">Select Language:</label>
+    <select style="color: #333 !important;" id="language" name="language" class="form-control" required>
+      <option style="color: #333;" value="english">English</option>
+      <option style="color: #333;" value="spanish">Spanish</option>
+    </select>
+  </div>
+  <!-- Full Name -->
+  <div class="form-group">
+    <label for="fullname">Full Name *</label>
+    <input type="text" id="fullname" name="fullname" placeholder="John Doe" required />
+  </div>
+  <!-- Email -->
+  <div class="form-group">
+    <label for="email">Email *</label>
+    <input type="email" id="email" name="email" placeholder="john@example.com" required />
+  </div>
+  <!-- Phone -->
+  <div class="form-group">
+    <label for="phone">Phone Number *</label>
+    <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" required />
+  </div>
+  <!-- Date -->
+  <div class="form-group">
+    <label for="date">Preferred Appointment Date *</label>
+    <input type="date" id="date" name="date" required />
+  </div>
+  <!-- Time -->
+  <div class="form-group">
+    <label for="time">Preferred Appointment Time *</label>
+    <input type="time" id="time" name="time" required />
+  </div>
+  <!-- Service Type -->
+  <div class="form-group">
+    <label for="service">Service Type *</label>
+    <select id="service" name="service" required>
+      <option value="">-- Please choose an option --</option>
+      <option value="consultation">Consultation</option>
+      <option value="follow-up">Follow-Up</option>
+      <option value="therapy">Therapy</option>
+    </select>
+  </div>
+  <!-- Notes -->
+  <div class="form-group">
+    <label for="message">Additional Notes</label>
+    <textarea id="message" name="message" rows="5" placeholder="Any other information?" ></textarea>
+  </div>
+  <button type="submit" id="submit-btn"   style="background-color: #005A8C;">Submit</button>
+</form>

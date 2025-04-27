@@ -51,6 +51,26 @@
  /* z-index: 9999; /* bring above the first navbar */
 }
 
+/* targets only your appointment form */
+#appointment-form input,
+#appointment-form select,
+#appointment-form textarea {
+  border: 1px solid #000 !important;
+  color: #000 !important; /* set text color to black */
+  box-shadow: none !important; /* remove any Bootstrap focus glow */
+}
+
+/* Optional: make the focus state a bit more visible */
+#appointment-form input:focus,
+#appointment-form select:focus,
+#appointment-form textarea:focus {
+  outline: none;
+  border-color: #000;
+  color: #000;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.2);
+}
+
+
     </style>
     
     
@@ -85,8 +105,8 @@
 <nav  class="navbar navbar-expand-lg navbar-light bg-light" >
 	<div class="container " style="height: -44px;">
 	  <!-- Brand Name -->
-    <a  style="font-size: medium;" class="navbar-brand" href="index.html">
-			California <span style="color:#41B5E5;font-size: medium; ">Rheumatology</span>
+    <a  style="font-size: medium; margin-left: -50px;" class="navbar-brand" href="index.html">
+			California <span style="color:#41B5E5;font-size: medium; ">Rheumatology Institute</span>
 		  </a>
   
 	  <!-- Toggler for Mobile -->
@@ -173,101 +193,180 @@
       <div class="row mt-5">
           <div class="col-md-6 offset-md-3">
               <div class="appointment-form-container">
-                 
-  <form action="submit_form.php" method="POST" class="appointment-form">
 
-    <!-- Select Language -->
-    <div class="form-group">
-      <label for="language">Select Language:</label>
-      <select style="color: #333 !important;" id="language" name="language" class="form-control" required>
-        <option style="color: #333;" value="english">English</option>
-        <option style="color: #333;" value="spanish">Spanish</option>
-      </select>
-    </div>
+                
+    
+<!-- 1) Include EmailJS Browser SDK v4 -->
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+  (function(){
+    emailjs.init({
+      publicKey: "GEeZ58IX2EWZKodgN", // ← your EmailJS Public Key
+    });
+  })();
+</script>
 
-    <!-- Full Name -->
-    <div class="form-group">
-      <label for="fullname">Full Name *</label>
-      <input 
-        type="text" 
-        id="fullname" 
-        name="fullname" 
-        placeholder="John Doe" 
-        required
-      />
-    </div>
+<!-- 2) Your Appointment Form -->
+<form
+  id="appointment-form"
+  class="appointment-form"
+  onsubmit="return sendEmail(event)"
+>
+  <!-- language -->
+  <div class="form-group">
+    <label for="language">Select Language:</label>
+    <select id="language" name="language" class="form-control" required>
+      <option value="english">English</option>
+      <option value="spanish">Spanish</option>
+    </select>
+  </div>
 
-    <!-- Email -->
-    <div class="form-group">
-      <label for="email">Email *</label>
-      <input 
-        type="email" 
-        id="email" 
-        name="email" 
-        placeholder="john@example.com" 
-        required
-      />
-    </div>
+  <!-- full name -->
+  <div class="form-group">
+    <label for="fullname">Full Name *</label>
 
-    <!-- Phone Number -->
-    <div class="form-group">
-      <label for="phone">Phone Number *</label>
-      <input 
-        type="tel" 
-        id="phone" 
-        name="phone" 
-        placeholder="(123) 456-7890" 
-        required
-      />
-    </div>
+    <input
+      type="text"
+      id="fullname"
+      name="fullname"
+      class="form-control" 
+      placeholder="John Doe"
+      required
+    />
+  </div>
 
-    <!-- Preferred Appointment Date -->
-    <div class="form-group">
-      <label for="date">Preferred Appointment Date *</label>
-      <input 
-        type="date" 
-        id="date" 
-        name="date" 
-        required
-      />
-    </div>
+  <!-- email -->
+  <div class="form-group">
+    <label for="email">Email *</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      class="form-control"
+      placeholder="john@example.com"
+      required
+    />
+  </div>
 
-    <!-- Preferred Appointment Time -->
-    <div class="form-group">
-      <label for="time">Preferred Appointment Time *</label>
-      <input 
-        type="time" 
-        id="time" 
-        name="time" 
-        required
-      />
-    </div>
+  <!-- phone -->
+  <div class="form-group">
+    <label for="phone">Phone Number *</label>
+    <input
+      type="tel"
+      id="phone"
+      name="phone"
+      class="form-control"
+      placeholder="(123) 456-7890"
+      required
+    />
+  </div>
 
-    <!-- Service Type (Dropdown) -->
-    <div class="form-group">
-      <label for="service">Service Type *</label>
-      <select id="service" name="service" required>
-        <option value="">-- Please choose an option --</option>
-        <option value="consultation">Consultation</option>
-        <option value="follow-up">Follow-Up</option>
-        <option value="therapy">Therapy</option>
-      </select>
-    </div>
+  <!-- date -->
+  <div class="form-group">
+    <label for="date">Preferred Appointment Date *</label>
+    <input
+      type="date"
+      id="date"
+      name="date"
+      class="form-control"
+      required
+    />
+  </div>
 
-    <!-- Additional Message or Notes -->
-    <div class="form-group">
-      <label for="message">Additional Notes</label>
-      <textarea 
-        id="message" 
-        name="message" 
-        rows="5" 
-        placeholder="Any other information we should know?"
-      ></textarea>
-    </div>
+  <!-- time -->
+  <div class="form-group">
+    <label for="time">Preferred Appointment Time *</label>
+    <input
+      type="time"
+      id="time"
+      name="time"
+      class="form-control"
+      required
+    />
+  </div>
 
-    <!-- Submit Button -->
-    <button style="background-color: #005A8C;" type="submit">Submit</button>
-  </form>
+  <!-- service type -->
+  <div class="form-group">
+    <label for="service">Service Type *</label>
+    <select id="service" name="service" class="form-control" required>
+      <option value="">-- Please choose an option --</option>
+      <option value="consultation">Consultation</option>
+      <option value="follow-up">Follow-Up</option>
+      <option value="therapy">Therapy</option>
+    </select>
+  </div>
+
+  <!-- additional notes -->
+  <div class="form-group">
+    <label for="message">Additional Notes</label>
+    <textarea
+      id="message"
+      name="message"
+      class="form-control"
+      rows="5"
+      placeholder="Any other information?"
+    ></textarea>
+  </div>
+
+  <!-- submit -->
+  <div class="text-center">
+    <button type="submit" style="background-color: #005A8C;" class="btn btn-primary">
+      Submit
+    </button>
+  </div>
+</form>
+<!-- place this right after your form -->
+<div id="form-message" style="margin-top:1rem;font-weight:bold;"></div>
+
+
+<!-- 3) sendEmail() function -->
+<script>
+  function sendEmail(e) {
+    e.preventDefault(); // stop normal form submission
+
+    const form     = document.getElementById('appointment-form');
+    const msgDiv   = document.getElementById('form-message');
+    msgDiv.textContent = '';          // clear any old message
+    msgDiv.style.color   = '';        // reset color
+
+    // collect values into params
+    const params = {
+      language:  document.getElementById('language').value,
+      full_name: document.getElementById('fullname').value,
+      email:     document.getElementById('email').value,
+      phone:     document.getElementById('phone').value,
+      date:      document.getElementById('date').value,
+      time:      document.getElementById('time').value,
+      service:   document.getElementById('service').value,
+      message:   document.getElementById('message').value,
+      subject:   'New Appointment Request'
+    };
+
+    emailjs.send(
+      'service_kjn4eeg',    // ← your Service ID
+      'template_ux4tkln',   // ← your Template ID
+      params
+    ).then(() => {
+      // show success message inline
+      msgDiv.style.color = 'green';
+      msgDiv.textContent = '✅ Appointment sent successfully, thanks!';
+      form.reset();
+    }, (err) => {
+      console.error('EmailJS error:', err);
+      // show error message inline
+      msgDiv.style.color = 'red';
+      msgDiv.textContent = '❌ Oops… something went wrong. Please try again.';
+    });
+
+    return false; // prevent any further default
+  }
+</script>
+
+
+<!-- your existing form, just give it an id -->
+
 
               </div>
           </div>

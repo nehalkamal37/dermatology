@@ -1,4 +1,32 @@
+/* full name tilte handeling  */
 
+		/* Remove any inline margins, allow wrapping */
+    .navbar-light .navbar-brand {
+      white-space: normal;      /* let it wrap on small screens */
+      font-size: 1.1rem;        /* base size */
+    }
+
+/* Stack the two parts on xs, inline on sm+ */
+.brand-primary,
+.brand-secondary {
+  display: inline;          /* default for sm+ */
+}
+
+/* On extra-small viewports, make them block (stacked) and reduce font */
+@media (max-width: 575.98px) {
+  .navbar-light .navbar-brand {
+    font-size: 1rem;
+    text-align: center;
+  margin-left: 0 !important;
+ 
+  }
+  .brand-primary,
+  .brand-secondary {
+    display: block;
+  }
+}
+
+	
 	/*ada */
 	/* your-custom.css */
 
