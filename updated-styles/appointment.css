@@ -259,3 +259,125 @@ button[type="submit"]:hover {
   background: #2980b9;
 }
 
+
+/* two */
+
+:root {
+  --brand-blue: #41B5E5;
+  --dark-blue: #003e5f;
+  --soft-gray: #f7f9fb;
+}
+
+/* HERO */
+.hero-wrap.hero-wrap-2 {
+  background: linear-gradient(rgba(0,62,95,0.6), rgba(65,181,229,0.6)),
+              url('../images/bg_1.jpg') center/cover no-repeat;
+  color: #fff;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-bottom: 3px solid var(--brand-blue);
+}
+.hero-wrap.hero-wrap-2 h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+.hero-wrap.hero-wrap-2 .breadcrumbs {
+  color: #eaf5fa;
+}
+
+/* SECTION TITLES */
+.section-title {
+  color: var(--dark-blue);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.section-title::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: var(--brand-blue);
+  display: block;
+  margin: 10px auto 25px;
+  border-radius: 2px;
+}
+.section-subtitle {
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+/* FORM */
+.appointment-section {
+  background: #fff;
+  padding: 80px 0;
+}
+.appointment-form-box {
+  background: #fff;
+  border: 1px solid #e3ebf0;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  padding: 40px 45px;
+  max-width: 800px;
+}
+.form-control, .form-select {
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  color: #000;
+}
+.btn-primary {
+  background: var(--brand-blue);
+  border: none;
+}
+.btn-primary:hover {
+  background: #2d9ec8;
+}
+
+/* INFO SECTIONS */
+.info-section {
+  background: var(--soft-gray);
+  padding: 80px 0;
+}
+.info-card {
+  background: #fff;
+  border: 1px solid #e3ebf0;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+  height: 100%;
+}
+.info-card h4 {
+  color: var(--brand-blue);
+  margin-bottom: 1rem;
+}
+.info-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.info-card li {
+  margin-bottom: .5rem;
+}
+
+/* FOOTER */
+.ftco-footer {
+  background: #222;
+  color: #fff;
+  border-top: 3px solid var(--brand-blue);
+}
+.ftco-footer a {
+  color: var(--brand-blue);
+  text-decoration: none;
+}
+.ftco-footer a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .appointment-form-box {
+    padding: 25px;
+  }
+}
