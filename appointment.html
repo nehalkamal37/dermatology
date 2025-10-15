@@ -159,7 +159,14 @@
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
             <h1 class="mb-2 bread">Appointment</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Appointment <i class="ion-ios-arrow-forward"></i></span></p>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home 
+              <i class="ion-ios-arrow-forward"></i></a></span> 
+              <span>Appointment <i class="ion-ios-arrow-forward"></i></span>
+          
+ <span class="mr-2"><a href="#payment-options-section">Payment Options <i class="ion-ios-arrow-forward"></i></a></span>
+<span class="mr-2"><a href="#privacy-security-section">Privacy & Security <i class="ion-ios-arrow-forward"></i></a></span>
+
+            </p>
           </div>
         </div>
       </div>
@@ -171,206 +178,145 @@
    
  
   
-<!-- more up-->
-<section class="appointment-section">
+<!-- more updates -->
+
+
+
+
+<section class="appointment-section" style="background: linear-gradient(135deg, #e0f7fa, #f3faff); padding: 80px 0;">
   <div class="container">
-      <div class="row text-center">
-          <div class="col-md-12">
-              <h2 class="section-title"> Book Appointment</h2>
-              <p class="section-subtitle">Schedule your visit with us by filling out the form below.</p>
+    <div class="text-center mb-5">
+      <h2 class="section-title" style="font-weight: 700; color: #005A8C;">Book an Appointment</h2>
+      <p class="text-muted">Schedule your visit quickly and securely below.</p>
+    </div>
+
+    <div class="col-md-6 offset-md-3">
+      <div class="appointment-form-container shadow-lg" style="background: rgba(255,255,255,0.85); backdrop-filter: blur(8px); border-radius: 16px; padding: 40px;">
+
+        <form id="appointment-form" onsubmit="return sendEmail(event)">
+          <!-- Floating fields -->
+                    <label for="language">Preferred Language</label>
+          <div class="form-floating mb-3 position-relative">
+            <i class="fas fa-language input-icon"></i>
+
+            <select id="language" name="language" class="form-control form-input" required>
+              <option value="" disabled selected>Choose Language</option>
+              <option value="english">English</option>
+              <option value="spanish">Spanish</option>
+            </select>
           </div>
-      </div>
-      
-      <div class="row mt-5">
-          <div class="col-md-6 offset-md-3">
-              <div class="appointment-form-container">
 
-                
-    
-<!-- 1) Include EmailJS Browser SDK v4 -->
-<script type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-  (function(){
-    emailjs.init({
-      publicKey: "GEeZ58IX2EWZKodgN", // ← your EmailJS Public Key
-    });
-  })();
-</script>
+                      <label for="fullname">Full Name</label>
 
-<!-- 2) Your Appointment Form -->
-<form
-  id="appointment-form"
-  class="appointment-form"
-  onsubmit="return sendEmail(event)"
->
-  <!-- language -->
-  <div class="form-group">
-    <label for="language">Select Language:</label>
-    <select id="language" name="language" class="form-control" required>
-      <option value="english">English</option>
-      <option value="spanish">Spanish</option>
-    </select>
-  </div>
-
-  <!-- full name -->
-  <div class="form-group">
-    <label for="fullname">Full Name *</label>
-
-    <input
-      type="text"
-      id="fullname"
-      name="fullname"
-      class="form-control" 
-      placeholder="John Doe"
-      required
-    />
-  </div>
-
-  <!-- email -->
-  <div class="form-group">
-    <label for="email">Email *</label>
-    <input
-      type="email"
-      id="email"
-      name="email"
-      class="form-control"
-      placeholder="john@example.com"
-      required
-    />
-  </div>
-
-  <!-- phone -->
-  <div class="form-group">
-    <label for="phone">Phone Number *</label>
-    <input
-      type="tel"
-      id="phone"
-      name="phone"
-      class="form-control"
-      placeholder="(123) 456-7890"
-      required
-    />
-  </div>
-
-  <!-- date -->
-  <div class="form-group">
-    <label for="date">Preferred Appointment Date *</label>
-    <input
-      type="date"
-      id="date"
-      name="date"
-      class="form-control"
-      required
-    />
-  </div>
-
-  <!-- time -->
-  <div class="form-group">
-    <label for="time">Preferred Appointment Time *</label>
-    <input
-      type="time"
-      id="time"
-      name="time"
-      class="form-control"
-      required
-    />
-  </div>
-
-  <!-- service type -->
-  <div class="form-group">
-    <label for="service">Service Type *</label>
-    <select id="service" name="service" class="form-control" required>
-      <option value="">-- Please choose an option --</option>
-      <option value="consultation">Consultation</option>
-      <option value="follow-up">Follow-Up</option>
-      <option value="therapy">Therapy</option>
-    </select>
-  </div>
-
-  <!-- additional notes -->
-  <div class="form-group">
-    <label for="message">Additional Notes</label>
-    <textarea
-      id="message"
-      name="message"
-      class="form-control"
-      rows="5"
-      placeholder="Any other information?"
-    ></textarea>
-  </div>
-
-  <!-- submit -->
-  <div class="text-center">
-    <button type="submit" style="background-color: #005A8C;" class="btn btn-primary">
-      Submit
-    </button>
-  </div>
-</form>
-<!-- place this right after your form -->
-<div id="form-message" style="margin-top:1rem;font-weight:bold;"></div>
-
-
-<!-- 3) sendEmail() function -->
-<script>
-  function sendEmail(e) {
-    e.preventDefault(); // stop normal form submission
-
-    const form     = document.getElementById('appointment-form');
-    const msgDiv   = document.getElementById('form-message');
-    msgDiv.textContent = '';          // clear any old message
-    msgDiv.style.color   = '';        // reset color
-
-    // collect values into params
-    const params = {
-      language:  document.getElementById('language').value,
-      full_name: document.getElementById('fullname').value,
-      email:     document.getElementById('email').value,
-      phone:     document.getElementById('phone').value,
-      date:      document.getElementById('date').value,
-      time:      document.getElementById('time').value,
-      service:   document.getElementById('service').value,
-      message:   document.getElementById('message').value,
-      subject:   'New Appointment Request'
-    };
-
-    emailjs.send(
-      'service_kjn4eeg',    // ← your Service ID
-      'template_ux4tkln',   // ← your Template ID
-      params
-    ).then(() => {
-      // show success message inline
-      msgDiv.style.color = 'green';
-      msgDiv.textContent = '✅ Appointment sent successfully, thanks!';
-      form.reset();
-    }, (err) => {
-      console.error('EmailJS error:', err);
-      // show error message inline
-      msgDiv.style.color = 'red';
-      msgDiv.textContent = '❌ Oops… something went wrong. Please try again.';
-    });
-
-    return false; // prevent any further default
-  }
-</script>
-
-
-<!-- your existing form, just give it an id -->
-
-
-              </div>
+          <div class="form-floating mb-3 position-relative">
+            <i class="fas fa-user input-icon"></i>
+            <input type="text" id="fullname" name="fullname" class="form-control form-input" placeholder="John Doe" required>
           </div>
+
+                                  <label for="email">Email</label>
+
+          <div class="form-floating mb-3 position-relative">
+
+            <i class="fas fa-envelope input-icon"></i>
+
+            <input type="email" id="email" name="email" class="form-control form-input" placeholder="john@example.com" required>
+          </div>
+
+                      <label for="phone">Phone Number</label>
+          <div class="form-floating mb-3 position-relative">
+            <i class="fas fa-phone input-icon"></i>
+            <input type="tel" id="phone" name="phone" class="form-control form-input" placeholder="(123) 456-7890" required>
+          </div>
+
+                      <label for="date">Preferred Date</label>
+          <div class="form-floating mb-3 position-relative">
+            <i class="fas fa-calendar-day input-icon"></i>
+            <input type="date" id="date" name="date" class="form-control form-input" required>
+          </div>
+
+                      <label for="time">Preferred Time</label>
+          <div class="form-floating mb-3 position-relative">
+            <i class="fas fa-clock input-icon"></i>
+            <input type="time" id="time" name="time" class="form-control form-input" required>
+          </div>
+
+                      <label for="service">Service Type</label>
+          <div class="form-floating mb-3 position-relative">
+            <i class="fas fa-stethoscope input-icon"></i>
+            <select id="service" name="service" class="form-control form-input" required>
+              <option value="" disabled selected>Choose a Service</option>
+              <option value="consultation">Consultation</option>
+              <option value="follow-up">Follow-Up</option>
+              <option value="therapy">Therapy</option>
+            </select>
+          </div>
+
+                      <label for="message">Additional Notes</label>
+          <div class="form-floating mb-4 position-relative">
+            <i class="fas fa-comment-medical input-icon"></i>
+            <textarea id="message" name="message" class="form-control form-input" placeholder="Any other information?" style="height: 100px;"></textarea>
+          </div>
+
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-lg w-100" style="background: linear-gradient(90deg,#005A8C,#41B5E5); border: none; border-radius: 50px;">
+              <i class="fas fa-paper-plane me-2"></i> Submit Appointment
+            </button>
+          </div>
+        </form>
+
+        <div id="form-message" role="alert" aria-live="polite" style="margin-top: 1rem; display:none;"></div>
       </div>
+    </div>
   </div>
 </section>
 
+<style>
+  .form-floating label {
+  color: #666;
+}
+.form-control.form-input {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding-left: 2.5rem !important;
+  height: 58px;
+}
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #41B5E5;
+  font-size: 1.1rem;
+}
+.form-control:focus {
+  border-color: #41B5E5;
+  box-shadow: 0 0 8px rgba(65, 181, 229, 0.4);
+}
+#form-message.success {
+  display: block;
+  background: #e9fbee;
+  color: #0a8a43;
+  border-left: 5px solid #0a8a43;
+  padding: 1rem;
+  border-radius: 6px;
+}
+#form-message.error {
+  display: block;
+  background: #fdeaea;
+  color: #c30000;
+  border-left: 5px solid #c30000;
+  padding: 1rem;
+  border-radius: 6px;
+}
 
-
+/*icons */
+</style>
 
 <!-- pay -->
 
 <br>
+<!--
 <section class="payment-options-section">
   <div class="container">
       <div class="row text-center">
@@ -405,39 +351,87 @@
       </div>
   </div>
 </section>
+-->
 
+<section class="payment-options-section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title" style="font-weight: 700; color: #005A8C;">Payment Options</h2>
+      <p class="section-subtitle text-muted">We offer flexible payment methods to ensure a smooth experience.</p>
+    </div>
 
+    <div class="row justify-content-center">
+      <!-- Accepted Payment Methods -->
+      <div class="col-md-5 mb-4">
+        <div class="payment-box shadow-lg p-4 text-center" style="background: rgba(255,255,255,0.85); border-radius: 16px; backdrop-filter: blur(8px); transition: all 0.3s ease;">
+          <h3 class="fw-bold mb-3" style="color: #005A8C;">Accepted Payment Methods</h3>
+          <ul class="list-unstyled payment-methods text-start mx-auto" style="max-width: 280px; font-size: 1.05rem;">
+            <li><i class="fab fa-cc-visa text-primary me-2"></i>Visa</li>
+            <li><i class="fab fa-cc-mastercard text-danger me-2"></i>Mastercard</li>
+            <li><i class="fab fa-cc-amex text-info me-2"></i>American Express</li>
+            <li><i class="fab fa-cc-discover text-warning me-2"></i>Discover</li>
+            <li><i class="fas fa-money-check-alt text-success me-2"></i>Debit & Credit Cards</li>
+            <li><i class="fas fa-hand-holding-usd text-secondary me-2"></i>Payment Plans (upon request)</li>
+          </ul>
+        </div>
+      </div>
 
+      <!-- Insurance Info -->
+      <div class="col-md-5 mb-4">
+        <div class="payment-box shadow-lg p-4 text-center" style="background: rgba(255,255,255,0.85); border-radius: 16px; backdrop-filter: blur(8px); transition: all 0.3s ease;">
+          <h3 class="fw-bold mb-3" style="color: #005A8C;">Insurance Information</h3>
+          <p class="text-muted mb-4" style="font-size: 1.05rem;">
+            We accept a wide range of <a href="pat-resources.html" style="color: #41B5E5; font-weight: 600;">insurance providers</a>.
+            For coverage details or plan questions, our team is happy to assist.
+          </p>
+          <a href="tel:8883671850" class="btn btn-lg text-white" style="background: linear-gradient(90deg, #005A8C, #41B5E5); border: none; border-radius: 50px;">
+            <i class="fas fa-phone-alt me-2"></i> Call for Insurance Inquiry
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider-gradient">
 
 <!-- privacy -->
 
+<section class="privacy-security-section" style="background-color: #f8f9fa; padding: 80px 0;">
+  <div class="container text-center">
+    <h2 class="section-title fw-bold" style="color: #005A8C;">Privacy & Security</h2>
+    <div style="width: 70px; height: 3px; background-color: #41B5E5; margin: 12px auto 24px auto;"></div>
+    <p class="section-subtitle text-muted">Your privacy and security are our top priorities.</p>
 
-<section class="privacy-security-section">
-  <div class="container">
-      <div class="row text-center">
-          <div class="col-md-12">
-              <h2 class="section-title"> Privacy & Security</h2>
-              <p class="section-subtitle">Your privacy and security are our top priorities.</p>
-          </div>
+    <div class="row justify-content-center mt-5">
+      <!-- HIPAA Compliance -->
+      <div class="col-md-5 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="privacy-box shadow-sm p-4 text-center">
+          <div class="icon-circle mb-3"><i class="fas fa-shield-alt"></i></div>
+          <h3 class="fw-bold mb-3" style="color: #005A8C;">HIPAA Compliance</h3>
+          <p class="text-muted" style="font-size: 1.05rem;">
+            We strictly follow HIPAA regulations to ensure the protection of your personal health information.
+          </p>
+        </div>
       </div>
-      
-      <div class="row mt-5">
-          <div class="col-md-6">
-              <div class="privacy-box">
-                  <h3 style="color: #41B5E5;">HIPAA Compliance</h3>
-                  <p>We strictly follow HIPAA regulations to ensure the protection of your personal health information.</p>
-              </div>
-          </div>
-          
-          <div class="col-md-6">
-              <div class="privacy-box">
-                  <h3 style="color: #41B5E5;">Terms & Conditions</h3>
-                  <p>By using our website, you agree to our <a href="#" class="hover-blue" style="color: #41B5E5;">Terms and Conditions</a> and <a href="#" class="hover-blue" style="color: #41B5E5;">Privacy Policy</a>.</p>
-              </div>
-          </div>
+
+      <!-- Terms & Conditions -->
+      <div class="col-md-5 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="privacy-box shadow-sm p-4 text-center">
+          <div class="icon-circle mb-3"><i class="fas fa-file-contract"></i></div>
+          <h3 class="fw-bold mb-3" style="color: #005A8C;">Terms & Conditions</h3>
+          <p class="text-muted" style="font-size: 1.05rem;">
+            By using our website, you agree to our
+            <a href="#" style="color: #41B5E5; font-weight: 600;">Terms and Conditions</a> and
+            <a href="#" style="color: #41B5E5; font-weight: 600;">Privacy Policy</a>.
+          </p>
+        </div>
       </div>
+    </div>
   </div>
 </section>
+
+
 
 <!-- last upp-->
 
