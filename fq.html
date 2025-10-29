@@ -99,7 +99,7 @@
           </nav>
    <!-- new nav -->
 	<!--  phones-->
-	<nav  class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav  class="navbar navbar-expand-lg navbar-light bg-light" style="height: 63px;" >
 		<div class="container">
 		  <!-- Brand Name -->
       <a  style="font-size: medium; margin-left: -50px;" class="navbar-brand" href="index.html">
@@ -161,7 +161,7 @@
       <div class="row no-gutters slider-text align-items-center justify-content-center">
         <div class="col-md-9 ftco-animate text-center">
           <h1 class="mb-2 bread">FAQs</h1>
-          <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>FAQs <i class="ion-ios-arrow-forward"></i></span></p>
+          <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>FAQs </span></p>
         </div>
       </div>
     </div>
@@ -459,6 +459,9 @@ document.addEventListener("DOMContentLoaded", function () {
   <a href="contact.html" class="btn px-4 py-2 mt-3">Contact Our Specialists</a>
 </section>
 
+
+
+
 <footer class="ftco-footer ftco-bg-dark py-4">
 	<div class="container text-center text-md-start">
 	  <div class="row">
@@ -523,7 +526,6 @@ document.addEventListener("DOMContentLoaded", function () {
         // trigger onload if cached
         if (src.complete) src.onload();
       });
-     
       </script>
       
 
@@ -571,6 +573,12 @@ document.addEventListener("DOMContentLoaded", function () {
 		</div>
 	  </div>
 	</div>
+
+	<!-- Back to Top Button -->
+<a href="#" id="back-to-top" title="Go to top">
+  <i class="fa fa-arrow-up"></i>
+</a>
+
   </footer>
 
     <style>
@@ -583,7 +591,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .ftco-footer a {
       color: #41B5E5; /* Blue links */
       text-decoration: none;
-      font-size: 1.2rem;
+	  font-size: 1.2rem;
 
     }
     
@@ -610,6 +618,54 @@ document.addEventListener("DOMContentLoaded", function () {
     
       </style>  
     
+	<style>
+		/* Back to Top Button */
+#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #41B5E5;
+  color: white;
+  font-size: 22px;
+  padding: 12px 16px;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  display: none;
+  transition: all 0.3s ease-in-out;
+  z-index: 9999;
+}
+
+#back-to-top:hover {
+  background-color: #2c8ebd;
+  transform: translateY(-3px);
+}
+
+	</style>
+  
+
+<script>
+  // Show button when scrolling down
+  window.addEventListener('scroll', function() {
+    const button = document.getElementById('back-to-top');
+    if (window.scrollY > 300) {
+      button.style.display = 'block';
+    } else {
+      button.style.display = 'none';
+    }
+  });
+
+  // Smooth scroll to top
+  document.getElementById('back-to-top').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
+
 
 
   

@@ -161,7 +161,7 @@ body{
     <!-- new nav -->
 	
 	<!--  phones-->
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 63px;" >
 		<div class="container">
 		  <!-- Brand Name -->
       <a  style="font-size: medium; margin-left: -50px;" class="navbar-brand" href="index.html">
@@ -237,6 +237,8 @@ body{
               </div>
           </a>
       </div>
+           <!-- added -->
+
       <div class="location-card">
           <a href="https://maps.google.com/?q=3095+Old+Conejo+Rd,+Suite+200,+Thousand+Oaks,+CA+91320" target="_blank">
               <img src="images/locations/box2.webp" alt="Thousand Oaks">
@@ -246,7 +248,7 @@ body{
               </div>
           </a>
       </div>
-     
+     <!-- added -->
       <div class="location-card">
           <a href="https://maps.google.com/?q=18433+Roscoe+Blvd,+Suite+104,+Northridge,+CA+91325" target="_blank">
               <img src="images/locations/new/San Luis Obispo website image.jpeg" alt="Northridge">
@@ -256,6 +258,7 @@ body{
               </div>
           </a>
       </div>
+      <!-- added -->
       <div class="location-card">
           <a href="https://maps.google.com/?q=18433+Roscoe+Blvd,+Suite+104,+Northridge,+CA+91325" target="_blank">
               <img src="images/locations/Northridge-box3.webp" alt="Northridge">
@@ -265,6 +268,7 @@ body{
               </div>
           </a>
       </div>
+           <!-- added -->
       <div class="location-card">
           <a href="https://maps.google.com/?q=21050+Centre+Pointe+Parkway,+Santa+Clarita,+CA+91350" target="_blank">
               <img src="images/locations/Santa-Clarita-1536x989.webp" alt="Santa Clarita">
@@ -283,7 +287,7 @@ body{
               </div>
           </a>
       </div>
-     
+     <!-- added -->
       <div class="location-card">
           <a href="https://maps.google.com/?q=5725+S+Soto+St,+Huntington+Park,+CA+90255" target="_blank">
               <img src="images/locations/Huntington-Park-1536x664.webp" alt="Huntington Park">
@@ -293,6 +297,7 @@ body{
               </div>
           </a>
       </div>
+      <!-- added -->
       <div class="location-card">
           <a href="https://maps.google.com/?q=145+Park+Lane,+Suite+200,+Moorpark,+CA+93021" target="_blank">
               <img src="images/locations/Moorpark-Office.webp" alt="Moorpark">
@@ -302,6 +307,7 @@ body{
               </div>
           </a>
       </div>
+      <!-- added -->
       <div class="location-card">
           <a href="https://maps.google.com/?q=520+W+Palmdale+Blvd+Unit+A,+Palmdale,+CA+93551" target="_blank">
               <img src="images/locations/Palmdale-1536x1528.webp" alt="Palmdale">
@@ -311,6 +317,7 @@ body{
               </div>
           </a>
       </div>
+      <!-- added -->
       <div class="location-card">
           <a href="https://maps.google.com/?q=980+N+D+St,+San+Bernardino,+CA+92410" target="_blank">
               <img src="images/locations/SanBernardino-box-img.webp" alt="San Bernardino">
@@ -480,156 +487,212 @@ body{
    
 
 
-    <footer class="ftco-footer ftco-bg-dark py-4">
-      <div class="container text-center text-md-start">
-        <div class="row">
-          <div class="col-auto mb-3" style="background:#333; padding:1rem; text-align:center;">
-            <!-- hidden source -->
-            <img id="logo-src" src="images/logos/CRI Logo-01.png" style="display:none;">
-            <!-- this will become the cropped, transparent canvas -->
-            <canvas id="logo-canvas" style="width: 255px;color: #000;"></canvas>
-          </div>
-          
-          <script>
-          window.addEventListener('DOMContentLoaded', () => {
-            const src    = document.getElementById('logo-src');
-            const out    = document.getElementById('logo-canvas');
-          
-            src.onload = () => {
-              // draw onto a temp canvas
-              const temp    = document.createElement('canvas');
-              const tCtx    = temp.getContext('2d');
-              temp.width    = src.width;
-              temp.height   = src.height;
-              tCtx.drawImage(src, 0, 0);
-          
-              // get pixel data & strip white
-              const imgData = tCtx.getImageData(0, 0, temp.width, temp.height);
-              const d       = imgData.data;
-              for (let i = 0; i < d.length; i += 4) {
-                if (d[i] > 240 && d[i+1] > 240 && d[i+2] > 240) {
-                  d[i+3] = 0;
-                }
+
+
+<footer class="ftco-footer ftco-bg-dark py-4">
+	<div class="container text-center text-md-start">
+	  <div class="row">
+      <div class="col-auto mb-3" style="background:#333; padding:1rem; text-align:center;">
+        <!-- hidden source -->
+        <img id="logo-src" src="images/logos/CRI Logo-01.png" style="display:none;">
+        <!-- this will become the cropped, transparent canvas -->
+        <canvas id="logo-canvas" style="width: 255px;color: #000;"></canvas>
+      </div>
+      
+      <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        const src    = document.getElementById('logo-src');
+        const out    = document.getElementById('logo-canvas');
+      
+        src.onload = () => {
+          // draw onto a temp canvas
+          const temp    = document.createElement('canvas');
+          const tCtx    = temp.getContext('2d');
+          temp.width    = src.width;
+          temp.height   = src.height;
+          tCtx.drawImage(src, 0, 0);
+      
+          // get pixel data & strip white
+          const imgData = tCtx.getImageData(0, 0, temp.width, temp.height);
+          const d       = imgData.data;
+          for (let i = 0; i < d.length; i += 4) {
+            if (d[i] > 240 && d[i+1] > 240 && d[i+2] > 240) {
+              d[i+3] = 0;
+            }
+          }
+          tCtx.putImageData(imgData, 0, 0);
+      
+          // find non-transparent bounds
+          let minX = temp.width, minY = temp.height;
+          let maxX = 0,        maxY = 0;
+          for (let y = 0; y < temp.height; y++) {
+            for (let x = 0; x < temp.width; x++) {
+              if (imgData.data[(y*temp.width + x)*4 + 3] > 0) {
+                minX = Math.min(minX, x);
+                minY = Math.min(minY, y);
+                maxX = Math.max(maxX, x);
+                maxY = Math.max(maxY, y);
               }
-              tCtx.putImageData(imgData, 0, 0);
-          
-              // find non-transparent bounds
-              let minX = temp.width, minY = temp.height;
-              let maxX = 0,        maxY = 0;
-              for (let y = 0; y < temp.height; y++) {
-                for (let x = 0; x < temp.width; x++) {
-                  if (imgData.data[(y*temp.width + x)*4 + 3] > 0) {
-                    minX = Math.min(minX, x);
-                    minY = Math.min(minY, y);
-                    maxX = Math.max(maxX, x);
-                    maxY = Math.max(maxY, y);
-                  }
-                }
-              }
-          
-              // size the output canvas to the logo’s box
-              const w = maxX - minX + 1;
-              const h = maxY - minY + 1;
-              out.width  = w;
-              out.height = h;
-          
-              // copy the cropped image into the visible canvas
-              const oCtx = out.getContext('2d');
-              oCtx.putImageData(
-                tCtx.getImageData(minX, minY, w, h),
-                0, 0
-              );
-            };
-          
-            // trigger onload if cached
-            if (src.complete) src.onload();
-          });
-          </script>
-          
-    
-          
-        <!-- Quick Links -->
-        <div class="col-md-3 mb-3">
-          <h2 class="ftco-heading-2" style="color: azure;">Quick Links</h2>
-          <ul class="list-unstyled">
-          <li><a href="index.html" class="d-block mb-2">Home</a></li>
-          <li><a href="about.html" class="d-block mb-2">About</a></li>
-          <li><a href="services.html" class="d-block mb-2">Services</a></li>
-          <li><a href="locations.html" class="d-block mb-2">Locations</a></li>
-          <li><a href="patient.html" class="d-block mb-2">Patient Info</a></li>
-          <li><a href="contact.html" class="d-block mb-2">Contact</a></li>
-          </ul>
-        </div>
-        <!-- Services -->
-        
-        
-          <!-- Contact Information -->
-        <div class="col-md-3 mb-3">
-          <h2 class="ftco-heading-2" style="color: azure;">Contact Us</h2>
-          <p><a href="locations.html" class="d-block mb-2">View Our 20 Locations</a></p>
-            <div class="contact-box">
-          <p><strong>Phone:</strong> <a href="tel:8883671850">(888) 367-1850</a></p>
+            }
+          }
+      
+          // size the output canvas to the logo’s box
+          const w = maxX - minX + 1;
+          const h = maxY - minY + 1;
+          out.width  = w;
+          out.height = h;
+      
+          // copy the cropped image into the visible canvas
+          const oCtx = out.getContext('2d');
+          oCtx.putImageData(
+            tCtx.getImageData(minX, minY, w, h),
+            0, 0
+          );
+        };
+      
+        // trigger onload if cached
+        if (src.complete) src.onload();
+      });
+      </script>
+      
+
+      
+		<!-- Quick Links -->
+		<div class="col-md-3 mb-3">
+		  <h2 class="ftco-heading-2" style="color: azure;">Quick Links</h2>
+		  <ul class="list-unstyled">
+			<li><a href="index.html" class="d-block mb-2">Home</a></li>
+			<li><a href="about.html" class="d-block mb-2">About</a></li>
+			<li><a href="services.html" class="d-block mb-2">Services</a></li>
+			<li><a href="locations.html" class="d-block mb-2">Locations</a></li>
+			<li><a href="patient.html" class="d-block mb-2">Patient Info</a></li>
+			<li><a href="contact.html" class="d-block mb-2">Contact</a></li>
+		  </ul>
+		</div>
+		<!-- Services -->
+		
+		
+	    <!-- Contact Information -->
+		<div class="col-md-3 mb-3">
+			<h2 class="ftco-heading-2" style="color: azure;">Contact Us</h2>
+			<p><a href="locations.html" class="d-block mb-2">View Our 20 Locations</a></p>
+			  <div class="contact-box">
+			<p><strong>Phone:</strong> <a href="tel:8883671850">(888) 367-1850</a></p>
+		</div>
+	
+	  </div>
+
+    <div class="col-md-3 mb-3">
+      <h2 class="ftco-heading-2" style="color: azure;">About Us</h2>
+      <ul class="list-unstyled d-flex justify-content-center">
+        <p>
+          We offer advanced treatments with a patient-focused approach, ensuring personalized care and improved quality of life.
+            Expert care for arthritis, autoimmune diseases, and joint health.</p>
+            
+        </ul>
         </div>
       
-        </div>
+	  <div class="row">
+		<div class="col-md-12 text-center mt-3">
+		  <p class="mb-0">
     
-        <div class="col-md-3 mb-3">
-          <h2 class="ftco-heading-2" style="color: azure;">About Us</h2>
-          <ul class="list-unstyled d-flex justify-content-center">
-            <p>
-              We offer advanced treatments with a patient-focused approach, ensuring personalized care and improved quality of life.
-                Expert care for arthritis, autoimmune diseases, and joint health.</p>
-                
-            </ul>
-            </div>
-          
-        <div class="row">
-        <div class="col-md-12 text-center mt-3">
-          <p class="mb-0">
-        
-          </p>
-        </div>
-        </div>
-      </div>
-      </footer>
+		  </p>
+		</div>
+	  </div>
+	</div>
+
+	<!-- Back to Top Button -->
+<a href="#" id="back-to-top" title="Go to top">
+  <i class="fa fa-arrow-up"></i>
+</a>
+
+  </footer>
+
+    <style>
+      .ftco-footer {
+      background-color: #333; /* Dark background */
+      color: #fff; /* White text */
+      font-size: 0.9rem; /* Compact font size */
+    }
     
-        <style>
-          .ftco-footer {
-          background-color: #333; /* Dark background */
-          color: #fff; /* White text */
-          font-size: 0.9rem; /* Compact font size */
-        }
-        
-        .ftco-footer a {
-          color: #41B5E5; /* Blue links */
-          text-decoration: none;
-        font-size: 1.2rem;
+    .ftco-footer a {
+      color: #41B5E5; /* Blue links */
+      text-decoration: none;
+	  font-size: 1.2rem;
+
+    }
     
-        }
-        
-        .ftco-footer a:hover {
-          text-decoration: underline;
-          color: #0056b3; /* Darker blue on hover */
-        }
-        
-        .ftco-footer .ftco-heading-2 {
-          font-size: 1.2rem;
-          font-weight: 600;
-          margin-bottom: 15px;
-        }
-        
-        .ftco-footer p, .ftco-footer ul {
-          margin: 0;
-          padding: 0;
-        }
-        
-        .ftco-footer .icon {
-          color: #ffc107; /* Yellow icon color */
-          margin-right: 5px;
-        }
-        
-          </style>  
-        
+    .ftco-footer a:hover {
+      text-decoration: underline;
+      color: #0056b3; /* Darker blue on hover */
+    }
+    
+    .ftco-footer .ftco-heading-2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    
+    .ftco-footer p, .ftco-footer ul {
+      margin: 0;
+      padding: 0;
+    }
+    
+    .ftco-footer .icon {
+      color: #ffc107; /* Yellow icon color */
+      margin-right: 5px;
+    }
+    
+      </style>  
+    
+	<style>
+		/* Back to Top Button */
+#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #41B5E5;
+  color: white;
+  font-size: 22px;
+  padding: 12px 16px;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  display: none;
+  transition: all 0.3s ease-in-out;
+  z-index: 9999;
+}
+
+#back-to-top:hover {
+  background-color: #2c8ebd;
+  transform: translateY(-3px);
+}
+
+	</style>
+  
+
+<script>
+  // Show button when scrolling down
+  window.addEventListener('scroll', function() {
+    const button = document.getElementById('back-to-top');
+    if (window.scrollY > 300) {
+      button.style.display = 'block';
+    } else {
+      button.style.display = 'none';
+    }
+  });
+
+  // Smooth scroll to top
+  document.getElementById('back-to-top').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
+
 
     
   

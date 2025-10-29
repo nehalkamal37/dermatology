@@ -265,7 +265,7 @@ function findNearestFromInput() {
     const lon = parseFloat(document.getElementById("longitude").value);
 
     if (isNaN(lat) || isNaN(lon)) {
-        alert("يرجى إدخال موقع صحيح!");
+     alert("Please enter a valid location!");
         return;
     }
 
