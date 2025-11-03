@@ -96,4 +96,151 @@
 		object-fit: cover;
 	}
 	
-	   
+			/* Ensure all condition boxes have the same fixed height */
+			.condition-box {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				height: 500px; /* Adjust the height as needed */
+				padding: 15px;
+				border: 1px solid #e0e0e0;
+				border-radius: 8px;
+				margin-bottom: 20px;
+				overflow: hidden;
+			}
+			/* Force images to maintain consistent size */
+			.condition-box img {
+				width: 100%;
+				height: auto;
+				max-height: 200px;
+				object-fit: cover;
+			}
+			.condition-box h4 {
+				margin: 10px 0;
+				flex-shrink: 0;
+			}
+			/* Make the details section fill remaining space and scroll if necessary */
+			.condition-details {
+				flex-grow: 1;
+				overflow-y: auto;
+				display: none; /* Default hidden; toggled via JavaScript */
+				margin-top: 10px;
+			}
+			.small-img {
+				width: 80%;
+				height: auto;
+				max-height: 180px;
+				object-fit: cover;
+			}
+			.arrow-down {
+				font-size: 24px;
+				color: #007bff;
+				cursor: pointer;
+				margin-left: 10px;
+				font-weight: bold;
+			}
+			.condition-box h4 {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 10px;
+			}
+		
+
+			/* Default condition-box height is 300px */
+			.condition-box {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				height: 300px; /* Default height */
+				padding: 15px;
+				border: 1px solid #e0e0e0;
+				border-radius: 8px;
+				margin-bottom: 20px;
+				overflow: hidden;
+				transition: height 0.3s ease;
+			}
+			/* Force images to maintain consistent size */
+			.condition-box img {
+				width: 100%;
+				height: auto;
+				max-height: 200px;
+				object-fit: cover;
+			}
+			.condition-box h4 {
+				margin: 10px 0;
+				flex-shrink: 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 10px;
+			}
+			/* Details section fills remaining space and scrolls if needed */
+			.condition-details {
+				flex-grow: 1;
+				overflow-y: auto;
+				display: none; /* Hidden by default; toggled via JS */
+				margin-top: 10px;
+			}
+			.small-img {
+				width: 80%;
+				height: auto;
+				max-height: 180px;
+				object-fit: cover;
+			}
+			.arrow-down {
+				font-size: 24px;
+				color: #007bff;
+				cursor: pointer;
+				margin-left: 10px;
+				font-weight: bold;
+			}
+		
+
+            
+/* Customize navigation arrows */
+/* --- Back to Top Button Enhanced --- */
+#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #41B5E5;                /* your brand blue */
+  color: #fff;
+  border-radius: 50%;                 /* perfectly round */
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease,
+    visibility 0.4s ease;
+  z-index: 999;
+}
+
+/* Hover glow */
+#back-to-top:hover {
+  background: #2e9cc8;
+  transform: scale(1.1);
+}
+
+/* When visible */
+#back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* When hidden (slide down slightly) */
+#back-to-top.hide {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+}
+

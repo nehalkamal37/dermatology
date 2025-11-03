@@ -270,7 +270,40 @@
   </div>
 </section>
 
+
 <style>
+  /* 1) Make room on the right */
+select.form-control.form-input {
+  padding-right: 2.75rem !important;   /* space for the arrow/icon */
+  height: 58px;                         /* keep same height */
+}
+
+/* 2) Remove the native arrow so padding actually applies */
+select.form-control.form-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* 3) (Optional) add a custom small arrow on the right */
+select.form-control.form-input {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='%2341B5E5'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E")
+             no-repeat right 12px center / 14px 14px;
+}
+
+/* 4) Hide the legacy IE/old-Edge arrow just in case */
+select.form-control.form-input::-ms-expand {
+  display: none;
+}
+
+/* (Nice-to-have) add padding inside the dropdown items (not all UAs honor this) */
+select.form-control.form-input option {
+  padding-right: 1rem;
+}
+
+</style>
+<style>
+
   .form-floating label {
   color: #666;
 }
@@ -486,6 +519,7 @@
   <span style="color: #41B5E5; font-weight: 600;">Terms and Conditions</span> and
   <span style="color: #41B5E5; font-weight: 600;">Privacy Policy</span>.
 </p>
+
 <!--
             <a href="#" style="color: #41B5E5; font-weight: 600;">Terms and Conditions</a> and
             <a href="#" style="color: #41B5E5; font-weight: 600;">Privacy Policy</a>.
@@ -624,6 +658,8 @@
   <i class="fa fa-arrow-up"></i>
 </a>
 
+
+
   </footer>
 
     <style>
@@ -690,28 +726,76 @@
 	</style>
   
 
+
 <script>
-  // Show button when scrolling down
-  window.addEventListener('scroll', function() {
-    const button = document.getElementById('back-to-top');
+  const backToTop = document.getElementById('back-to-top');
+
+  window.addEventListener('scroll', () => {
     if (window.scrollY > 300) {
-      button.style.display = 'block';
+      backToTop.classList.add('show');
+      backToTop.classList.remove('hide');
     } else {
-      button.style.display = 'none';
+      backToTop.classList.add('hide');
+      backToTop.classList.remove('show');
     }
   });
 
-  // Smooth scroll to top
-  document.getElementById('back-to-top').addEventListener('click', function(e) {
+  backToTop.addEventListener('click', (e) => {
     e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 </script>
 
 
+<style>
+
+/* Customize navigation arrows */
+/* --- Back to Top Button Enhanced --- */
+#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #41B5E5;                /* your brand blue */
+  color: #fff;
+  border-radius: 50%;                 /* perfectly round */
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease,
+    visibility 0.4s ease;
+  z-index: 999;
+}
+
+/* Hover glow */
+#back-to-top:hover {
+  background: #2e9cc8;
+  transform: scale(1.1);
+}
+
+/* When visible */
+#back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* When hidden (slide down slightly) */
+#back-to-top.hide {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+}
+
+</style>
 <!--main -->
   <!-- loader -->
 

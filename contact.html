@@ -400,18 +400,7 @@ select.form-control:focus {
   </div>
 </section>
 
-<style>
-.mission-section {
-  padding: 60px 0;
-  background-color: #f9f9f9;
-	font-family: Georgia, 'Times New Roman', Times, serif;   
-}
-.carousel img {
-  border-radius: 10px;
-  max-height: 500px;
-  object-fit: cover;
-}
-</style>
+
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
@@ -609,26 +598,28 @@ document.addEventListener('DOMContentLoaded', function () {
 	</style>
   
 
+
+
 <script>
-  // Show button when scrolling down
-  window.addEventListener('scroll', function() {
-    const button = document.getElementById('back-to-top');
+  const backToTop = document.getElementById('back-to-top');
+
+  window.addEventListener('scroll', () => {
     if (window.scrollY > 300) {
-      button.style.display = 'block';
+      backToTop.classList.add('show');
+      backToTop.classList.remove('hide');
     } else {
-      button.style.display = 'none';
+      backToTop.classList.add('hide');
+      backToTop.classList.remove('show');
     }
   });
 
-  // Smooth scroll to top
-  document.getElementById('back-to-top').addEventListener('click', function(e) {
+  backToTop.addEventListener('click', (e) => {
     e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 </script>
+
+
 
     
     
