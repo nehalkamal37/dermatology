@@ -12,7 +12,6 @@
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
@@ -35,8 +34,6 @@
 <link rel="stylesheet" href="updates.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 <head>
 	<!-- Preload critical font -->
@@ -269,7 +266,8 @@ nav.navbar.navbar-light.bg-light span {
 	
 
     <section class="home-slider owl-carousel">
-      <div class="slider-item" style="background-image:url(images/suggestions/an-older-couple.jpg);" data-stellar-background-ratio="0.5">
+		<div class="slider-item" style="background-image:url(images/suggestions/an-older-couple.webp);" loading="lazy">
+
       	<div class="overlay"></div>
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
@@ -297,14 +295,13 @@ nav.navbar.navbar-light.bg-light span {
 	<p class="button-custom order-lg-last mb-0"><a href="appointment.html" class="btn btn-secondary py-2 px-3">Make An Appointment</a></p>
 			</div>
 			
-			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 
 			</div>
         </div>
         </div>
       </div>
 
-<div class="slider-item" style="background-image:url(images/suggestions/hero2.png);">
+<div class="slider-item" style="background-image:url(images/suggestions/hero2.webp);">
       	<div class="overlay"></div>
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
@@ -854,90 +851,9 @@ color: #000;
 font-size: larger;
 	}
 </style>
-<!--
-<section class="insurance-section py-5">
-	<div class="container" style="max-width: 888px; width: 100%; padding: 0 1rem;">
-	  
-	  <h2 class="section-title ins mb-3">
-		<a href="pat-resources.html" class="text-decoration-none" style="color: #41B5E5;">
-		  Insurances
-		</a>
-	  </h2>
-	  
-	  <p class="lead text-dark mb-2">
-		All of our providers are certified and meet the highest standards of care.
-	  </p>
-	  <p class="insurance-note mb-4">
-		If you do not see your insurance provider, please <strong>call us</strong> for additional information.
-	  </p>
-	  
-	  <a href="tel:8883671850"
-		 class="btn btn-primary mb-4"
-		 aria-label="Call (888) 367-1850">
-		Call (888) 367-1850
-	  </a>
-	  
-	  <div id="insuranceCarousel" class="carousel slide" data-bs-ride="carousel">
-		<div class="carousel-inner text-center">
-		  
-		  <div class="carousel-item active">
-			<img
-			  src="images/suggestions/ins/an.png" loading="lazy"
-			  class="d-block mx-auto img-fluid"
-			  alt="Aetna logo"
-			>
-		  </div>
-		  
-		  <div class="carousel-item">
-			<img
-			  src="images/suggestions/ins/american-specialty-health-insurance.svg"
-			  class="d-block mx-auto img-fluid" loading="lazy"
-			  alt="American Specialty Health Networks logo"
-			>
-		  </div>
-		  
-		  <div class="carousel-item">
-			<img
-			  src="images/suggestions/ins/bl.png" loading="lazy"
-			  class="d-block mx-auto img-fluid"
-			  alt="Blue Cross Blue Shield logo"
-			>
-		  </div>
-		  
-		  <div class="carousel-item">
-			<img
-			  src="images/suggestions/ins/hn.png" loading="lazy"
-			  class="d-block mx-auto img-fluid"
-			  alt="Health Net logo"
-			>
-		  </div>
-		
-		</div>
-		
-		<button
-		  class="carousel-control-prev"
-		  type="button"
-		  data-bs-target="#insuranceCarousel"
-		  data-bs-slide="prev"
-		  aria-label="Previous insurance"
-		>
-		  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-		  <span class="visually-hidden">Previous</span>
-		</button>
-		<button
-		  class="carousel-control-next"
-		  type="button"
-		  data-bs-target="#insuranceCarousel"
-		  data-bs-slide="next"
-		  aria-label="Next insurance"
-		>
-		  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-		  <span class="visually-hidden">Next</span>
-		</button>
-	  </div>
-	</div>
-  </section>
--->
+
+
+
 
 
 <section class="appointment-section text-center">
@@ -956,75 +872,6 @@ font-size: larger;
     </div>
   </div>
 </section>
-
-<style>
-.appointment-section {
-  background: linear-gradient(135deg, #f7faff 0%, #e8f2ff 100%);
-  border-radius: 10px;
-  padding: 40px 15px; /* ✅ compact height */
-  margin: 50px auto;
-  max-width: 900px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-
-.appointment-section h2 {
-  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
-  font-weight: 700;
-}
-
-.appointment-section p {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 1.2rem;
-}
-
-.cta-buttons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-}
-
-.btn {
-  border-radius: 6px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.btn-primary {
-  background-color: #007bff;
-  border: none;
-}
-
-.btn-primary:hover {
-  background-color: #0069d9;
-  transform: translateY(-1px);
-}
-
-.btn-outline-primary {
-  border: 1.5px solid #007bff;
-  color: #007bff;
-  background: transparent;
-}
-
-.btn-outline-primary:hover {
-  background-color: #007bff;
-  color: #fff;
-  transform: translateY(-1px);
-}
-
-/* 📱 Mobile adjustments */
-@media (max-width: 768px) {
-  .appointment-section {
-    padding: 30px 12px;
-    margin: 30px auto;
-  }
-  .btn {
-    width: 100%;
-  }
-}
-</style>
 
 
 <!-- ✅ Appointment Section -->
@@ -1057,121 +904,8 @@ font-size: larger;
   </div>
 </section>
 
-<style>
-/* 🩺 Appointment Section */
-.appointment-section {
-  background: linear-gradient(135deg, #007bff 0%, #41b5e5 100%);
-  color: #fff;
-  border-radius: 12px;
-  margin: 60px auto;
-  max-width: 1000px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-.appointment-section h2 {
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
-}
-.appointment-section .btn-primary {
-  background-color: #fff;
-  color: #007bff;
-  border: none;
-  transition: all 0.3s ease;
-}
-.appointment-section .btn-primary:hover {
-  background-color: #e6f3ff;
-  transform: translateY(-2px);
-}
-.appointment-section .btn-outline-primary {
-  border-color: #fff;
-  color: #fff;
-  transition: all 0.3s ease;
-}
-.appointment-section .btn-outline-primary:hover {
-  background-color: #fff;
-  color: #007bff;
-  transform: translateY(-2px);
-}
 
-/* 💳 Insurance Scroller */
-.insurance-section {
-  background-color: #f9fbfc;
-}
-.insurance-scroller {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-}
-.insurance-track {
-  display: flex;
-  width: calc(250px * 8);
-  animation: scroll 20s linear infinite;
-}
-.insurance-track img {
-  height: 60px;
-  width: auto;
-  margin: 0 40px;
-  filter: grayscale(100%);
-  opacity: 0.8;
-  transition: all 0.3s ease;
-}
-.insurance-track img:hover {
-  filter: grayscale(0%);
-  opacity: 1;
-  transform: scale(1.05);
-}
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-.insurance-scroller:hover .insurance-track {
-  animation-play-state: paused; /* pause on hover */
-}
-.section-title {
-  font-weight: 700;
-  letter-spacing: 0.5px;
-}
-</style>
 
-<!--
-<section class="insurance-section" style="height: 388px;">
-    <div class="container">
-        <h2 class="ins" class="section-title"><a  href="pat-resources.html" style="color: #41B5E5;">Insurances</a></h2>
-		<p style="color: #000;">All of our providers are certified and meet the highest standards of care</p>
-        <p class="insurance-note"> If you do not see your insurance provider, please <strong>call us</strong> for additional information.</p>
-        <a href="tel:8883671850" class="btn btn-primary"> Call (888) 367-1850</a>
-        
-        <div id="insuranceCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="images/suggestions/ins/an.png" class="d-block mx-auto" alt="Aetna">
-                </div>
-                <div class="carousel-item">
-                    <img src="images/suggestions/ins/american-specialty-health-insurance.svg" class="d-block mx-auto" alt="American Specialty Health Networks">
-                </div>
-                <div class="carousel-item">
-                    <img src="images/suggestions/ins/bl.png" class="d-block mx-auto" alt="Blue Cross Blue Shield">
-                </div>
-                <div class="carousel-item">
-                    <img src="images/suggestions/ins/hn.png" class="d-block mx-auto" alt="Health Net">
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#insuranceCarousel" role="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#insuranceCarousel" role="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </a>
-        </div>
-    </div>
-</section>
--->
 <section class="insurance-section py-5">
 	<div class="container">
 	 
@@ -1437,29 +1171,24 @@ document.addEventListener('DOMContentLoaded', function () {
   disable: window.innerWidth < 768
 });
 
-$(document).ready(function () {
-  $(".home-slider").owlCarousel({...});
-});
-
-window.addEventListener("load", function() {
-  $(".home-slider").owlCarousel({
-    items: 1,
-    loop: true,
-    autoplay: true,
-    autoplayTimeout: 5000,
-    autoplayHoverPause: true,
-    nav: true,
-    dots: true,
-    navText: [
-      '<span class="owl-prev">‹</span>',
-      '<span class="owl-next">›</span>'
-    ]
-  });
-});
 
 
 </script>
 
+<script defer>
+document.addEventListener("DOMContentLoaded", () => {
+  $(".home-slider").owlCarousel({
+    items: 1,
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 4000,
+    autoplayHoverPause: true,
+    nav: true,
+    dots: true,
+    navText: ["‹", "›"]
+  });
+});
+</script>
 
 
 <style>
@@ -1470,6 +1199,9 @@ window.addEventListener("load", function() {
 
   <!-- loader -->
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
